@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConnectedU - Seamless Parent-School Communication</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">
+                    <span class="logo-icon">🎓</span>
+                    <span class="logo-text">ConnectedU</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#modules">Modules</a></li>
+                    <li><a href="#roles">User Roles</a></li>
+                    <li><a href="#demo" class="nav-cta">Request Demo</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
     <div class="floating-elements">
         <div class="floating-element" style="width: 20px; height: 20px; top: 20%; left: 10%; animation-delay: 0s;"></div>
         <div class="floating-element" style="width: 15px; height: 15px; top: 60%; left: 80%; animation-delay: 5s;"></div>
@@ -36,16 +60,16 @@
                     </div>
                     <div class="hero-stats">
                         <div class="stat-item">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Schools</span>
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Core Modules</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">50K+</span>
-                            <span class="stat-label">Parents</span>
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Features</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">99.9%</span>
-                            <span class="stat-label">Uptime</span>
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Support</span>
                         </div>
                     </div>
                 </div>
@@ -63,36 +87,35 @@
                 <h2>Complete Communication Ecosystem</h2>
                 <p>Everything you need to keep schools, parents, teachers, and transportation connected seamlessly</p>
             </div>
+                        <!-- Feature Cards -->
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🖥️</div>
+                    <div class="feature-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
                     <h3>Web-Based ERP</h3>
-                    <p>Comprehensive school management system with intuitive dashboard for administrators to manage all school activities and communication efficiently.</p>
+                    <p>Comprehensive school management system with intuitive dashboard.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Mobile Apps (iOS & Android)</h3>
-                    <p>Native mobile applications for parents, teachers, and drivers with real-time notifications and offline capabilities.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Apps</h3>
+                    <p>Native apps for parents and teachers for instant access.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">💬</div>
-                    <h3>Multi-Type Messaging</h3>
-                    <p>Send different types of messages including acknowledgments, replies, payment requests, and emergency alerts with appropriate response mechanisms.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Smart Notifications</h3>
+                    <p>Real-time alerts and updates for important events.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
-                    <h3>Parent Dashboard</h3>
-                    <p>Parents can view all their children in one place, track messages, respond appropriately, and stay updated on school activities.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👨‍🏫</div>
-                    <h3>Teacher Tools</h3>
-                    <p>Teachers can mark attendance, enter academic details, send updates to parents, and manage their classroom communications.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🚌</div>
-                    <h3>Bus Management</h3>
-                    <p>Bus drivers can check students in/out, track routes, and notify parents about pickup/drop-off times with GPS integration.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytics</h3>
+                    <p>Detailed insights and reporting for better decisions.</p>
                 </div>
             </div>
         </div>
@@ -105,33 +128,34 @@
                 <h2>Smart Message Types</h2>
                 <p>Different communication needs require different message types with appropriate response mechanisms</p>
             </div>
+            <!-- Message Types -->
             <div class="message-grid">
-                <div class="message-card message-normal">
-                    <h3>📝 Normal Messages</h3>
-                    <p>General announcements, updates, and information sharing</p>
+                <div class="message-card">
+                    <i class="fas fa-envelope message-icon"></i>
+                    <h3>General Notice</h3>
                 </div>
-                <div class="message-card message-ack">
-                    <h3>✅ Acknowledgment</h3>
-                    <p>Messages requiring confirmation receipt from parents</p>
+                <div class="message-card">
+                    <i class="fas fa-check-circle message-icon"></i>
+                    <h3>Acknowledgement</h3>
                 </div>
-                <div class="message-card message-reply">
-                    <h3>💬 Reply Messages</h3>
-                    <p>Two-way communication for discussions and queries</p>
+                <div class="message-card">
+                    <i class="fas fa-reply message-icon"></i>
+                    <h3>Quick Reply</h3>
                 </div>
-                <div class="message-card message-payment">
-                    <h3>💳 Payment Requests</h3>
-                    <p>Fee reminders and payment collection with tracking</p>
+                <div class="message-card">
+                    <i class="fas fa-credit-card message-icon"></i>
+                    <h3>Payment</h3>
                 </div>
-                <div class="message-card message-emergency">
-                    <h3>🚨 Emergency Alerts</h3>
-                    <p>Urgent notifications requiring immediate attention</p>
+                <div class="message-card">
+                    <i class="fas fa-exclamation-triangle message-icon"></i>
+                    <h3>Emergency</h3>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- User Roles -->
-    <section class="user-roles">
+    <section id="roles" class="user-roles">
         <div class="container">
             <div class="section-title">
                 <h2>Designed for Everyone</h2>
@@ -229,16 +253,19 @@
     </section>
 
     <!-- Software Modules Section -->
-    <section class="modules">
+    <section id="modules" class="modules">
         <div class="container">
             <div class="section-title">
                 <h2>Comprehensive School Management Modules</h2>
                 <p>Everything you need to manage your educational institution efficiently</p>
             </div>
             
+            <!-- Module Cards -->
             <div class="modules-grid">
                 <div class="module-card">
-                    <div class="module-icon">📚</div>
+                    <div class="module-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
                     <h3>Academic Management</h3>
                     <ul class="module-features">
                         <li>Course & curriculum planning</li>
@@ -249,7 +276,9 @@
                 </div>
 
                 <div class="module-card">
-                    <div class="module-icon">👥</div>
+                    <div class="module-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
                     <h3>Student Management</h3>
                     <ul class="module-features">
                         <li>Student enrollment & records</li>
@@ -260,7 +289,9 @@
                 </div>
 
                 <div class="module-card">
-                    <div class="module-icon">💰</div>
+                    <div class="module-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
                     <h3>Financial Management</h3>
                     <ul class="module-features">
                         <li>Fee management</li>
@@ -474,8 +505,8 @@
                 <div>
                     <h4>Contact</h4>
                     <p>Email: hello@connectedu.in</p>
-                    <p>Phone: +91 XXXX XXXXX</p>
-                    <p>Address: Your City, India</p>
+                    <p>Phone: +91 9037 138 030</p>
+                    <p>Address: Alappuzha, Kerala, India</p>
                 </div>
             </div>
             <div style="border-top: 1px solid #333; padding-top: 2rem; text-align: center;">
@@ -614,6 +645,17 @@
 
         // Uncomment below to enable typing effect
         // setTimeout(() => typeWriter(originalText, heroTitle, 80), 1000);
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const spans = mobileMenuBtn.querySelectorAll('span');
+            spans[0].classList.toggle('rotate-45');
+            spans[1].classList.toggle('opacity-0');
+            spans[2].classList.toggle('rotate-negative-45');
+        });
     </script>
 </body>
 </html>
