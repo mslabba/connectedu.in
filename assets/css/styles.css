@@ -493,9 +493,17 @@ body {
     margin-right: 1rem;
 }
 
-.parent-icon { background: linear-gradient(45deg, #ff6b6b, #ffa500); }
+.admin-icon { background: linear-gradient(45deg, #4361ee, #3a0ca3); }
 .teacher-icon { background: linear-gradient(45deg, #4ecdc4, #44a08d); }
-.driver-icon { background: linear-gradient(45deg, #667eea, #764ba2); }
+.parent-icon { background: linear-gradient(45deg, #ff6b6b, #ffa500); }
+.accountant-icon { background: linear-gradient(45deg, #2d6a4f, #95d5b2); }
+.librarian-icon { background: linear-gradient(45deg, #bc6c25, #dda15e); }
+.transport-icon { background: linear-gradient(45deg, #2b2d42, #8d99ae); }
+
+.role-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
 
 .role-card h3 {
     font-size: 1.4rem;
@@ -834,7 +842,7 @@ body {
     width: 70px;
     height: 70px;
     margin: 0 auto 1.5rem;
-    background: var(--background-light);
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -879,6 +887,11 @@ body {
     font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
+}
+
+.value-card:hover .value-icon {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .value-card h3 {
@@ -1068,4 +1081,12 @@ body {
 @keyframes float-around {
     0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
     100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+.module-card:nth-child(9) .module-icon {
+    background: linear-gradient(135deg, #3a0ca3 0%, #4895ef 100%);
+}
+
+.feature-card:nth-child(5) .feature-icon {
+    background: linear-gradient(135deg, #3a0ca3 0%, #4895ef 100%);
 }
