@@ -309,7 +309,7 @@ body {
 
 .features {
     padding: 5rem 0;
-    background: #f8fafc;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .section-title {
@@ -548,7 +548,7 @@ body {
 }
 
 .value-card:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.89);
     transform: translateY(-5px);
 }
 
@@ -651,107 +651,119 @@ body {
     }
 }
 
-/* Modules Section Styling */
+/* Modules Section */
 .modules {
     padding: 5rem 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: var(--background-light);
 }
 
 .modules-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
 
 .module-card {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
     position: relative;
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
     overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.05);
-}
-
-.module-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .module-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .module-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    transition: transform 0.3s ease;
-    width: 70px;
-    height: 70px;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
 }
 
 .module-card:hover .module-icon {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1);
 }
 
 .module-card h3 {
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
     color: var(--text-primary);
-    margin-bottom: 1.5rem;
+    margin: 0;
 }
 
-.module-features {
+.module-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.module-card:hover .module-details {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.module-details h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.module-details ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.module-features li {
-    padding: 0.5rem 0;
-    color: var(--text-secondary);
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    font-size: 0.95rem;
+.module-details li {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    text-align: center;
 }
 
-.module-features li:last-child {
-    border-bottom: none;
-}
+@media (max-width: 768px) {
+    .modules-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        padding: 0 1rem;
+    }
 
-.module-features li::before {
-    content: '→';
-    color: var(--primary-color);
-    margin-right: 0.75rem;
-    font-weight: bold;
-    font-size: 1.1rem;
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    .module-card {
+        min-height: 180px;
+    }
 }
-
-/* Module Card Color Variations */
-.module-card:nth-child(1) .module-icon { background: linear-gradient(135deg, #4361ee, #4895ef); }
-.module-card:nth-child(2) .module-icon { background: linear-gradient(135deg, #3f37c9, #4361ee); }
-.module-card:nth-child(3) .module-icon { background: linear-gradient(135deg, #4895ef, #4cc9f0); }
-.module-card:nth-child(4) .module-icon { background: linear-gradient(135deg, #4cc9f0, #4361ee); }
-.module-card:nth-child(5) .module-icon { background: linear-gradient(135deg, #3f37c9, #4895ef); }
-.module-card:nth-child(6) .module-icon { background: linear-gradient(135deg, #4361ee, #4cc9f0); }
 
 /* Benefits Section */
 .benefits {
