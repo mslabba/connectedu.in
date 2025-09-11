@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Tutorials - ConnectedU School Management System</title>
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Video Tutorials - ConnectedU School Management System">
+  <meta name="description"
+    content="Learn how to use ConnectedU school management software with step-by-step video tutorials. Master features like class management, examination module, and more.">
+  <meta name="keywords"
+    content="ConnectedU tutorials, school management tutorial, CBSE examination tutorial, class management guide, school ERP tutorial">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://connectedu.in/video-tutorials.html">
+  <meta property="og:title" content="Video Tutorials - ConnectedU School Management System">
+  <meta property="og:description"
+    content="Learn how to use ConnectedU school management software with step-by-step video tutorials.">
+  <meta property="og:image" content="https://connectedu.in/assets/images/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://connectedu.in/video-tutorials.html">
+  <meta property="twitter:title" content="Video Tutorials - ConnectedU School Management System">
+  <meta property="twitter:description"
+    content="Learn how to use ConnectedU school management software with step-by-step video tutorials.">
+  <meta property="twitter:image" content="https://connectedu.in/assets/images/twitter-image.jpg">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://connectedu.in/video-tutorials.html">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <style>
+    .tutorials-hero {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: white;
+      padding: 8rem 0 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tutorials-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .tutorials-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .tutorials-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .tutorials-hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .tutorials-grid {
+      padding: 4rem 0;
+      background: var(--background-light);
+    }
+
+    .tutorials-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .tutorial-card {
+      background: white;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .tutorial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .tutorial-video {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      border: 0;
+    }
+
+    /* Hide YouTube branding elements */
+    .tutorial-video::after {
+      content: '';
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      width: 120px;
+      height: 30px;
+      background: transparent;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .tutorial-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tutorial-card::after {
+      content: '';
+      position: absolute;
+      top: 210px;
+      right: 8px;
+      width: 150px;
+      height: 40px;
+      background: white;
+      pointer-events: none;
+      z-index: 5;
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .tutorial-content {
+      padding: 1.5rem;
+    }
+
+    .tutorial-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .tutorial-description {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .tutorial-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .tutorial-tag {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .breadcrumb {
+      background: white;
+      padding: 1rem 0;
+      border-bottom: 1px solid #eee;
+      margin-top: 80px;
+    }
+
+    .breadcrumb-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-secondary);
+    }
+
+    .breadcrumb-nav a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .breadcrumb-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .back-to-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--primary-color);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      margin: 2rem 0;
+    }
+
+    .back-to-home:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(67, 97, 238, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .tutorials-hero h1 {
+        font-size: 2rem;
+      }
+
+      .tutorials-hero p {
+        font-size: 1rem;
+      }
+
+      .tutorials-container {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+      }
+
+      .tutorial-video {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">🎓</span>
+          <span class="logo-text">ConnectedU</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#modules">Modules</a></li>
+          <li><a href="index.html#roles">User Roles</a></li>
+          <li><a href="video-tutorials.html" class="nav-active">Video Tutorials</a></li>
+          <li><a href="index.html#demo" class="nav-cta">Request Demo</a></li>
+        </ul>
+        <button class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <section class="breadcrumb">
+    <div class="container">
+      <nav class="breadcrumb-nav">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Video Tutorials</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="tutorials-hero">
+    <div class="container">
+      <h1>Video Tutorials</h1>
+      <p>Learn how to use ConnectedU with our comprehensive video tutorials. Master every feature with step-by-step
+        guidance from our experts.</p>
+    </div>
+  </section>
+
+  <!-- Tutorials Grid -->
+  <section class="tutorials-grid">
+    <div class="tutorials-container">
+      <!-- Tutorial 1: Add Class and Section -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/NHBFTA768FQ?modestbranding=1&rel=0"
+          title="Add Class and Section - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Add Class and Section</h3>
+          <p class="tutorial-description">
+            Learn how to set up and manage classes and sections in ConnectedU. This tutorial covers creating new
+            classes, organizing sections, and managing student assignments efficiently.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">Basic Setup</span>
+            <span><i class="fas fa-clock"></i> Getting Started</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 2: CBSE Examination -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/6O2gx9vKaj4?modestbranding=1&rel=0"
+          title="Overall working of CBSE Examination - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Overall Working of CBSE Examination</h3>
+          <p class="tutorial-description">
+            Comprehensive guide to managing CBSE examinations in ConnectedU. Covers exam scheduling, grade
+            configuration, result management, and compliance with CBSE guidelines.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">CBSE</span>
+            <span><i class="fas fa-graduation-cap"></i> Examination</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 3: Examination Module -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/h0lpQAmQUVk?modestbranding=1&rel=0"
+          title="Overall Working Of Examination Module - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Overall Working Of Examination Module</h3>
+          <p class="tutorial-description">
+            Deep dive into the examination module features. Learn about creating exams, managing question banks,
+            automated grading, and generating comprehensive reports.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">Advanced</span>
+            <span><i class="fas fa-chart-line"></i> Module Overview</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 4: Add Subject and Subject Group -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/2a-eawA_6WQ?modestbranding=1&rel=0"
+          title="Add Subject and Subject Group - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Add Subject and Subject Group</h3>
+          <p class="tutorial-description">
+            Learn how to add and organize subjects and subject groups in ConnectedU. Essential for setting up your
+            academic structure and curriculum management.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">Basic Setup</span>
+            <span><i class="fas fa-book"></i> Academic Setup</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 5: Human Resource Setup and Working -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/R3n-exj67M8?modestbranding=1&rel=0"
+          title="Human Resource Setup and Working - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Human Resource Setup and Working</h3>
+          <p class="tutorial-description">
+            Complete guide to setting up and managing human resources in ConnectedU. Learn staff management, role
+            assignments, and HR workflows.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">HR Management</span>
+            <span><i class="fas fa-users"></i> Staff Setup</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 6: Add and Generate Student and Staff ID Card -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/rKMeGAGcSKY?modestbranding=1&rel=0"
+          title="Add and Generate Student and Staff ID Card - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Add and Generate Student and Staff ID Card</h3>
+          <p class="tutorial-description">
+            Step-by-step tutorial on creating and generating professional ID cards for students and staff members using
+            ConnectedU's ID card module.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">ID Management</span>
+            <span><i class="fas fa-id-card"></i> Card Generation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 7: QR Code Attendance -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/xRB1Fpv0Z3o?modestbranding=1&rel=0"
+          title="QR Code Attendance - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">QR Code Attendance</h3>
+          <p class="tutorial-description">
+            Learn how to implement QR code-based attendance system for quick and accurate attendance tracking for
+            students and staff.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">Attendance</span>
+            <span><i class="fas fa-qrcode"></i> QR Technology</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 8: Fee Create and Assign -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/H9IYSNyfzWw?modestbranding=1&rel=0"
+          title="Fee Create and Assign - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Fee Create and Assign</h3>
+          <p class="tutorial-description">
+            Master fee structure creation and assignment in ConnectedU. Learn to set up different fee types, terms, and
+            assign them to specific classes or students.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">Fee Management</span>
+            <span><i class="fas fa-rupee-sign"></i> Fee Setup</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 9: Fee Discount -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/1ucVuJLUVwM?modestbranding=1&rel=0"
+          title="Fee Discount - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Fee Discount</h3>
+          <p class="tutorial-description">
+            Learn how to create and apply fee discounts for students. Understand different discount types, eligibility
+            criteria, and automatic discount applications.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">Fee Management</span>
+            <span><i class="fas fa-percent"></i> Discounts</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 10: Offline Fee Payment from Student/Parent -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/B_o0UFiGFEk?modestbranding=1&rel=0"
+          title="Offline Fee Payment from Student/Parent - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Offline Fee Payment from Student/Parent</h3>
+          <p class="tutorial-description">
+            Guide to processing offline fee payments from students and parents. Learn payment recording, receipt
+            generation, and parent portal integration.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">Fee Management</span>
+            <span><i class="fas fa-money-bill"></i> Payment Processing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 11: General Setup of Examination Module -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/zj5Ghp2RhsA?modestbranding=1&rel=0"
+          title="General Setup of Examination Module - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">General Setup of Examination Module</h3>
+          <p class="tutorial-description">
+            Initial setup and configuration of the examination module. Learn the foundational steps for exam management
+            system setup.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">Examination</span>
+            <span><i class="fas fa-cog"></i> Setup</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 12: Basic Step of CBSE Examination -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/G3fK0n-yQGY?modestbranding=1&rel=0"
+          title="Basic Step of CBSE Examination - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Basic Step of CBSE Examination</h3>
+          <p class="tutorial-description">
+            Learn the fundamental steps for setting up CBSE examinations. Essential tutorial for schools following CBSE
+            curriculum and examination patterns.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">CBSE</span>
+            <span><i class="fas fa-graduation-cap"></i> Basic Setup</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 13: Generate Student Certificate -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/LdlcvBYnnvg?modestbranding=1&rel=0"
+          title="Generate Student Certificate - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Generate Student Certificate</h3>
+          <p class="tutorial-description">
+            Learn how to create and generate various student certificates including academic certificates, character
+            certificates, and custom certificates.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">Certificates</span>
+            <span><i class="fas fa-certificate"></i> Document Generation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 14: Overall Working of Lesson Plan -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/z7vOw58VBtw?modestbranding=1&rel=0"
+          title="Overall Working of Lesson Plan - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Overall Working of Lesson Plan</h3>
+          <p class="tutorial-description">
+            Comprehensive guide to lesson plan creation and management. Learn how teachers can create, schedule, and
+            track lesson plans effectively.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">Academic</span>
+            <span><i class="fas fa-chalkboard-teacher"></i> Lesson Planning</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 15: Promote Students -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/c9VPY1YzfwU?modestbranding=1&rel=0"
+          title="Promote Students - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Promote Students</h3>
+          <p class="tutorial-description">
+            Learn the student promotion process from one class to another. Understand batch promotion, individual
+            promotion, and handling promotion criteria.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">Student Management</span>
+            <span><i class="fas fa-level-up-alt"></i> Promotion</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 16: Manage Alumni -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/E_mMnmiGLr0?modestbranding=1&rel=0"
+          title="Manage Alumni - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Manage Alumni</h3>
+          <p class="tutorial-description">
+            Complete guide to alumni management system. Learn how to maintain alumni records, communication, and
+            engagement through ConnectedU platform.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">Alumni</span>
+            <span><i class="fas fa-user-graduate"></i> Alumni Management</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 17: Expense Head -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/U1WdAh-GOVM?modestbranding=1&rel=0"
+          title="Expense Head - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Expense Head</h3>
+          <p class="tutorial-description">
+            Learn how to set up and manage expense heads for proper financial categorization. Essential for school
+            expense tracking and financial reporting.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">Finance</span>
+            <span><i class="fas fa-list"></i> Expense Categories</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 18: Expenses -->
+      <div class="tutorial-card">
+        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/TDFO2Izm4T0?modestbranding=1&rel=0"
+          title="Expenses - ConnectedU Tutorial" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Expenses</h3>
+          <p class="tutorial-description">
+            Complete guide to expense management in ConnectedU. Learn how to record, track, and manage all school
+            expenses with proper documentation.
+          </p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">Finance</span>
+            <span><i class="fas fa-receipt"></i> Expense Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="text-align: center; margin-top: 3rem;">
+      <a href="index.html" class="back-to-home">
+        <i class="fas fa-arrow-left"></i>
+        Back to Home
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--text-primary); color: white; padding: 3rem 0 1rem;">
+    <div class="container">
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+            <span style="font-size: 1.5rem;">🎓</span>
+            <span style="font-size: 1.25rem; font-weight: 700;">ConnectedU</span>
+          </div>
+          <p style="opacity: 0.8; line-height: 1.6;">
+            Transforming school communication with innovative technology solutions for educational institutions across
+            India.
+          </p>
+        </div>
+        <div>
+          <h4 style="margin-bottom: 1rem; color: var(--accent-color);">Quick Links</h4>
+          <ul style="list-style: none; line-height: 2;">
+            <li><a href="index.html"
+                style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Home</a></li>
+            <li><a href="index.html#features"
+                style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Features</a>
+            </li>
+            <li><a href="index.html#modules"
+                style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Modules</a>
+            </li>
+            <li><a href="video-tutorials.html"
+                style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Video
+                Tutorials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="margin-bottom: 1rem; color: var(--accent-color);">Contact</h4>
+          <div style="line-height: 2; opacity: 0.8;">
+            <p><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i> info@connectedu.in</p>
+            <p><i class="fas fa-phone" style="margin-right: 0.5rem;"></i> +91 123 456 7890</p>
+            <p><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i> Kerala, India</p>
+          </div>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; text-align: center; opacity: 0.6;">
+        <p>&copy; 2025 ConnectedU. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const spans = mobileMenuBtn.querySelectorAll('span');
+      spans[0].classList.toggle('rotate-45');
+      spans[1].classList.toggle('opacity-0');
+      spans[2].classList.toggle('rotate-negative-45');
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Add animation on scroll for tutorial cards
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Initially hide cards and animate them in
+    document.querySelectorAll('.tutorial-card').forEach((card, index) => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      card.style.transitionDelay = `${index * 0.2}s`;
+      observer.observe(card);
+    });
+
+    // Hide YouTube branding elements using jQuery
+    $(document).ready(function () {
+      // Function to hide YouTube branding elements
+      function hideYouTubeBranding() {
+        $('iframe[src*="youtube"]').each(function () {
+          try {
+            const iframe = this;
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+            // Hide elements with class ytp-show-cards-title
+            $(iframeDoc).find('.ytp-show-cards-title').hide();
+
+            // Hide anchor elements with class ytp-youtube-button
+            $(iframeDoc).find('a.ytp-youtube-button').hide();
+
+            // Additional YouTube branding elements to hide
+            $(iframeDoc).find('.ytp-watermark').hide();
+            $(iframeDoc).find('.ytp-chrome-top').hide();
+
+          } catch (e) {
+            // Cross-origin restrictions prevent direct iframe access
+            console.log('Cross-origin restrictions for iframe');
+          }
+        });
+      }
+
+      // Run the function after a delay to ensure YouTube player is loaded
+      setTimeout(hideYouTubeBranding, 3000);
+
+      // Also run it when videos are played
+      $('iframe[src*="youtube"]').on('load', function () {
+        setTimeout(hideYouTubeBranding, 2000);
+      });
+
+      // Alternative approach using CSS injection
+      function injectCSS() {
+        $('iframe[src*="youtube"]').each(function () {
+          try {
+            const iframe = this;
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+            // Inject CSS to hide YouTube branding
+            const style = document.createElement('style');
+            style.textContent = `
+              .ytp-show-cards-title { display: none !important; }
+              a.ytp-youtube-button { display: none !important; }
+              .ytp-watermark { display: none !important; }
+              .ytp-chrome-top { display: none !important; }
+              .ytp-pause-overlay { display: none !important; }
+            `;
+
+            if (iframeDoc && iframeDoc.head) {
+              iframeDoc.head.appendChild(style);
+            }
+          } catch (e) {
+            console.log('Cannot inject CSS due to cross-origin restrictions');
+          }
+        });
+      }
+
+      // Try CSS injection method as backup
+      setTimeout(injectCSS, 4000);
+
+      // Run periodically to catch dynamically loaded content
+      setInterval(function () {
+        hideYouTubeBranding();
+        injectCSS();
+      }, 10000);
+    });
+  </script>
+</body>
+
+</html>
