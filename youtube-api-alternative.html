@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alternative Video Player - YouTube API Implementation</title>
+  <style>
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .custom-video-player {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+      color: white;
+      font-size: 14px;
+    }
+
+    .custom-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .play-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .branding-overlay {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- YouTube API Alternative Implementation -->
+  <div class="video-container">
+    <div id="player"></div>
+    <div class="branding-overlay">ConnectedU Tutorial</div>
+  </div>
+
+  <script>
+    // YouTube API Alternative - Custom Player
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '250',
+        width: '100%',
+        videoId: 'NHBFTA768FQ', // Replace with your video ID
+        playerVars: {
+          'modestbranding': 1,
+          'rel': 0,
+          'showinfo': 0,
+          'controls': 1,
+          'disablekb': 1,
+          'iv_load_policy': 3,
+          'cc_load_policy': 0,
+          'fs': 1,
+          'playsinline': 1
+        },
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      // Custom branding overlay
+      setTimeout(() => {
+        hideYouTubeButton();
+      }, 1000);
+    }
+
+    function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.PLAYING) {
+        hideYouTubeButton();
+      }
+    }
+
+    function hideYouTubeButton() {
+      // This function attempts to hide YouTube branding using CSS injection
+      var iframe = document.querySelector('#player iframe');
+      if (iframe) {
+        try {
+          var style = document.createElement('style');
+          style.textContent = `
+                        .ytp-youtube-button { display: none !important; }
+                        .ytp-watermark { display: none !important; }
+                        .ytp-chrome-top { display: none !important; }
+                        .ytp-show-cards-title { display: none !important; }
+                    `;
+          iframe.contentDocument.head.appendChild(style);
+        } catch (e) {
+          console.log('Cross-origin restrictions prevent direct styling');
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
