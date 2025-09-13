@@ -1,11 +1,25 @@
 /* Modern CSS Reset and Variables */
 :root {
-    --primary-color: #4361ee;
-    --secondary-color: #3f37c9;
-    --accent-color: #4895ef;
-    --text-primary: #2b2d42;
-    --text-secondary: #555b6e;
-    --background-light: #f8fafc;
+    --primary-color: #2E8B57;
+    /* Sea Green - trustworthy, growth-oriented */
+    --secondary-color: #4682B4;
+    /* Steel Blue - professional, calming */
+    --accent-color: #20B2AA;
+    /* Light Sea Green - complements primary, fresh */
+    --success-color: #228B22;
+    /* Forest Green - achievement */
+    --info-color: #1E90FF;
+    /* Dodger Blue - information */
+    --warning-color: #FFD700;
+    /* Gold - attention, important */
+    --text-primary: #2F4F4F;
+    /* Dark Slate Gray - readable, professional */
+    --text-secondary: #708090;
+    /* Slate Gray - softer secondary text */
+    --background-light: #F8F8FF;
+    /* Ghost White - clean, educational */
+    --background-warm: #FFF8DC;
+    /* Cornsilk - warm, welcoming */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
@@ -27,7 +41,7 @@ body {
 }
 
 .gradient-bg {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2E8B57 0%, #4682B4 100%);
 }
 
 /* Navigation Styles */
@@ -147,7 +161,7 @@ body {
     min-height: 100vh;
     padding: var(--spacing-lg) 0;
     overflow: hidden;
-    background: linear-gradient(135deg, #4361ee 0%, #4895ef 100%);
+    background: linear-gradient(135deg, #2E8B57 0%, #4682B4 100%);
     z-index: 1;
     /* Lower z-index for hero section */
 }
@@ -165,7 +179,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #4361ee 0%, #4895ef 100%);
+    background: linear-gradient(135deg, #2E8B57 0%, #4682B4 100%);
     opacity: 0.95;
 }
 
@@ -295,14 +309,14 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(45deg, #ff6b6b, #ffa500);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     color: white;
-    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 10px 30px rgba(46, 139, 87, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+    box-shadow: 0 15px 40px rgba(46, 139, 87, 0.4);
 }
 
 .btn-secondary {
@@ -321,7 +335,7 @@ body {
 .features {
     position: relative;
     padding: 5rem 0;
-    background: #f8fafc;
+    background: var(--background-warm);
     z-index: 2;
     /* Higher z-index for features section */
     margin-top: -1px;
@@ -353,7 +367,7 @@ body {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
     margin-bottom: 1rem;
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -404,13 +418,13 @@ body {
 
 .feature-card:hover .feature-icon {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(67, 97, 238, 0.3);
+    box-shadow: 0 10px 20px rgba(46, 139, 87, 0.3);
 }
 
 /* Message Types Section */
 .message-types {
     padding: 5rem 0;
-    background: #f8fafc;
+    background: var(--background-warm);
 }
 
 .message-grid {
@@ -448,7 +462,7 @@ body {
 
 /* Message Type Colors */
 .message-card:nth-child(1) {
-    border-left: 4px solid #4361ee;
+    border-left: 4px solid var(--info-color);
 }
 
 .message-card:nth-child(2) {
@@ -469,7 +483,7 @@ body {
 
 /* Message Card Hover Effects */
 .message-card:nth-child(1):hover .message-icon {
-    color: #4361ee;
+    color: var(--info-color);
 }
 
 .message-card:nth-child(2):hover .message-icon {
@@ -531,7 +545,7 @@ body {
 }
 
 .admin-icon {
-    background: linear-gradient(45deg, #4361ee, #3a0ca3);
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
 }
 
 .teacher-icon {
@@ -630,7 +644,7 @@ body {
 
 .footer h4 {
     margin-bottom: 1rem;
-    color: #667eea;
+    color: var(--primary-color);
 }
 
 .contact-form {
@@ -667,7 +681,7 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: var(--primary-color);
 }
 
 .mobile-preview {
@@ -753,7 +767,7 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     display: flex;
     align-items: center;
@@ -886,7 +900,7 @@ body {
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
 }
 
 .role-card:hover {
@@ -1161,14 +1175,6 @@ body {
     100% {
         transform: rotate(360deg) translateX(100px) rotate(-360deg);
     }
-}
-
-.module-card:nth-child(9) .module-icon {
-    background: linear-gradient(135deg, #3a0ca3 0%, #4895ef 100%);
-}
-
-.feature-card:nth-child(5) .feature-icon {
-    background: linear-gradient(135deg, #3a0ca3 0%, #4895ef 100%);
 }
 
 .contact-why-grid {
