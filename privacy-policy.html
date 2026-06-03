@@ -1,584 +1,676 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17526502385"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17526502385"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-17526502385');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Connectedu School Management System</title>
 
-    gtag('config', 'AW-17526502385');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - ConnectedU School Management System</title>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Privacy Policy - Connectedu School Management System">
+    <meta name="description" content="Connectedu privacy policy explaining how we collect, use, and protect your personal data in compliance with Indian data protection laws.">
+    <meta name="keywords" content="Connectedu privacy policy, data protection, DPDPA compliance, school management privacy, student data security">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://connectedu.in/privacy-policy.html">
 
-  <!-- Primary Meta Tags -->
-  <meta name="title" content="Privacy Policy - ConnectedU School Management System">
-  <meta name="description"
-    content="ConnectedU privacy policy explaining how we collect, use, and protect your personal data in compliance with Indian data protection laws.">
-  <meta name="keywords"
-    content="ConnectedU privacy policy, data protection, DPDPA compliance, school management privacy, student data security">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://connectedu.in/privacy-policy.html">
-  <meta property="og:title" content="Privacy Policy - ConnectedU School Management System">
-  <meta property="og:description"
-    content="ConnectedU privacy policy explaining how we collect, use, and protect your personal data.">
-  <meta property="og:image" content="https://connectedu.in/assets/images/og-image.jpg">
+    <!-- Core & Font Stylesheets -->
+    <link rel="stylesheet" href="assets/css/styles-v2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Calendly Integration Assets -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://connectedu.in/privacy-policy.html">
-  <meta property="twitter:title" content="Privacy Policy - ConnectedU School Management System">
-  <meta property="twitter:description"
-    content="ConnectedU privacy policy explaining how we collect, use, and protect your personal data.">
-  <meta property="twitter:image" content="https://connectedu.in/assets/images/twitter-image.jpg">
+    <style>
+        :root {
+            /* Map old local styles to premium CSS variables cleanly */
+            --primary-color: var(--primary-blue);
+            --secondary-color: var(--accent-teal);
+            --accent-color: var(--accent-purple);
+            --text-primary: var(--slate-900);
+            --text-secondary: var(--slate-600);
+            --background-light: var(--slate-50);
+            --border-radius: var(--radius-md);
+            --transition: var(--transition-smooth);
+        }
 
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://connectedu.in/privacy-policy.html">
+        .privacy-hero {
+            background: linear-gradient(135deg, var(--slate-900) 0%, var(--dark-navy) 100%);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--navy-card-border);
+        }
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-  <link rel="shortcut icon" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" href="assets/images/favicon.png">
+        .privacy-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.8;
+        }
 
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        .privacy-hero .container {
+            position: relative;
+            z-index: 2;
+        }
 
-  <style>
-    .privacy-hero {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-      color: white;
-      padding: 8rem 0 4rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
+        .privacy-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            color: var(--pure-white);
+            letter-spacing: -1px;
+        }
 
-    .privacy-hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-      opacity: 0.3;
-    }
+        .privacy-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+            opacity: 0.8;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .privacy-hero .container {
-      position: relative;
-      z-index: 2;
-    }
+        .privacy-content {
+            padding: 5rem 0;
+            background: var(--background-light);
+        }
 
-    .privacy-hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
+        .privacy-container {
+            max-width: 840px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-    .privacy-hero p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+        .privacy-section {
+            background: var(--pure-white);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--slate-100);
+            transition: var(--transition);
+        }
 
-    .privacy-content {
-      padding: 4rem 0;
-      background: var(--background-light);
-    }
+        .privacy-section:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(46, 91, 255, 0.1);
+        }
 
-    .privacy-container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
+        .privacy-section h2 {
+            color: var(--slate-900);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -0.5px;
+        }
 
-    .privacy-section {
-      background: white;
-      border-radius: var(--border-radius);
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      transition: var(--transition);
-    }
+        .privacy-section h2 i {
+            color: var(--primary-color);
+        }
 
-    .privacy-section:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-    }
+        .privacy-section h3 {
+            color: var(--slate-800);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+        }
 
-    .privacy-section h2 {
-      color: var(--primary-color);
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
+        .privacy-section p {
+            color: var(--slate-600);
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
 
-    .privacy-section h3 {
-      color: var(--text-primary);
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin: 1.5rem 0 0.75rem;
-    }
+        .privacy-section ul {
+            color: var(--slate-600);
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+            padding-left: 20px;
+        }
 
-    .privacy-section p {
-      color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
+        .privacy-section li {
+            margin-bottom: 8px;
+        }
 
-    .privacy-section ul {
-      color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
-    }
+        .contact-info {
+            background: var(--slate-50);
+            border: 1px solid var(--slate-100);
+            color: var(--slate-800);
+            padding: 24px;
+            border-radius: var(--radius-sm);
+            margin-top: 20px;
+        }
 
-    .privacy-section li {
-      margin-bottom: 0.5rem;
-    }
+        .contact-info h4 {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--slate-900);
+        }
 
-    .contact-info {
-      background: #2c3e50;
-      color: white;
-      padding: 1.5rem;
-      border-radius: var(--border-radius);
-      margin-top: 1rem;
-    }
+        .contact-info p {
+            margin-bottom: 8px;
+            opacity: 1;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--slate-600);
+        }
 
-    .contact-info h4 {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-    }
+        .contact-info p i {
+            color: var(--primary-color);
+            width: 16px;
+        }
 
-    .contact-info p {
-      margin-bottom: 0.5rem;
-      opacity: 0.9;
-    }
+        .effective-date {
+            background: linear-gradient(135deg, rgba(46, 91, 255, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%);
+            border: 1px solid rgba(46, 91, 255, 0.1);
+            color: var(--primary-blue);
+            padding: 16px 24px;
+            border-radius: var(--radius-sm);
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
 
-    .effective-date {
-      background: #34495e;
-      color: white;
-      padding: 1rem 1.5rem;
-      border-radius: var(--border-radius);
-      text-align: center;
-      margin-bottom: 2rem;
-      font-weight: 500;
-    }
+        .breadcrumb {
+            background: var(--pure-white);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--slate-100);
+            margin-top: 92px; /* Balanced for desktop header height */
+        }
 
-    .breadcrumb {
-      background: white;
-      padding: 1rem 0;
-      border-bottom: 1px solid #eee;
-      margin-top: 80px;
-    }
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--slate-400);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
 
-    .breadcrumb-nav {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--text-secondary);
-    }
+        .breadcrumb-nav a {
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
 
-    .breadcrumb-nav a {
-      color: var(--primary-color);
-      text-decoration: none;
-      transition: var(--transition);
-    }
+        .breadcrumb-nav a:hover {
+            color: var(--primary-blue-hover);
+        }
 
-    .breadcrumb-nav a:hover {
-      text-decoration: underline;
-    }
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 28px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            margin: 40px 0;
+            box-shadow: 0 4px 15px -3px rgba(46, 91, 255, 0.3);
+        }
 
-    .back-to-home {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--primary-color);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: var(--transition);
-      margin: 2rem 0;
-    }
+        .back-to-home:hover {
+            transform: translateY(-2px);
+            background-color: var(--primary-blue-hover);
+            box-shadow: 0 8px 25px -3px rgba(46, 91, 255, 0.4);
+        }
 
-    .back-to-home:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(67, 97, 238, 0.4);
-    }
+        @media (max-width: 991px) {
+            .breadcrumb {
+                margin-top: 70px; /* Aligned for tablet/mobile header height */
+            }
+        }
 
-    @media (max-width: 768px) {
-      .privacy-hero h1 {
-        font-size: 2rem;
-      }
+        @media (max-width: 768px) {
+            .privacy-hero h1 {
+                font-size: 2.2rem;
+            }
 
-      .privacy-hero p {
-        font-size: 1rem;
-      }
+            .privacy-container {
+                padding: 0 16px;
+            }
 
-      .privacy-container {
-        padding: 0 1rem;
-      }
-
-      .privacy-section {
-        padding: 1.5rem;
-      }
-    }
-  </style>
+            .privacy-section {
+                padding: 24px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <div class="nav-content">
-        <a href="index.html" class="logo">
-          <img src="assets/images/logo.png" alt="ConnectedU Logo" class="logo-icon">
-        </a>
-        <ul class="nav-links">
-          <li><a href="index.html#features">Features</a></li>
-          <li><a href="index.html#modules">Modules</a></li>
-          <li><a href="index.html#roles">User Roles</a></li>
-          <li><a href="video-tutorials.html">Video Tutorials</a></li>
-          <li><a href="index.html#demo" class="nav-cta">Request Demo</a></li>
-        </ul>
-        <button class="mobile-menu-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-  </nav>
+    <!-- Header & Navigation -->
+    <header class="header" id="home">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html#home" class="logo-wrapper">
+                    <img src="assets/images/latest/logo-text.png" alt="Connectedu Logo">
+                </a>
+                
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html#features" class="nav-link">Features</a></li>
+                        <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+                        <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+                        <li><a href="index.html#about" class="nav-link">About</a></li>
+                        <li><a href="video-tutorials.html" class="nav-link">Resources</a></li>
+                        
+                        <!-- Mobile Actions -->
+                        <li class="nav-actions-mobile">
+                            <a href="#login" class="btn btn-secondary">Login</a>
+                            <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">Book a Demo</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="nav-actions">
+                    <a href="#login" class="login-link">Login</a>
+                    <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">Book a Demo</a>
+                </div>
 
-  <!-- Breadcrumb -->
-  <section class="breadcrumb">
-    <div class="container">
-      <nav class="breadcrumb-nav">
-        <a href="index.html">Home</a>
-        <i class="fas fa-chevron-right"></i>
-        <span>Privacy Policy</span>
-      </nav>
-    </div>
-  </section>
-
-  <!-- Hero Section -->
-  <section class="privacy-hero">
-    <div class="container">
-      <h1><i class="fas fa-shield-alt"></i> Privacy Policy</h1>
-      <p>We are committed to protecting your privacy and ensuring the security of your personal data in compliance with Indian data protection laws.</p>
-    </div>
-  </section>
-
-  <!-- Privacy Content -->
-  <section class="privacy-content">
-    <div class="privacy-container">
-      <div class="effective-date">
-        <strong>Effective Date:</strong> January 1, 2025 | <strong>Last Updated:</strong> January 1, 2025
-      </div>
-
-      <!-- Introduction -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-info-circle"></i> Introduction</h2>
-        <p>Turgut, a proprietorship owned by Muhammed Shihabudeen Labba, values your privacy and is committed to protecting personal data collected through ConnectedU ("Platform"), including the website https://connectedu.in and the mobile app.</p>
-        <p>This Privacy Policy explains what data we collect, how we use it, and your rights under applicable Indian laws, including the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023 (DPDPA).</p>
-      </div>
-
-      <!-- Who We Are -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-building"></i> Who We Are</h2>
-        <ul>
-          <li><strong>Business Name:</strong> Turgut (Proprietorship)</li>
-          <li><strong>Owner:</strong> Muhammed Shihabudeen Labba</li>
-          <li><strong>GSTIN:</strong> 32AHDPL2727R1Z3</li>
-          <li><strong>Registered Address:</strong> 10/179, Valanjavazhy, Alappuzha, Alappuzha, Kerala, 688005</li>
-          <li><strong>Contact Email:</strong> hello@connectedu.in</li>
-          <li><strong>Contact Phone:</strong> +919037138030</li>
-        </ul>
-      </div>
-
-      <!-- Data We Collect -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-database"></i> Data We Collect</h2>
-        <p>We collect personal and non-personal data to provide, improve, and secure the Platform. This may include:</p>
-        
-        <h3>Personal Data</h3>
-        <ul>
-          <li>Student information: name, date of birth, enrollment number, class/section, academic records</li>
-          <li>Teacher information: name, contact details, qualifications, attendance</li>
-          <li>Parent/guardian information: name, email, phone, relationship with student</li>
-          <li>Login credentials: username, password</li>
-          <li>Payment details (for subscription or module fees)</li>
-        </ul>
-
-        <h3>Non-Personal Data</h3>
-        <ul>
-          <li>Device information (type, OS, IP address)</li>
-          <li>Usage data (pages visited, features used, app activity)</li>
-          <li>Cookies and analytics data (optional)</li>
-        </ul>
-      </div>
-
-      <!-- Children's Data -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-child"></i> Children's Data</h2>
-        <ul>
-          <li>The Platform is used by minors under 18 under supervision of parents/guardians and educational institutions.</li>
-          <li>Personal data of minors is collected only with explicit consent from parents/guardians or the school acting on their behalf.</li>
-          <li>Parents/guardians have the right to access, correct, or request deletion of their child's data at any time.</li>
-        </ul>
-      </div>
-
-      <!-- How We Use Your Data -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-cogs"></i> How We Use Your Data</h2>
-        <p>We use collected data to:</p>
-        <ul>
-          <li>Provide and operate the Platform services for schools, teachers, students, and parents</li>
-          <li>Manage accounts, subscriptions, and payments</li>
-          <li>Communicate important updates, notices, or announcements</li>
-          <li>Analyze usage patterns to improve features and performance</li>
-          <li>Maintain security, prevent fraud, and comply with legal obligations</li>
-        </ul>
-      </div>
-
-      <!-- Data Sharing -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-share-alt"></i> Data Sharing</h2>
-        <p>We do not sell or rent personal data. We may share data only in these cases:</p>
-        <ul>
-          <li>With schools or authorized administrators for academic and administrative purposes</li>
-          <li>With service providers (e.g., cloud hosting, SMS gateways, payment processors) under strict contractual obligations</li>
-          <li>To comply with legal obligations or respond to lawful requests by government authorities</li>
-        </ul>
-      </div>
-
-      <!-- Data Retention -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-clock"></i> Data Retention</h2>
-        <ul>
-          <li>Personal data is retained only as long as necessary to provide services or comply with legal obligations.</li>
-          <li>Schools may request data export or deletion at any time.</li>
-          <li>Usage and non-personal data may be retained for analytics and improvement purposes.</li>
-        </ul>
-      </div>
-
-      <!-- Data Security -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-lock"></i> Data Security</h2>
-        <ul>
-          <li>We implement reasonable technical, administrative, and physical safeguards to protect data.</li>
-          <li>Measures include: encryption (in transit and at rest), secure authentication, access control, periodic security audits, and regular backups.</li>
-          <li>While we strive to protect data, no system is 100% secure; users must follow safe practices for accounts and devices.</li>
-        </ul>
-      </div>
-
-      <!-- Your Rights -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-user-shield"></i> Your Rights</h2>
-        <p>Under the Digital Personal Data Protection Act, 2023, users have the right to:</p>
-        <ul>
-          <li>Access personal data</li>
-          <li>Correct or update personal data</li>
-          <li>Request deletion of personal data</li>
-          <li>Withdraw consent for data processing</li>
-          <li>Lodge complaints with the Data Protection Officer (DPO) or relevant authority</li>
-        </ul>
-        <div class="contact-info">
-          <h4>Contact for privacy requests:</h4>
-          <p><i class="fas fa-envelope"></i> Email: hello@connectedu.in</p>
-          <p><i class="fas fa-phone"></i> Phone: +919037138030</p>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-      </div>
+    </header>
 
-      <!-- Cookies and Tracking -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-cookie-bite"></i> Cookies and Tracking</h2>
-        <ul>
-          <li>We use cookies and similar technologies for analytics, performance, and user experience.</li>
-          <li>You can manage cookie preferences through your browser or app settings.</li>
-        </ul>
-      </div>
-
-      <!-- Third-Party Services -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-external-link-alt"></i> Third-Party Services</h2>
-        <ul>
-          <li>The Platform may use third-party services (e.g., AWS, Firebase, SMS gateways, payment gateways).</li>
-          <li>Third parties are bound by data protection agreements and use data only for service purposes.</li>
-          <li>We are not responsible for the privacy practices of these third parties; users should review their policies separately.</li>
-        </ul>
-      </div>
-
-      <!-- Data Breach Notification -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-exclamation-triangle"></i> Data Breach Notification</h2>
-        <ul>
-          <li>In the event of a data breach, we will notify affected users and the Data Protection Board as required by law.</li>
-          <li>We maintain an internal incident response plan to mitigate risks.</li>
-        </ul>
-      </div>
-
-      <!-- Cross-Border Data Transfer -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-globe"></i> Cross-Border Data Transfer</h2>
-        <ul>
-          <li>Some data may be stored or processed on servers outside India (e.g., cloud hosting).</li>
-          <li>We ensure such transfers comply with DPDPA cross-border data rules and maintain adequate safeguards.</li>
-        </ul>
-      </div>
-
-      <!-- Changes to This Privacy Policy -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-edit"></i> Changes to This Privacy Policy</h2>
-        <ul>
-          <li>We may update this Privacy Policy periodically.</li>
-          <li>Users will be notified of material changes via the Platform or email.</li>
-          <li>Continued use of the Platform after updates constitutes acceptance of the revised policy.</li>
-        </ul>
-      </div>
-
-      <!-- Governing Law and Jurisdiction -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-gavel"></i> Governing Law and Jurisdiction</h2>
-        <ul>
-          <li>This Privacy Policy is governed by the laws of India.</li>
-          <li>Any disputes shall be subject to the exclusive jurisdiction of courts in Kerala, preferably Ernakulam.</li>
-        </ul>
-      </div>
-
-      <!-- Contact Us -->
-      <div class="privacy-section">
-        <h2><i class="fas fa-envelope"></i> Contact Us</h2>
-        <p>For privacy-related questions, concerns, or requests:</p>
-        <div class="contact-info">
-          <h4>Turgut (Proprietorship owned by Muhammed Shihabudeen Labba)</h4>
-          <p><i class="fas fa-envelope"></i> Email: hello@connectedu.in</p>
-          <p><i class="fas fa-phone"></i> Phone: +919037138030</p>
-          <p><i class="fas fa-map-marker-alt"></i> Address: 10/179, Valanjavazhy, Alappuzha, Alappuzha, Kerala, 688005</p>
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Privacy Policy</span>
+            </nav>
         </div>
-      </div>
+    </section>
 
-      <div style="text-align: center; margin-top: 3rem;">
-        <a href="index.html" class="back-to-home">
-          <i class="fas fa-arrow-left"></i>
-          Back to Home
-        </a>
-      </div>
+    <!-- Hero Section -->
+    <section class="privacy-hero">
+        <div class="container">
+            <h1><i class="fas fa-shield-alt"></i> Privacy Policy</h1>
+            <p>We are committed to protecting your privacy and ensuring the security of your personal data in compliance with Indian data protection laws.</p>
+        </div>
+    </section>
+
+    <!-- Privacy Content -->
+    <section class="privacy-content">
+        <div class="privacy-container">
+            <div class="effective-date">
+                <strong>Effective Date:</strong> January 1, 2025 | <strong>Last Updated:</strong> January 1, 2025
+            </div>
+
+            <!-- Introduction -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-info-circle"></i> Introduction</h2>
+                <p>Turgut, a proprietorship owned by Muhammed Shihabudeen Labba, values your privacy and is committed to protecting personal data collected through ConnectedU ("Platform"), including the website https://connectedu.in and the mobile app.</p>
+                <p>This Privacy Policy explains what data we collect, how we use it, and your rights under applicable Indian laws, including the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023 (DPDPA).</p>
+            </div>
+
+            <!-- Who We Are -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-building"></i> Who We Are</h2>
+                <ul>
+                    <li><strong>Business Name:</strong> Turgut (Proprietorship)</li>
+                    <li><strong>Owner:</strong> Muhammed Shihabudeen Labba</li>
+                    <li><strong>GSTIN:</strong> 32AHDPL2727R1Z3</li>
+                    <li><strong>Registered Address:</strong> 10/179, Valanjavazhy, Alappuzha, Alappuzha, Kerala, 688005</li>
+                    <li><strong>Contact Email:</strong> hello@connectedu.in</li>
+                    <li><strong>Contact Phone:</strong> +919037138030</li>
+                </ul>
+            </div>
+
+            <!-- Data We Collect -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-database"></i> Data We Collect</h2>
+                <p>We collect personal and non-personal data to provide, improve, and secure the Platform. This may include:</p>
+                
+                <h3>Personal Data</h3>
+                <ul>
+                    <li>Student information: name, date of birth, enrollment number, class/section, academic records</li>
+                    <li>Teacher information: name, contact details, qualifications, attendance</li>
+                    <li>Parent/guardian information: name, email, phone, relationship with student</li>
+                    <li>Login credentials: username, password</li>
+                    <li>Payment details (for subscription or module fees)</li>
+                </ul>
+
+                <h3>Non-Personal Data</h3>
+                <ul>
+                    <li>Device information (type, OS, IP address)</li>
+                    <li>Usage data (pages visited, features used, app activity)</li>
+                    <li>Cookies and analytics data (optional)</li>
+                </ul>
+            </div>
+
+            <!-- Children's Data -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-child"></i> Children's Data</h2>
+                <ul>
+                    <li>The Platform is used by minors under 18 under supervision of parents/guardians and educational institutions.</li>
+                    <li>Personal data of minors is collected only with explicit consent from parents/guardians or the school acting on their behalf.</li>
+                    <li>Parents/guardians have the right to access, correct, or request deletion of their child's data at any time.</li>
+                </ul>
+            </div>
+
+            <!-- How We Use Your Data -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-cogs"></i> How We Use Your Data</h2>
+                <p>We use collected data to:</p>
+                <ul>
+                    <li>Provide and operate the Platform services for schools, teachers, students, and parents</li>
+                    <li>Manage accounts, subscriptions, and payments</li>
+                    <li>Communicate important updates, notices, or announcements</li>
+                    <li>Analyze usage patterns to improve features and performance</li>
+                    <li>Maintain security, prevent fraud, and comply with legal obligations</li>
+                </ul>
+            </div>
+
+            <!-- Data Sharing -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-share-alt"></i> Data Sharing</h2>
+                <p>We do not sell or rent personal data. We may share data only in these cases:</p>
+                <ul>
+                    <li>With schools or authorized administrators for academic and administrative purposes</li>
+                    <li>With service providers (e.g., cloud hosting, SMS gateways, payment processors) under strict contractual obligations</li>
+                    <li>To comply with legal obligations or respond to lawful requests by government authorities</li>
+                </ul>
+            </div>
+
+            <!-- Data Retention -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-clock"></i> Data Retention</h2>
+                <ul>
+                    <li>Personal data is retained only as long as necessary to provide services or comply with legal obligations.</li>
+                    <li>Schools may request data export or deletion at any time.</li>
+                    <li>Usage and non-personal data may be retained for analytics and improvement purposes.</li>
+                </ul>
+            </div>
+
+            <!-- Data Security -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-lock"></i> Data Security</h2>
+                <ul>
+                    <li>We implement reasonable technical, administrative, and physical safeguards to protect data.</li>
+                    <li>Measures include: encryption (in transit and at rest), secure authentication, access control, periodic security audits, and regular backups.</li>
+                    <li>While we strive to protect data, no system is 100% secure; users must follow safe practices for accounts and devices.</li>
+                </ul>
+            </div>
+
+            <!-- Your Rights -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-user-shield"></i> Your Rights</h2>
+                <p>Under the Digital Personal Data Protection Act, 2023, users have the right to:</p>
+                <ul>
+                    <li>Access personal data</li>
+                    <li>Correct or update personal data</li>
+                    <li>Request deletion of personal data</li>
+                    <li>Withdraw consent for data processing</li>
+                    <li>Lodge complaints with the Data Protection Officer (DPO) or relevant authority</li>
+                </ul>
+                <div class="contact-info">
+                    <h4>Contact for privacy requests:</h4>
+                    <p><i class="fas fa-envelope"></i> Email: hello@connectedu.in</p>
+                    <p><i class="fas fa-phone"></i> Phone: +919037138030</p>
+                </div>
+            </div>
+
+            <!-- Cookies and Tracking -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-cookie-bite"></i> Cookies and Tracking</h2>
+                <ul>
+                    <li>We use cookies and similar technologies for analytics, performance, and user experience.</li>
+                    <li>You can manage cookie preferences through your browser or app settings.</li>
+                </ul>
+            </div>
+
+            <!-- Third-Party Services -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-external-link-alt"></i> Third-Party Services</h2>
+                <ul>
+                    <li>The Platform may use third-party services (e.g., AWS, Firebase, SMS gateways, payment gateways).</li>
+                    <li>Third parties are bound by data protection agreements and use data only for service purposes.</li>
+                    <li>We are not responsible for the privacy practices of these third parties; users should review their policies separately.</li>
+                </ul>
+            </div>
+
+            <!-- Data Breach Notification -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-exclamation-triangle"></i> Data Breach Notification</h2>
+                <ul>
+                    <li>In the event of a data breach, we will notify affected users and the Data Protection Board as required by law.</li>
+                    <li>We maintain an internal incident response plan to mitigate risks.</li>
+                </ul>
+            </div>
+
+            <!-- Cross-Border Data Transfer -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-globe"></i> Cross-Border Data Transfer</h2>
+                <ul>
+                    <li>Some data may be stored or processed on servers outside India (e.g., cloud hosting).</li>
+                    <li>We ensure such transfers comply with DPDPA cross-border data rules and maintain adequate safeguards.</li>
+                </ul>
+            </div>
+
+            <!-- Changes to This Privacy Policy -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-edit"></i> Changes to This Privacy Policy</h2>
+                <ul>
+                    <li>We may update this Privacy Policy periodically.</li>
+                    <li>Users will be notified of material changes via the Platform or email.</li>
+                    <li>Continued use of the Platform after updates constitutes acceptance of the revised policy.</li>
+                </ul>
+            </div>
+
+            <!-- Governing Law and Jurisdiction -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-gavel"></i> Governing Law and Jurisdiction</h2>
+                <ul>
+                    <li>This Privacy Policy is governed by the laws of India.</li>
+                    <li>Any disputes shall be subject to the exclusive jurisdiction of courts in Kerala, preferably Ernakulam.</li>
+                </ul>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="privacy-section">
+                <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+                <p>For privacy-related questions, concerns, or requests:</p>
+                <div class="contact-info">
+                    <h4>Turgut (Proprietorship owned by Muhammed Shihabudeen Labba)</h4>
+                    <p><i class="fas fa-envelope"></i> Email: hello@connectedu.in</p>
+                    <p><i class="fas fa-phone"></i> Phone: +919037138030</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Address: 10/179, Valanjavazhy, Alappuzha, Alappuzha, Kerala, 688005</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html" class="back-to-home">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h4>Connectedu</h4>
+                    <p>Revolutionizing school management and bridging parent-classroom connections through advanced real-time SaaS technology.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="footer-column-title">Features</h5>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html#features">Smart Attendance</a></li>
+                        <li class="footer-link"><a href="index.html#features">Bus Tracking</a></li>
+                        <li class="footer-link"><a href="index.html#features">Digital Ledger Fees</a></li>
+                        <li class="footer-link"><a href="index.html#features">AI Automation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="footer-column-title">Solutions</h5>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html#solutions">For Principals</a></li>
+                        <li class="footer-link"><a href="index.html#solutions">For Administrators</a></li>
+                        <li class="footer-link"><a href="index.html#solutions">For Teachers</a></li>
+                        <li class="footer-link"><a href="index.html#solutions">For Parents</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="footer-column-title">Pricing</h5>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html#pricing">Annual Plans</a></li>
+                        <li class="footer-link"><a href="index.html#pricing">Onboarding Support</a></li>
+                        <li class="footer-link"><a href="index.html#pricing">Custom Setup</a></li>
+                        <li class="footer-link"><a href="index.html#pricing">Addons</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="footer-column-title">Resources</h5>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html#resources">Knowledge Base</a></li>
+                        <li class="footer-link"><a href="index.html#resources">Video Walkthroughs</a></li>
+                        <li class="footer-link"><a href="index.html#resources">Platform Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Connectedu. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Sales Modal -->
+    <div class="contact-modal" id="contactSalesModal">
+        <div class="contact-modal-content glass-card">
+            <button class="contact-modal-close" aria-label="Close contact modal">&times;</button>
+            <div class="contact-modal-header">
+                <h3>Talk to our Sales Team</h3>
+                <p>Learn how Connectedu can transform parent communication and school administration.</p>
+            </div>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-sales-form">
+                <input type="hidden" name="access_key" value="e6c00b1f-b590-4d88-9fe9-2616c56c2914">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                <div class="form-grid">
+                    <div class="form-group-v2">
+                        <label for="salesName">Contact Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="salesName" name="name" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+                    <div class="form-group-v2">
+                        <label for="salesEmail">Work Email</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="salesEmail" name="email" placeholder="principal@yourschool.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group-v2">
+                        <label for="salesPhone">Phone Number</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="salesPhone" name="phone" placeholder="e.g. +91 98765 43210" required>
+                        </div>
+                    </div>
+                    <div class="form-group-v2">
+                        <label for="salesSchool">School Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-school"></i>
+                            <input type="text" id="salesSchool" name="school_name" placeholder="e.g. Greenfield Public School" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group-v2 full-width">
+                    <label for="salesMessage">Tell us about your school</label>
+                    <div class="input-wrapper textarea-wrapper">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <textarea id="salesMessage" name="message" rows="4" placeholder="How many students do you manage? What specific features (fees, attendance, bus tracking) are you looking to optimize?" required></textarea>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary submit-sales-btn">
+                    <span>Send Inquiry</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer style="background: var(--text-primary); color: white; padding: 3rem 0 1rem;">
-    <div class="container">
-      <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-            <span style="font-size: 1.5rem;">🎓</span>
-            <span style="font-size: 1.25rem; font-weight: 700;">ConnectedU</span>
-          </div>
-          <p style="opacity: 0.8; line-height: 1.6;">
-            Transforming school communication with innovative technology solutions for educational institutions across
-            India.
-          </p>
-        </div>
-        <div>
-          <h4 style="margin-bottom: 1rem; color: var(--accent-color);">Quick Links</h4>
-          <ul style="list-style: none; line-height: 2;">
-            <li><a href="index.html"
-                style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Home</a></li>
-            <li><a href="index.html#features"
-                style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Features</a>
-            </li>
-            <li><a href="index.html#modules"
-                style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Modules</a>
-            </li>
-            <li><a href="video-tutorials.html"
-                style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Video
-                Tutorials</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 style="margin-bottom: 1rem; color: var(--accent-color);">Contact</h4>
-          <div style="line-height: 2; opacity: 0.8;">
-            <p><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i> info@connectedu.in</p>
-            <p><i class="fas fa-phone" style="margin-right: 0.5rem;"></i> +91 123 456 7890</p>
-            <p><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i> Kerala, India</p>
-          </div>
-        </div>
-      </div>
-      <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; text-align: center; opacity: 0.6;">
-        <p>&copy; 2025 ConnectedU. All rights reserved. | <a href="privacy-policy.html" style="color: var(--accent-color); text-decoration: none;">Privacy Policy</a> | <a href="terms-conditions.html" style="color: var(--accent-color); text-decoration: none;">Terms & Conditions</a></p>
-      </div>
-    </div>
-  </footer>
+    <!-- Core App JS -->
+    <script src="assets/js/app-v2.js"></script>
 
-  <script>
-    // Mobile menu toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
+    <script>
+        // Add animation on scroll for privacy sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-    mobileMenuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      const spans = mobileMenuBtn.querySelectorAll('span');
-      spans[0].classList.toggle('rotate-45');
-      spans[1].classList.toggle('opacity-0');
-      spans[2].classList.toggle('rotate-negative-45');
-    });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
 
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // Add animation on scroll for privacy sections
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-
-    // Initially hide sections and animate them in
-    document.querySelectorAll('.privacy-section').forEach((section, index) => {
-      section.style.opacity = '0';
-      section.style.transform = 'translateY(30px)';
-      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      section.style.transitionDelay = `${index * 0.1}s`;
-      observer.observe(section);
-    });
-  </script>
+        // Initially hide sections and animate them in
+        document.querySelectorAll('.privacy-section').forEach((section, index) => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            section.style.transitionDelay = `${index * 0.08}s`;
+            observer.observe(section);
+        });
+    </script>
 </body>
-
 </html>

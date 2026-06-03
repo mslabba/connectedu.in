@@ -47,18 +47,36 @@
   <link rel="shortcut icon" href="assets/images/favicon.png">
   <link rel="apple-touch-icon" href="assets/images/favicon.png">
 
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles-v2.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Calendly Integration Assets -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
   <style>
+    :root {
+      /* Map old local styles to premium CSS variables cleanly */
+      --primary-color: var(--primary-blue);
+      --secondary-color: var(--accent-teal);
+      --accent-color: var(--accent-purple);
+      --text-primary: var(--slate-900);
+      --text-secondary: var(--slate-600);
+      --background-light: var(--slate-50);
+      --border-radius: var(--radius-md);
+      --transition: var(--transition-smooth);
+    }
+
     .tutorials-hero {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      background: linear-gradient(135deg, var(--slate-900) 0%, var(--dark-navy) 100%);
       color: white;
       padding: 8rem 0 4rem;
       text-align: center;
       position: relative;
       overflow: hidden;
+      border-bottom: 1px solid var(--navy-card-border);
     }
 
     .tutorials-hero::before {
@@ -68,8 +86,8 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-      opacity: 0.3;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+      opacity: 0.8;
     }
 
     .tutorials-hero .container {
@@ -78,22 +96,24 @@
     }
 
     .tutorials-hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+      color: var(--pure-white);
+      letter-spacing: -1px;
     }
 
     .tutorials-hero p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-      max-width: 600px;
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      opacity: 0.8;
+      max-width: 680px;
       margin-left: auto;
       margin-right: auto;
     }
 
     .tutorials-grid {
-      padding: 4rem 0;
+      padding: 5rem 0;
       background: var(--background-light);
     }
 
@@ -107,17 +127,19 @@
     }
 
     .tutorial-card {
-      background: white;
+      background: var(--pure-white);
       border-radius: var(--border-radius);
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--slate-100);
       transition: var(--transition);
       position: relative;
     }
 
     .tutorial-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(46, 91, 255, 0.1);
     }
 
     .tutorial-video {
@@ -125,6 +147,54 @@
       width: 100%;
       height: 250px;
       border: 0;
+    }
+
+    .tutorial-video-placeholder {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tutorial-video-placeholder::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      transition: background 0.3s ease;
+    }
+
+    .tutorial-video-placeholder:hover::before {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .play-trigger-btn {
+      position: relative;
+      z-index: 2;
+      width: 60px;
+      height: 60px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 4px 15px rgba(46, 91, 255, 0.4);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .tutorial-video-placeholder:hover .play-trigger-btn {
+      transform: scale(1.1);
+      background: var(--primary-blue-hover);
     }
 
     /* Hide YouTube branding elements */
@@ -138,11 +208,6 @@
       background: transparent;
       pointer-events: none;
       z-index: 10;
-    }
-
-    .tutorial-card {
-      position: relative;
-      overflow: hidden;
     }
 
     .tutorial-card::after {
@@ -186,26 +251,34 @@
     }
 
     .tutorial-tag {
-      background: var(--primary-color);
-      color: white;
+      background: rgba(46, 91, 255, 0.1);
+      color: var(--primary-blue);
       padding: 0.25rem 0.75rem;
       border-radius: 20px;
       font-size: 0.8rem;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .breadcrumb {
-      background: white;
-      padding: 1rem 0;
-      border-bottom: 1px solid #eee;
-      margin-top: 80px;
+      background: var(--pure-white);
+      padding: 16px 0;
+      border-bottom: 1px solid var(--slate-100);
+      margin-top: 92px; /* Balanced for desktop header height */
+    }
+
+    @media (max-width: 991px) {
+      .breadcrumb {
+        margin-top: 70px; /* Mobile header height */
+      }
     }
 
     .breadcrumb-nav {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      color: var(--text-secondary);
+      gap: 8px;
+      color: var(--slate-400);
+      font-size: 0.9rem;
+      font-weight: 500;
     }
 
     .breadcrumb-nav a {
@@ -215,26 +288,29 @@
     }
 
     .breadcrumb-nav a:hover {
+      color: var(--primary-blue-hover);
       text-decoration: underline;
     }
 
     .back-to-home {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 10px;
       background: var(--primary-color);
       color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 50px;
+      padding: 12px 28px;
+      border-radius: var(--radius-md);
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       transition: var(--transition);
-      margin: 2rem 0;
+      margin: 40px 0;
+      box-shadow: 0 4px 15px -3px rgba(46, 91, 255, 0.3);
     }
 
     .back-to-home:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(67, 97, 238, 0.4);
+      box-shadow: 0 6px 20px -3px rgba(46, 91, 255, 0.4);
+      color: white;
     }
 
     @media (max-width: 768px) {
@@ -259,28 +335,43 @@
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
+  <!-- Header & Navigation -->
+  <header class="header" id="home">
     <div class="container">
-      <div class="nav-content">
-        <a href="index.html" class="logo">
-          <img src="assets/images/logo.png" alt="ConnectedU Logo" class="logo-icon">
+      <div class="nav-container">
+        <a href="index.html#home" class="logo-wrapper">
+          <img src="assets/images/latest/logo-text.png" alt="Connectedu Logo">
         </a>
-        <ul class="nav-links">
-          <li><a href="index.html#features">Features</a></li>
-          <li><a href="index.html#modules">Modules</a></li>
-          <li><a href="index.html#roles">User Roles</a></li>
-          <li><a href="video-tutorials.html" class="nav-active">Video Tutorials</a></li>
-          <li><a href="index.html#demo" class="nav-cta">Request Demo</a></li>
-        </ul>
-        <button class="mobile-menu-btn">
+        
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html#features" class="nav-link">Features</a></li>
+            <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+            <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="video-tutorials.html" class="nav-link active">Resources</a></li>
+            
+            <!-- Mobile Actions -->
+            <li class="nav-actions-mobile">
+              <a href="index.html#login" class="btn btn-secondary">Login</a>
+              <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">Book a Demo</a>
+            </li>
+          </ul>
+        </nav>
+        
+        <div class="nav-actions">
+          <a href="index.html#login" class="login-link">Login</a>
+          <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">Book a Demo</a>
+        </div>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
       </div>
     </div>
-  </nav>
+  </header>
 
   <!-- Breadcrumb -->
   <section class="breadcrumb">
@@ -307,7 +398,7 @@
     <div class="tutorials-container">
       <!-- Tutorial 1: Add Class and Section -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/NHBFTA768FQ?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/NHBFTA768FQ?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Add Class and Section - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -327,7 +418,7 @@
 
       <!-- Tutorial 2: CBSE Examination -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/6O2gx9vKaj4?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/6O2gx9vKaj4?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Overall working of CBSE Examination - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -347,7 +438,7 @@
 
       <!-- Tutorial 3: Examination Module -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/h0lpQAmQUVk?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/h0lpQAmQUVk?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Overall Working Of Examination Module - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -367,7 +458,7 @@
 
       <!-- Tutorial 4: Add Subject and Subject Group -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/2a-eawA_6WQ?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/2a-eawA_6WQ?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Add Subject and Subject Group - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -387,7 +478,7 @@
 
       <!-- Tutorial 5: Human Resource Setup and Working -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/R3n-exj67M8?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/R3n-exj67M8?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Human Resource Setup and Working - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -407,7 +498,7 @@
 
       <!-- Tutorial 6: Add and Generate Student and Staff ID Card -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/rKMeGAGcSKY?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/rKMeGAGcSKY?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Add and Generate Student and Staff ID Card - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -427,7 +518,7 @@
 
       <!-- Tutorial 7: QR Code Attendance -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/xRB1Fpv0Z3o?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/xRB1Fpv0Z3o?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="QR Code Attendance - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -447,7 +538,7 @@
 
       <!-- Tutorial 8: Fee Create and Assign -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/H9IYSNyfzWw?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/H9IYSNyfzWw?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Fee Create and Assign - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -467,7 +558,7 @@
 
       <!-- Tutorial 9: Fee Discount -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/1ucVuJLUVwM?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/1ucVuJLUVwM?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Fee Discount - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -487,7 +578,7 @@
 
       <!-- Tutorial 10: Offline Fee Payment from Student/Parent -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/B_o0UFiGFEk?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/B_o0UFiGFEk?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Offline Fee Payment from Student/Parent - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -507,7 +598,7 @@
 
       <!-- Tutorial 11: General Setup of Examination Module -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/zj5Ghp2RhsA?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/zj5Ghp2RhsA?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="General Setup of Examination Module - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -527,7 +618,7 @@
 
       <!-- Tutorial 12: Basic Step of CBSE Examination -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/G3fK0n-yQGY?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/G3fK0n-yQGY?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Basic Step of CBSE Examination - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -547,7 +638,7 @@
 
       <!-- Tutorial 13: Generate Student Certificate -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/LdlcvBYnnvg?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/LdlcvBYnnvg?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Generate Student Certificate - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -567,7 +658,7 @@
 
       <!-- Tutorial 14: Overall Working of Lesson Plan -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/z7vOw58VBtw?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/z7vOw58VBtw?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Overall Working of Lesson Plan - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -587,7 +678,7 @@
 
       <!-- Tutorial 15: Promote Students -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/c9VPY1YzfwU?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/c9VPY1YzfwU?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Promote Students - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -607,7 +698,7 @@
 
       <!-- Tutorial 16: Manage Alumni -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/E_mMnmiGLr0?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/E_mMnmiGLr0?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Manage Alumni - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -627,7 +718,7 @@
 
       <!-- Tutorial 17: Expense Head -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/U1WdAh-GOVM?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/U1WdAh-GOVM?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Expense Head - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -647,7 +738,7 @@
 
       <!-- Tutorial 18: Expenses -->
       <div class="tutorial-card">
-        <iframe class="tutorial-video" src="https://www.youtube-nocookie.com/embed/TDFO2Izm4T0?modestbranding=1&rel=0"
+        <iframe class="tutorial-video" src="https://www.youtube.com/embed/TDFO2Izm4T0?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
           title="Expenses - ConnectedU Tutorial" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -674,77 +765,188 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer style="background: var(--text-primary); color: white; padding: 3rem 0 1rem;">
+  <!-- Section 16: Final Call To Action -->
+  <section class="final-cta-section" id="demo">
     <div class="container">
-      <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-            <span style="font-size: 1.5rem;">🎓</span>
-            <span style="font-size: 1.25rem; font-weight: 700;">ConnectedU</span>
-          </div>
-          <p style="opacity: 0.8; line-height: 1.6;">
-            Transforming school communication with innovative technology solutions for educational institutions across
-            India.
-          </p>
-        </div>
-        <div>
-          <h4 style="margin-bottom: 1rem; color: var(--accent-color);">Quick Links</h4>
-          <ul style="list-style: none; line-height: 2;">
-            <li><a href="index.html"
-                style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Home</a></li>
-            <li><a href="index.html#features"
-                style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Features</a>
-            </li>
-            <li><a href="index.html#modules"
-                style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Modules</a>
-            </li>
-            <li><a href="video-tutorials.html"
-                style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Video
-                Tutorials</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 style="margin-bottom: 1rem; color: var(--accent-color);">Contact</h4>
-          <div style="line-height: 2; opacity: 0.8;">
-            <p><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i> info@connectedu.in</p>
-            <p><i class="fas fa-phone" style="margin-right: 0.5rem;"></i> +91 123 456 7890</p>
-            <p><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i> Kerala, India</p>
-          </div>
+      <div class="cta-box reveal">
+        <h2>Transform Your School Experience with Connectedu</h2>
+        <p>Join schools that are improving communication, efficiency, student safety, and parent engagement. Get started with Connectedu today.</p>
+        <div class="cta-box-buttons">
+          <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">Book a Demo</a>
+          <a href="#contact-sales" class="btn btn-dark contact-sales-btn">Contact Sales</a>
         </div>
       </div>
-      <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; text-align: center; opacity: 0.6;">
-        <p>&copy; 2025 ConnectedU. All rights reserved. | <a href="privacy-policy.html" style="color: var(--accent-color); text-decoration: none;">Privacy Policy</a> | <a href="terms-conditions.html" style="color: var(--accent-color); text-decoration: none;">Terms & Conditions</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>Connectedu</h4>
+          <p>Revolutionizing school management and bridging parent-classroom connections through advanced real-time SaaS technology.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h5 class="footer-column-title">Features</h5>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="index.html#features">Smart Attendance</a></li>
+            <li class="footer-link"><a href="index.html#features">Bus Tracking</a></li>
+            <li class="footer-link"><a href="index.html#features">Digital Ledger Fees</a></li>
+            <li class="footer-link"><a href="index.html#features">AI Automation</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h5 class="footer-column-title">Solutions</h5>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="index.html#solutions">For Principals</a></li>
+            <li class="footer-link"><a href="index.html#solutions">For Administrators</a></li>
+            <li class="footer-link"><a href="index.html#solutions">For Teachers</a></li>
+            <li class="footer-link"><a href="index.html#solutions">For Parents</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h5 class="footer-column-title">Pricing</h5>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="index.html#pricing">Annual Plans</a></li>
+            <li class="footer-link"><a href="index.html#pricing">Onboarding Support</a></li>
+            <li class="footer-link"><a href="index.html#pricing">Custom Setup</a></li>
+            <li class="footer-link"><a href="index.html#pricing">Addons</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-column-title">Resources</h5>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="index.html#resources">Knowledge Base</a></li>
+            <li class="footer-link"><a href="video-tutorials.html">Video Walkthroughs</a></li>
+            <li class="footer-link"><a href="index.html#resources">Platform Status</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Connectedu. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-conditions.html">Terms of Service</a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <!-- Contact Sales Modal -->
+  <div class="contact-modal" id="contactSalesModal">
+    <div class="contact-modal-content glass-card">
+      <button class="contact-modal-close" aria-label="Close contact modal">&times;</button>
+      <div class="contact-modal-header">
+        <h3>Talk to our Sales Team</h3>
+        <p>Learn how Connectedu can transform parent communication and school administration.</p>
+      </div>
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-sales-form">
+        <input type="hidden" name="access_key" value="e6c00b1f-b590-4d88-9fe9-2616c56c2914">
+        <!-- Bot protection spam prevention -->
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        
+        <div class="form-grid">
+          <div class="form-group-v2">
+            <label for="salesName">Contact Name</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="salesName" name="name" placeholder="Enter your full name" required>
+            </div>
+          </div>
+          <div class="form-group-v2">
+            <label for="salesEmail">Work Email</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" id="salesEmail" name="email" placeholder="principal@yourschool.com" required>
+            </div>
+          </div>
+          <div class="form-group-v2">
+            <label for="salesPhone">Phone Number</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-phone"></i>
+              <input type="tel" id="salesPhone" name="phone" placeholder="e.g. +91 98765 43210" required>
+            </div>
+          </div>
+          <div class="form-group-v2">
+            <label for="salesSchool">School Name</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-school"></i>
+              <input type="text" id="salesSchool" name="school_name" placeholder="e.g. Greenfield Public School" required>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group-v2 full-width">
+          <label for="salesMessage">Tell us about your school</label>
+          <div class="input-wrapper textarea-wrapper">
+            <i class="fa-solid fa-comment-dots"></i>
+            <textarea id="salesMessage" name="message" rows="4" placeholder="How many students do you manage? What specific features (fees, attendance, bus tracking) are you looking to optimize?" required></textarea>
+          </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary submit-sales-btn">
+          <span>Send Inquiry</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Core App JS -->
+  <script src="assets/js/app-v2.js"></script>
+
   <script>
-    // Mobile menu toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
+    // Handle local file protocol (file://) fallback to avoid YouTube Error 153
+    if (window.location.protocol === 'file:') {
+      console.log('Local file protocol detected. Swapping YouTube iframes with preview images to avoid Error 153.');
+      
+      const runFallback = () => {
+        document.querySelectorAll('iframe.tutorial-video').forEach(iframe => {
+          const src = iframe.getAttribute('src');
+          if (src && src.includes('/embed/')) {
+            const videoId = src.split('/embed/')[1].split('?')[0];
+            const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+            
+            // Create custom preview container
+            const placeholder = document.createElement('div');
+            placeholder.className = 'tutorial-video-placeholder';
+            placeholder.style.backgroundImage = `url('${thumbnailUrl}')`;
+            
+            // Play button
+            const playBtn = document.createElement('div');
+            playBtn.className = 'play-trigger-btn';
+            playBtn.innerHTML = '<i class="fa-solid fa-play" style="margin-left: 4px;"></i>';
+            placeholder.appendChild(playBtn);
+            
+            // Open YouTube watch URL on click
+            placeholder.addEventListener('click', () => {
+              window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+            });
+            
+            // Replace iframe
+            iframe.parentNode.replaceChild(placeholder, iframe);
+          }
+        });
+      };
 
-    mobileMenuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      const spans = mobileMenuBtn.querySelectorAll('span');
-      spans[0].classList.toggle('rotate-45');
-      spans[1].classList.toggle('opacity-0');
-      spans[2].classList.toggle('rotate-negative-45');
-    });
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', runFallback);
+      } else {
+        runFallback();
+      }
+    }
 
     // Add animation on scroll for tutorial cards
     const observerOptions = {
