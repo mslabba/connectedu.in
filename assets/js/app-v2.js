@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initCardGlows();
     initStatsCounters();
     initTestimonialsCarousel();
-    initVideoModal();
     initScrollspy();
     initCalendly();
     initContactModal();
@@ -356,3 +355,4 @@ function initContactModal() {
         }
     });
 }
+
