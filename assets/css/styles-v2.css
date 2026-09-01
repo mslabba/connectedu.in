@@ -1622,4 +1622,46 @@ input, select, textarea, button {
     margin-top: 10px;
 }
 
+/* Footer App Badges */
+.footer-app-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-app-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.2s ease;
+}
+
+.footer-app-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.35);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.footer-app-btn i.fa-google-play {
+    font-size: 1.05rem;
+    color: #3DDC84;
+}
+
+.footer-app-btn i.fa-apple {
+    font-size: 1.15rem;
+    color: #FFFFFF;
+}
+
+
 

@@ -1,0 +1,647 @@
+/* 
+ * Connectedu Mobile App Landing Page Stylesheet
+ * Optimized for mobile-first QR code scans from school brochures
+ */
+
+:root {
+    --app-navy-dark: #090D1A;
+    --app-navy-card: #0F172A;
+    --app-blue-primary: #2E5BFF;
+    --app-blue-hover: #1D4ED8;
+    --app-blue-soft: rgba(46, 91, 255, 0.08);
+    --app-blue-glow: rgba(46, 91, 255, 0.25);
+    --app-teal-accent: #0EA5E9;
+    --app-bg-light: #F8FAFC;
+    --app-border-color: #E2E8F0;
+    --app-text-main: #0F172A;
+    --app-text-muted: #475569;
+    --app-radius-lg: 20px;
+    --app-radius-md: 12px;
+}
+
+/* Base Body Adjustments */
+body.app-landing-body {
+    background-color: var(--app-bg-light);
+    color: var(--app-text-main);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header Bar */
+.app-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    padding: 14px 0;
+}
+
+.app-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-logo img {
+    height: 38px;
+    width: auto;
+    display: block;
+}
+
+.app-header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--app-blue-soft);
+    color: var(--app-blue-primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(46, 91, 255, 0.2);
+}
+
+.app-header-badge i {
+    font-size: 0.75rem;
+}
+
+/* Hero Section */
+.app-hero {
+    position: relative;
+    padding: 60px 24px 80px;
+    background: radial-gradient(100% 100% at 50% 0%, rgba(46, 91, 255, 0.07) 0%, rgba(248, 250, 252, 0) 100%), #FFFFFF;
+    text-align: center;
+    border-bottom: 1px solid var(--app-border-color);
+}
+
+.app-hero-container {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.app-brand-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FFFFFF;
+    border: 1px solid var(--app-border-color);
+    box-shadow: 0 4px 14px rgba(9, 13, 26, 0.05);
+    padding: 6px 18px;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--app-text-muted);
+    margin-bottom: 24px;
+}
+
+.app-brand-pill .dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--app-blue-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--app-blue-primary);
+}
+
+.app-hero-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    color: var(--app-navy-dark);
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+}
+
+.app-hero-title .gradient-text {
+    background: linear-gradient(135deg, var(--app-blue-primary) 0%, var(--app-teal-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.app-hero-subtitle {
+    font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+    color: var(--app-text-muted);
+    line-height: 1.6;
+    max-width: 680px;
+    margin: 0 auto 36px;
+}
+
+.app-hero-cta-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--app-navy-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+}
+
+/* Store Buttons Grid */
+.app-store-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* Official Store Button Styles */
+.store-btn {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--app-navy-dark);
+    color: #FFFFFF;
+    padding: 14px 28px;
+    border-radius: 14px;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 25px -5px rgba(9, 13, 26, 0.2);
+    min-width: 220px;
+    min-height: 58px;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.store-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px -6px rgba(46, 91, 255, 0.3);
+    background: #000000;
+    color: #FFFFFF;
+}
+
+.store-btn:active {
+    transform: translateY(0);
+}
+
+.store-btn i {
+    font-size: 2.2rem;
+    color: #FFFFFF;
+}
+
+.store-btn-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.store-btn-subtitle {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.8;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.store-btn-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Device Detection Badge on Buttons */
+.store-btn.recommended {
+    border-color: var(--app-blue-primary);
+    box-shadow: 0 0 0 3px rgba(46, 91, 255, 0.25), 0 12px 28px -4px rgba(46, 91, 255, 0.4);
+}
+
+.store-btn.recommended .device-badge {
+    position: absolute;
+    top: -12px;
+    right: 12px;
+    background: linear-gradient(135deg, var(--app-blue-primary), var(--app-teal-accent));
+    color: #FFFFFF;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 10px;
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Common Styling */
+.app-section {
+    padding: 80px 24px;
+}
+
+.app-section-light {
+    background-color: #FFFFFF;
+}
+
+.app-section-tint {
+    background-color: #F8FAFC;
+}
+
+.app-container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.app-section-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 50px;
+}
+
+.app-section-tag {
+    display: inline-block;
+    color: var(--app-blue-primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+}
+
+.app-section-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    color: var(--app-navy-dark);
+    line-height: 1.25;
+}
+
+/* Smart Platform Section (4 Experiences) */
+.roles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.role-card {
+    background: #FFFFFF;
+    border-radius: var(--app-radius-lg);
+    padding: 32px 28px;
+    border: 1px solid var(--app-border-color);
+    box-shadow: 0 4px 20px rgba(9, 13, 26, 0.03);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.role-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(9, 13, 26, 0.08);
+    border-color: rgba(46, 91, 255, 0.3);
+}
+
+.role-card:hover::before {
+    background: linear-gradient(90deg, var(--app-blue-primary), var(--app-teal-accent));
+}
+
+.role-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    background: var(--app-blue-soft);
+    color: var(--app-blue-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.role-card:hover .role-icon {
+    background: var(--app-blue-primary);
+    color: #FFFFFF;
+}
+
+.role-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--app-navy-dark);
+    margin-bottom: 10px;
+}
+
+.role-description {
+    font-size: 0.95rem;
+    color: var(--app-text-muted);
+    line-height: 1.55;
+}
+
+/* Why Connectedu Section */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.benefit-card {
+    background: #FFFFFF;
+    border-radius: var(--app-radius-md);
+    padding: 24px 20px;
+    border: 1px solid var(--app-border-color);
+    box-shadow: 0 2px 10px rgba(9, 13, 26, 0.03);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--app-blue-primary);
+}
+
+.benefit-icon-check {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(14, 165, 233, 0.12);
+    color: var(--app-teal-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.benefit-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--app-navy-dark);
+}
+
+/* App Experience Mockup Section */
+.app-experience-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .app-experience-wrapper {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+}
+
+.app-experience-info {
+    max-width: 480px;
+}
+
+.app-experience-info h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--app-navy-dark);
+    margin-bottom: 16px;
+    line-height: 1.25;
+}
+
+.app-experience-info p {
+    font-size: 1.05rem;
+    color: var(--app-text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.role-pills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.role-pill-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: #FFFFFF;
+    border: 1px solid var(--app-border-color);
+    font-weight: 600;
+    color: var(--app-navy-dark);
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.role-pill-item i {
+    color: var(--app-blue-primary);
+}
+
+.role-pill-item.active,
+.role-pill-item:hover {
+    background: var(--app-blue-soft);
+    border-color: var(--app-blue-primary);
+    color: var(--app-blue-primary);
+}
+
+/* Phone Mockup Styling */
+.phone-mockup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.phone-frame {
+    width: 100%;
+    max-width: 320px;
+    background: var(--app-navy-dark);
+    border-radius: 44px;
+    padding: 12px;
+    box-shadow: 0 25px 60px -15px rgba(9, 13, 26, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.phone-screen {
+    width: 100%;
+    aspect-ratio: 9 / 19.5;
+    background: #FFFFFF;
+    border-radius: 34px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-notch {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 18px;
+    background: var(--app-navy-dark);
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.phone-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Download CTA Section */
+.app-cta-banner {
+    background: linear-gradient(135deg, var(--app-navy-dark) 0%, #0F172A 100%);
+    border-radius: var(--app-radius-lg);
+    padding: 60px 36px;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(9, 13, 26, 0.3);
+}
+
+.app-cta-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(46, 91, 255, 0.15), transparent 60%);
+    pointer-events: none;
+}
+
+.app-cta-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 14px;
+}
+
+.app-cta-subtitle {
+    font-size: 1.1rem;
+    color: #94A3B8;
+    max-width: 540px;
+    margin: 0 auto 36px;
+}
+
+/* Footer Section */
+.app-footer {
+    background: #FFFFFF;
+    border-top: 1px solid var(--app-border-color);
+    padding: 50px 24px 40px;
+}
+
+.app-footer-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.app-footer-logo img {
+    height: 42px;
+    width: auto;
+    margin-bottom: 14px;
+}
+
+.app-footer-tagline {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--app-text-muted);
+    margin-bottom: 28px;
+}
+
+.app-footer-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--app-navy-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: var(--app-bg-light);
+    border: 1px solid var(--app-border-color);
+    transition: all 0.2s ease;
+}
+
+.contact-link i {
+    color: var(--app-blue-primary);
+}
+
+.contact-link:hover {
+    color: var(--app-blue-primary);
+    border-color: var(--app-blue-primary);
+    background: var(--app-blue-soft);
+}
+
+.app-footer-copyright {
+    font-size: 0.85rem;
+    color: #94A3B8;
+    border-top: 1px solid var(--app-border-color);
+    width: 100%;
+    padding-top: 24px;
+}
+
+/* Mobile Responsiveness Rules */
+@media (max-width: 640px) {
+    .app-hero {
+        padding: 40px 16px 50px;
+    }
+    
+    .app-section {
+        padding: 50px 16px;
+    }
+    
+    .store-btn {
+        width: 100%;
+        min-width: unset;
+        justify-content: center;
+        padding: 16px 20px;
+    }
+
+    .app-cta-banner {
+        padding: 40px 20px;
+    }
+
+    .app-footer-contact {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .contact-link {
+        width: 100%;
+        justify-content: center;
+    }
+}
