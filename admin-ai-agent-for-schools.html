@@ -18,14 +18,14 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Connectedu School Management System</title>
+    <title>Admin AI Agent for Schools — Ask Your ERP in Plain English</title>
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="Privacy Policy - Connectedu School Management System">
-    <meta name="description" content="Connectedu privacy policy explaining how we collect, use, and protect your personal data in compliance with Indian data protection laws.">
-    <meta name="keywords" content="Connectedu privacy policy, data protection, DPDPA compliance, school management privacy, student data security">
+    <meta name="title" content="Admin AI Agent for Schools — Ask Your ERP in Plain English">
+    <meta name="description" content="School admins ask in any language about live fees, attendance, and headcounts. Answers come from live school data via secure database queries — ConnectEdu.">
+    <meta name="keywords" content="Admin AI Agent for schools, AI school management, AI school ERP, school management system with AI, school admin AI assistant, ConnectEdu">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://connectedu.in/privacy-policy.html">
+    <link rel="canonical" href="https://connectedu.in/admin-ai-agent-for-schools.html">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/latest/transparent-logo.png">
@@ -268,6 +268,77 @@
                 padding: 24px;
             }
         }
+    
+        .ai-demo-section {
+            padding: 0 0 3rem;
+            background: var(--background-light, #f8fafc);
+        }
+        .ai-demo-card {
+            max-width: 900px;
+            margin: -2rem auto 0;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1.75rem 1.5rem 1.5rem;
+            box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        .ai-demo-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #2e5bff;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .ai-demo-card h2 {
+            font-size: clamp(1.25rem, 3vw, 1.6rem);
+            margin: 0 0 0.5rem;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+        }
+        .ai-demo-sub {
+            color: #64748b;
+            margin: 0 0 1.25rem;
+            font-size: 0.98rem;
+        }
+        .ai-demo-frame {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            background: #0f172a;
+            line-height: 0;
+        }
+        .ai-demo-video {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 70vh;
+            background: #0f172a;
+        }
+        @media (max-width: 768px) {
+            .ai-demo-card { margin-top: -1rem; padding: 1.25rem 1rem; }
+        }
+    </style>
+
+    <style>
+        .ai-trust { background: linear-gradient(135deg, rgba(46,91,255,.05), rgba(14,165,233,.05)); border: 1px solid rgba(46,91,255,.12); padding: 14px 18px; border-radius: 8px; margin: 1rem 0 1.25rem; font-weight: 600; color: #1e293b; }
+        .ai-example { background: #f8fafc; border-left: 3px solid #2e5bff; padding: 10px 14px; margin: .5rem 0 1rem; font-style: italic; color: #334155; border-radius: 0 8px 8px 0; }
+        .ai-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
+        .ai-table th, .ai-table td { border: 1px solid #f1f5f9; padding: 12px 14px; text-align: left; vertical-align: top; color: #475569; }
+        .ai-table th { background: #f8fafc; color: #0f172a; }
+        .ai-cta { text-align: center; }
+        .ai-cta .hero-actions, .privacy-hero .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 1.25rem; }
+        .ai-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; font-size: .85rem; font-weight: 600; margin: 0 6px 8px 0; }
+        .ai-pill.live { background: rgba(16,185,129,.1); color: #047857; border: 1px solid rgba(16,185,129,.3); }
+        .ai-pill.soon { background: rgba(245,158,11,.1); color: #b45309; border: 1px solid rgba(245,158,11,.3); }
+        .faq-block { margin-bottom: 1.25rem; }
+        .faq-block h3 { margin-top: 0; font-size: 1.1rem; }
     </style>
 </head>
 
@@ -287,7 +358,7 @@
                 <nav>
                     <ul class="nav-menu">
                         <li><a href="index.html#features" class="nav-link">Features</a></li>
-                        <li><a href="admin-ai-agent-for-schools.html" class="nav-link">Admin AI Agent <span class="nav-new-badge">NEW</span></a></li>
+                        <li><a href="admin-ai-agent-for-schools.html" class="nav-link active">Admin AI Agent <span class="nav-new-badge">NEW</span></a></li>
                         <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
                         <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
                         <li><a href="index.html#about" class="nav-link">About</a></li>
@@ -315,266 +386,225 @@
         </div>
     </header>
 
+    
     <!-- Breadcrumb -->
     <section class="breadcrumb">
         <div class="container">
-            <nav class="breadcrumb-nav">
+            <nav class="breadcrumb-nav" aria-label="Breadcrumb">
                 <a href="index.html">Home</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Privacy Policy</span>
+                <span>Admin AI Agent</span>
             </nav>
         </div>
     </section>
 
-    <!-- Hero Section -->
     <section class="privacy-hero">
         <div class="container">
-            <h1><i class="fas fa-shield-alt"></i> Privacy Policy</h1>
-            <p>We are committed to protecting your privacy and ensuring the security of your personal data in compliance with Indian data protection laws.</p>
+            <h1><i class="fas fa-robot"></i> Admin AI Agent for Schools</h1>
+            <p>Ask your ERP in plain English. Get answers from your school’s live data.</p>
+            <div class="hero-actions">
+                <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">See Admin AI Agent</a>
+                <a href="https://schools.connectedu.in/site/login" class="btn btn-secondary">School Login</a>
+            </div>
         </div>
     </section>
 
-    <!-- Privacy Content -->
+    <section class="ai-demo-section" aria-label="Admin AI Agent demo">
+        <div class="container">
+            <div class="ai-demo-card">
+                <p class="ai-demo-label"><i class="fas fa-play-circle"></i> See it in action</p>
+                <h2>Ask a question. Get an answer from live school data.</h2>
+                <p class="ai-demo-sub">Short demo of ConnectEdu’s Admin AI Agent — sped up for the web. No audio.</p>
+                <div class="ai-demo-frame">
+                    <video
+                        class="ai-demo-video"
+                        controls
+                        muted
+                        playsinline
+                        preload="metadata"
+                        poster="assets/images/admin-ai-agent-demo-poster.jpg"
+                        aria-label="Screen recording of ConnectEdu Admin AI Agent answering a school question">
+                        <source src="assets/video/admin-ai-agent-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="privacy-content">
         <div class="privacy-container">
-            <div class="effective-date">
-                <strong>Effective Date:</strong> January 1, 2025 | <strong>Last Updated:</strong> August 9, 2026
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-comments"></i> Ask your school ERP instead of searching it</h2>
+                <p>School administrators already have the data they need. The challenge is finding it.</p>
+                <p>A principal may need pending fees for one class. An administrator may want today’s absent count. A school owner may want weekly fee collection or the number of active students on record.</p>
+                <p>Usually that means opening reports, setting filters, checking modules, exporting sheets, or asking someone to prepare a summary.</p>
+                <p>ConnectEdu’s <strong>Admin AI Agent for schools</strong> offers another path: ask your school ERP in natural language and get an answer from the school’s own data.</p>
+                <p>You can <strong>ask in any language; answers are in English</strong>.</p>
+                <div class="ai-trust">Answers come from live school data via secure database queries.</div>
+                <p>The agent sits inside ConnectEdu’s school ERP for principals, administrators, and other authorized staff who already run school operations — fees, attendance, staff, transport, exams, and more — and need faster access to information.</p>
             </div>
 
-            <!-- Introduction -->
             <div class="privacy-section">
-                <h2><i class="fas fa-info-circle"></i> Introduction</h2>
-                <p>Turgut, a proprietorship owned by Muhammed Shihabudeen Labba, values your privacy and is committed to protecting personal data collected through ConnectedU ("Platform"), including the website https://connectedu.in and the mobile app.</p>
-                <p>This Privacy Policy explains what data we collect, how we use it, and your rights under applicable Indian laws, including the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023 (DPDPA).</p>
+                <h2><i class="fas fa-circle-info"></i> What is an Admin AI Agent in a school ERP?</h2>
+                <p>An <strong>Admin AI Agent in a school ERP</strong> is an AI interface that lets authorized administrators ask about information stored in their school management system using natural language.</p>
+                <p>Instead of hunting through screens for a report, an administrator can ask:</p>
+                <ul>
+                    <li>“How much fee is pending for Class 8?”</li>
+                    <li>“How many students are absent today?”</li>
+                    <li>“How many active students are there in the school?”</li>
+                    <li>“What was the fee collection this week?”</li>
+                    <li>“Which staff are on leave today?”</li>
+                    <li>“Where is Bus 3 right now?”</li>
+                    <li>“What is Class 10’s exam schedule this week?”</li>
+                    <li>“Show me attendance for Class 7.”</li>
+                </ul>
+                <p>The agent interprets the question, uses information available to that user’s permissions, and returns the result in English.</p>
+                <p>That is different from a generic chatbot answering from training data. ConnectEdu’s Admin AI Agent is tied to the school’s ERP. For fees, attendance, student counts, and other operational records, the useful answer has to come from the school’s database—not from general AI knowledge.</p>
             </div>
 
-            <!-- Who We Are -->
             <div class="privacy-section">
-                <h2><i class="fas fa-building"></i> Who We Are</h2>
-                <ul>
-                    <li><strong>Business Name:</strong> Turgut (Proprietorship)</li>
-                    <li><strong>Owner:</strong> Muhammed Shihabudeen Labba</li>
-                    <li><strong>GSTIN:</strong> 32AHDPL2727R1Z3</li>
-                    <li><strong>Registered Address:</strong> 10/179, Valanjavazhy, Alappuzha, Alappuzha, Kerala, 688005</li>
-                    <li><strong>Contact Email:</strong> hello@connectedu.in</li>
-                    <li><strong>Contact Phone:</strong> +919037138030</li>
-                </ul>
+                <h2><i class="fas fa-list-check"></i> What can school leaders ask?</h2>
+                <h3>Fee information</h3>
+                <div class="ai-example">“How much fee is pending for Class 8?”</div>
+                <h3>Attendance and absences</h3>
+                <div class="ai-example">“How many students are absent today?”</div>
+                <div class="ai-example">“What is today’s attendance status for Class 7?”</div>
+                <h3>Student and class headcounts</h3>
+                <div class="ai-example">“How many active students are currently registered?”</div>
+                <div class="ai-example">“How many students are in Class 10?”</div>
+                <h3>Fee collection</h3>
+                <div class="ai-example">“What was the fee collection this week?”</div>
+                <h3>Staff</h3>
+                <div class="ai-example">“Which staff are on leave today?”</div>
+                <div class="ai-example">“How many teachers are assigned to Class 9?”</div>
+                <h3>Transport</h3>
+                <div class="ai-example">“Where is Bus 3 right now?”</div>
+                <div class="ai-example">“Which students are on the Airport Road route?”</div>
+                <h3>Exams</h3>
+                <div class="ai-example">“What is Class 10’s exam schedule this week?”</div>
+                <div class="ai-example">“Who scored below 40% in Class 8 Maths?”</div>
+                <p>In each case, the answer is based on the school’s actual ERP data, within what that user’s role is allowed to see — including staff, transport, and exam records where those modules are live.</p>
             </div>
 
-            <!-- Data We Collect -->
             <div class="privacy-section">
-                <h2><i class="fas fa-database"></i> Data We Collect</h2>
-                <p>We collect personal and non-personal data to provide, improve, and secure the Platform. This may include:</p>
-                
-                <h3>Personal Data</h3>
-                <ul>
-                    <li>Student information: name, date of birth, enrollment number, class/section, academic records</li>
-                    <li>Teacher information: name, contact details, qualifications, attendance</li>
-                    <li>Parent/guardian information: name, email, phone, relationship with student</li>
-                    <li>Location Data: Precise (GPS) and approximate (network-based) location coordinates when using features such as live school bus tracking, transport monitoring, and location-verified attendance check-ins</li>
-                    <li>Login credentials: username, password</li>
-                    <li>Payment details (for subscription or module fees)</li>
-                </ul>
-
-                <h3>Non-Personal Data</h3>
-                <ul>
-                    <li>Device information (type, OS, IP address)</li>
-                    <li>Usage data (pages visited, features used, app activity)</li>
-                    <li>Cookies and analytics data (optional)</li>
-                </ul>
+                <h2><i class="fas fa-shield-halved"></i> Why accuracy matters in AI school management</h2>
+                <p>Fluent AI answers are not enough for school administration. Questions about fees, attendance, or student records need to connect to operational data.</p>
+                <div class="ai-trust">Answers come from live school data via secure database queries.</div>
+                <p>The agent also runs inside ConnectEdu’s access-control model. Users should only see what their role permits. School ERPs hold sensitive financial and student information; an AI interface must not bypass permissions.</p>
+                <p>So the Admin AI Agent is part of the school ERP environment—not a separate public chatbot.</p>
             </div>
 
-            <!-- Location Data & Tracking Services -->
             <div class="privacy-section">
-                <h2><i class="fas fa-location-dot"></i> Location Data & Tracking Services</h2>
-                <p>ConnectedU accesses, collects, and processes location data to deliver essential school safety, transport management, and administrative services. This section details how location data is collected, used, and protected:</p>
-                
-                <h3>1. Types of Location Data Collected</h3>
-                <ul>
-                    <li><strong>Precise Location:</strong> Exact GPS coordinates collected from your mobile device when using real-time navigation or vehicle tracking features.</li>
-                    <li><strong>Approximate Location:</strong> Network-based location information derived from cellular towers or Wi-Fi signals to determine approximate device position.</li>
-                </ul>
-
-                <h3>2. Purpose of Location Data Collection</h3>
-                <ul>
-                    <li><strong>Live School Bus Tracking:</strong> To enable parents and school administrators to view the real-time location and movement of school buses during morning pickup and afternoon drop-off routes.</li>
-                    <li><strong>Driver & Transport Monitoring:</strong> To track active bus routes, monitor schedule adherence, calculate estimated arrival times (ETA), and alert parents when the bus approaches designated stops.</li>
-                    <li><strong>Location-Verified Attendance:</strong> To verify staff, teacher, or driver presence and check-in/check-out timestamps within authorized school premises or bus route stops.</li>
-                </ul>
-
-                <h3>3. Foreground and Background Location Collection</h3>
-                <ul>
-                    <li><strong>Foreground Location Access:</strong> Location data is accessed when the mobile app is actively open and in use on your device screen.</li>
-                    <li><strong>Background Location Access:</strong> For authorized school transport drivers and fleet managers, location data may be accessed in the background (even when the app is closed, minimized, or the screen is locked) exclusively while a school bus route or transit trip is actively in progress. This continuous background tracking is required to maintain live bus location updates for safety monitoring and parent notifications.</li>
-                    <li>Background location access is strictly inactive when a trip is not active and can be managed via device permissions.</li>
-                </ul>
-
-                <h3>4. User Control & Permissions</h3>
-                <ul>
-                    <li>Location permission prompts are requested within the app prior to accessing location features.</li>
-                    <li>You can grant, modify, or revoke location access at any time through your device settings (Settings &gt; Apps &gt; ConnectedU &gt; Permissions &gt; Location).</li>
-                    <li>Please note that denying location permissions will disable real-time bus tracking and location-based check-in features.</li>
-                </ul>
-
-                <h3>5. Storage, Security & Sharing</h3>
-                <ul>
-                    <li>Location data is transmitted securely using industry-standard SSL/TLS encryption.</li>
-                    <li>Location coordinates are stored only for as long as necessary to complete transit tracking and maintain historical route logs for school administration.</li>
-                    <li>We do <strong>not</strong> sell, trade, or rent location data to third parties, nor do we use location data for targeted advertising or user profiling.</li>
-                </ul>
+                <h2><i class="fas fa-toggle-on"></i> What is live today—and what is coming next?</h2>
+                <p><span class="ai-pill live"><i class="fas fa-circle-check"></i> Live today</span> <span class="ai-pill soon"><i class="fas fa-clock"></i> In the pipeline</span></p>
+                <h3>Live today</h3>
+                <ol>
+                    <li>Search the school’s database for relevant, permitted information.</li>
+                    <li>Answer in English, even when the question was asked in another language.</li>
+                </ol>
+                <h3>In the pipeline</h3>
+                <p>Reminders and notifications are being explored as administrative workflows. <strong>They are not live Admin AI Agent capabilities today.</strong></p>
+                <p>The current product helps administrators <strong>find and understand school information through natural-language queries</strong>—not claim every administrative action is already automated.</p>
             </div>
 
-            <!-- Children's Data -->
             <div class="privacy-section">
-                <h2><i class="fas fa-child"></i> Children's Data</h2>
-                <ul>
-                    <li>The Platform is used by minors under 18 under supervision of parents/guardians and educational institutions.</li>
-                    <li>Personal data of minors is collected only with explicit consent from parents/guardians or the school acting on their behalf.</li>
-                    <li>Parents/guardians have the right to access, correct, or request deletion of their child's data at any time.</li>
-                </ul>
+                <h2><i class="fas fa-sitemap"></i> Where the Admin AI Agent sits in ConnectEdu</h2>
+                <p>The agent is not a standalone AI app with a second database. It sits inside ConnectEdu’s school management system, which connects operations such as attendance, fees, exams, academics, transport, and communication.</p>
+                <p><strong>School data → secure database queries → Admin AI Agent → English answer</strong></p>
+                <p>Instead of: which report → which module → which filters → which dates → where is the result?<br>an administrator can start with the question itself.</p>
             </div>
 
-            <!-- How We Use Your Data -->
             <div class="privacy-section">
-                <h2><i class="fas fa-cogs"></i> How We Use Your Data</h2>
-                <p>We use collected data to:</p>
-                <ul>
-                    <li>Provide and operate the Platform services for schools, teachers, students, and parents</li>
-                    <li>Deliver real-time school bus tracking, route alerts, and location-verified safety services</li>
-                    <li>Manage accounts, subscriptions, and payments</li>
-                    <li>Communicate important updates, notices, or announcements</li>
-                    <li>Analyze usage patterns to improve features and performance</li>
-                    <li>Maintain security, prevent fraud, and comply with legal obligations</li>
-                </ul>
+                <h2><i class="fas fa-table"></i> AI school management vs a chatbot bolted onto an ERP</h2>
+                <table class="ai-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Website / generic chatbot</th>
+                            <th>ConnectEdu Admin AI Agent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Job</th>
+                            <td>School info, policies, FAQs</td>
+                            <td>Operational questions for authorized staff</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Data</th>
+                            <td>Training data or fixed FAQs</td>
+                            <td>Live school ERP data (permitted fields)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Example</th>
+                            <td>“Where is the school?”</td>
+                            <td>“How much fee is pending for Class 8?”</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Access</th>
+                            <td>Often public</td>
+                            <td>Role-based, inside the ERP</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Ask the ERP about the school’s data instead of manually searching the ERP to find it.</strong></p>
             </div>
 
-            <!-- Data Sharing -->
             <div class="privacy-section">
-                <h2><i class="fas fa-share-alt"></i> Data Sharing</h2>
-                <p>We do not sell or rent personal data. We may share data only in these cases:</p>
+                <h2><i class="fas fa-users"></i> Who it is for</h2>
                 <ul>
-                    <li>With schools or authorized administrators for academic and administrative purposes</li>
-                    <li>With service providers (e.g., cloud hosting, SMS gateways, payment processors) under strict contractual obligations</li>
-                    <li>To comply with legal obligations or respond to lawful requests by government authorities</li>
-                </ul>
-            </div>
-
-            <!-- Data Retention -->
-            <div class="privacy-section">
-                <h2><i class="fas fa-clock"></i> Data Retention</h2>
-                <ul>
-                    <li>Personal data is retained only as long as necessary to provide services or comply with legal obligations.</li>
-                    <li>Schools may request data export or deletion at any time.</li>
-                    <li>Usage and non-personal data may be retained for analytics and improvement purposes.</li>
+                    <li><strong>Principals</strong> — quick answers across operations without waiting on every small pull.</li>
+                    <li><strong>School administrators</strong> — faster access to fees, attendance, and student records they already manage.</li>
+                    <li><strong>School owners / management</strong> — operational visibility without learning every module.</li>
+                    <li><strong>Schools on ConnectEdu</strong> — an AI query layer on the ERP they already use, not a replacement for the ERP.</li>
                 </ul>
             </div>
 
-            <!-- Data Security -->
             <div class="privacy-section">
-                <h2><i class="fas fa-lock"></i> Data Security</h2>
-                <ul>
-                    <li>We implement reasonable technical, administrative, and physical safeguards to protect data.</li>
-                    <li>Measures include: encryption (in transit and at rest), secure authentication, access control, periodic security audits, and regular backups.</li>
-                    <li>While we strive to protect data, no system is 100% secure; users must follow safe practices for accounts and devices.</li>
-                </ul>
-            </div>
-
-            <!-- Your Rights -->
-            <div class="privacy-section">
-                <h2><i class="fas fa-user-shield"></i> Your Rights</h2>
-                <p>Under the Digital Personal Data Protection Act, 2023, users have the right to:</p>
-                <ul>
-                    <li>Access personal data</li>
-                    <li>Correct or update personal data</li>
-                    <li>Request deletion of personal data</li>
-                    <li>Withdraw consent for data processing</li>
-                    <li>Lodge complaints with the Data Protection Officer (DPO) or relevant authority</li>
-                </ul>
-                <div class="contact-info">
-                    <h4>Contact for privacy requests:</h4>
-                    <p><i class="fas fa-envelope"></i> Email: hello@connectedu.in</p>
-                    <p><i class="fas fa-phone"></i> Phone: +919037138030</p>
+                <h2><i class="fas fa-circle-question"></i> Frequently asked questions</h2>
+                <div class="faq-block">
+                    <h3>What is an Admin AI Agent in a school ERP?</h3>
+                    <p>An AI interface inside a school ERP that lets authorized administrators ask about school data in natural language and get answers from information available in that ERP.</p>
+                </div>
+                <div class="faq-block">
+                    <h3>Can I ask in my own language?</h3>
+                    <p>Yes. Ask in any language. <strong>Answers are in English.</strong></p>
+                </div>
+                <div class="faq-block">
+                    <h3>Where do answers come from?</h3>
+                    <p><strong>Answers come from live school data via secure database queries</strong>—from the school’s ConnectEdu data for school-specific questions, not from general AI knowledge alone.</p>
+                </div>
+                <div class="faq-block">
+                    <h3>Can it answer questions about fees and attendance?</h3>
+                    <p>Yes. It can answer relevant questions about fees, attendance, student counts, fee collection, staff, transport, and exams — based on data in the school’s ERP and the user’s permissions.</p>
+                </div>
+                <div class="faq-block">
+                    <h3>Can it send fee reminders or notifications?</h3>
+                    <p>Not currently. Live capability is search and answer. <strong>Reminders and notifications are in the pipeline, not live today.</strong></p>
+                </div>
+                <div class="faq-block">
+                    <h3>Is it available to every user?</h3>
+                    <p>No. It is for authorized ConnectEdu users. Access follows the ERP’s role and permission model.</p>
                 </div>
             </div>
 
-            <!-- Cookies and Tracking -->
-            <div class="privacy-section">
-                <h2><i class="fas fa-cookie-bite"></i> Cookies and Tracking</h2>
-                <ul>
-                    <li>We use cookies and similar technologies for analytics, performance, and user experience.</li>
-                    <li>You can manage cookie preferences through your browser or app settings.</li>
-                </ul>
-            </div>
-
-            <!-- Third-Party Services -->
-            <div class="privacy-section">
-                <h2><i class="fas fa-external-link-alt"></i> Third-Party Services</h2>
-                <ul>
-                    <li>The Platform may use third-party services (e.g., AWS, Firebase, SMS gateways, payment gateways).</li>
-                    <li>Third parties are bound by data protection agreements and use data only for service purposes.</li>
-                    <li>We are not responsible for the privacy practices of these third parties; users should review their policies separately.</li>
-                </ul>
-            </div>
-
-            <!-- Data Breach Notification -->
-            <div class="privacy-section">
-                <h2><i class="fas fa-exclamation-triangle"></i> Data Breach Notification</h2>
-                <ul>
-                    <li>In the event of a data breach, we will notify affected users and the Data Protection Board as required by law.</li>
-                    <li>We maintain an internal incident response plan to mitigate risks.</li>
-                </ul>
-            </div>
-
-            <!-- Cross-Border Data Transfer -->
-            <div class="privacy-section">
-                <h2><i class="fas fa-globe"></i> Cross-Border Data Transfer</h2>
-                <ul>
-                    <li>Some data may be stored or processed on servers outside India (e.g., cloud hosting).</li>
-                    <li>We ensure such transfers comply with DPDPA cross-border data rules and maintain adequate safeguards.</li>
-                </ul>
-            </div>
-
-            <!-- Changes to This Privacy Policy -->
-            <div class="privacy-section">
-                <h2><i class="fas fa-edit"></i> Changes to This Privacy Policy</h2>
-                <ul>
-                    <li>We may update this Privacy Policy periodically.</li>
-                    <li>Users will be notified of material changes via the Platform or email.</li>
-                    <li>Continued use of the Platform after updates constitutes acceptance of the revised policy.</li>
-                </ul>
-            </div>
-
-            <!-- Governing Law and Jurisdiction -->
-            <div class="privacy-section">
-                <h2><i class="fas fa-gavel"></i> Governing Law and Jurisdiction</h2>
-                <ul>
-                    <li>This Privacy Policy is governed by the laws of India.</li>
-                    <li>Any disputes shall be subject to the exclusive jurisdiction of courts in Kerala, preferably Ernakulam.</li>
-                </ul>
-            </div>
-
-            <!-- Contact Us -->
-            <div class="privacy-section">
-                <h2><i class="fas fa-envelope"></i> Contact Us</h2>
-                <p>For privacy-related questions, concerns, or requests:</p>
-                <div class="contact-info">
-                    <h4>Turgut (Proprietorship owned by Muhammed Shihabudeen Labba)</h4>
-                    <p><i class="fas fa-envelope"></i> Email: hello@connectedu.in</p>
-                    <p><i class="fas fa-phone"></i> Phone: +919037138030</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Address: 10/179, Valanjavazhy, Alappuzha, Alappuzha, Kerala, 688005</p>
+            <div class="privacy-section ai-cta">
+                <h2><i class="fas fa-sparkles"></i> See Admin AI Agent</h2>
+                <p>Ask your ERP. Get the answer. Book a short demo, or log in if your school already uses ConnectEdu.</p>
+                <div class="hero-actions">
+                    <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">See Admin AI Agent</a>
+                    <a href="https://schools.connectedu.in/site/login" class="btn btn-secondary">School Login</a>
                 </div>
+                <p style="margin-top:1.25rem;margin-bottom:0;font-size:.9rem;opacity:.75;">Existing ConnectEdu schools: after login, open Admin AI Agent from the admin panel.</p>
             </div>
 
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="index.html" class="back-to-home">
-                    <i class="fas fa-arrow-left"></i>
-                    Back to Home
-                </a>
-            </div>
+            <a href="index.html" class="back-to-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
         </div>
     </section>
 
-    <!-- Footer -->
+<!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
