@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PDDRVMHG');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17526502385"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-17526502385');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin AI Agent for Schools — Ask Your ERP in Plain English</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Admin AI Agent for Schools — Ask Your ERP in Plain English">
+    <meta name="description" content="School admins ask in any language about live fees, attendance, and headcounts. Answers come from live school data via secure database queries — ConnectEdu.">
+    <meta name="keywords" content="Admin AI Agent for schools, AI school management, AI school ERP, school management system with AI, school admin AI assistant, ConnectEdu">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://connectedu.in/admin-ai-agent-for-schools.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/latest/transparent-logo.png">
+
+    <!-- Core & Font Stylesheets -->
+    <link rel="stylesheet" href="assets/css/styles-v2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Calendly Integration Assets -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+    <style>
+        :root {
+            /* Map old local styles to premium CSS variables cleanly */
+            --primary-color: var(--primary-blue);
+            --secondary-color: var(--accent-teal);
+            --accent-color: var(--accent-purple);
+            --text-primary: var(--slate-900);
+            --text-secondary: var(--slate-600);
+            --background-light: var(--slate-50);
+            --border-radius: var(--radius-md);
+            --transition: var(--transition-smooth);
+        }
+
+        .privacy-hero {
+            background: linear-gradient(135deg, var(--slate-900) 0%, var(--dark-navy) 100%);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--navy-card-border);
+        }
+
+        .privacy-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.8;
+        }
+
+        .privacy-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .privacy-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            color: var(--pure-white);
+            letter-spacing: -1px;
+        }
+
+        .privacy-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+            opacity: 0.8;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .privacy-content {
+            padding: 5rem 0;
+            background: var(--background-light);
+        }
+
+        .privacy-container {
+            max-width: 840px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .privacy-section {
+            background: var(--pure-white);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--slate-100);
+            transition: var(--transition);
+        }
+
+        .privacy-section:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(46, 91, 255, 0.1);
+        }
+
+        .privacy-section h2 {
+            color: var(--slate-900);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .privacy-section h2 i {
+            color: var(--primary-color);
+        }
+
+        .privacy-section h3 {
+            color: var(--slate-800);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+        }
+
+        .privacy-section p {
+            color: var(--slate-600);
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
+
+        .privacy-section ul {
+            color: var(--slate-600);
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+            padding-left: 20px;
+        }
+
+        .privacy-section li {
+            margin-bottom: 8px;
+        }
+
+        .contact-info {
+            background: var(--slate-50);
+            border: 1px solid var(--slate-100);
+            color: var(--slate-800);
+            padding: 24px;
+            border-radius: var(--radius-sm);
+            margin-top: 20px;
+        }
+
+        .contact-info h4 {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--slate-900);
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+            opacity: 1;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--slate-600);
+        }
+
+        .contact-info p i {
+            color: var(--primary-color);
+            width: 16px;
+        }
+
+        .effective-date {
+            background: linear-gradient(135deg, rgba(46, 91, 255, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%);
+            border: 1px solid rgba(46, 91, 255, 0.1);
+            color: var(--primary-blue);
+            padding: 16px 24px;
+            border-radius: var(--radius-sm);
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .breadcrumb {
+            background: var(--pure-white);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--slate-100);
+            margin-top: 92px; /* Balanced for desktop header height */
+        }
+
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--slate-400);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .breadcrumb-nav a:hover {
+            color: var(--primary-blue-hover);
+        }
+
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 28px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            margin: 40px 0;
+            box-shadow: 0 4px 15px -3px rgba(46, 91, 255, 0.3);
+        }
+
+        .back-to-home:hover {
+            transform: translateY(-2px);
+            background-color: var(--primary-blue-hover);
+            box-shadow: 0 8px 25px -3px rgba(46, 91, 255, 0.4);
+        }
+
+        @media (max-width: 991px) {
+            .breadcrumb {
+                margin-top: 70px; /* Aligned for tablet/mobile header height */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .privacy-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .privacy-container {
+                padding: 0 16px;
+            }
+
+            .privacy-section {
+                padding: 24px;
+            }
+        }
+    
+        .ai-demo-section {
+            padding: 0 0 3rem;
+            background: var(--background-light, #f8fafc);
+        }
+        .ai-demo-card {
+            max-width: 900px;
+            margin: -2rem auto 0;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1.75rem 1.5rem 1.5rem;
+            box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        .ai-demo-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #2e5bff;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .ai-demo-card h2 {
+            font-size: clamp(1.25rem, 3vw, 1.6rem);
+            margin: 0 0 0.5rem;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+        }
+        .ai-demo-sub {
+            color: #64748b;
+            margin: 0 0 1.25rem;
+            font-size: 0.98rem;
+        }
+        .ai-demo-frame {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            background: #0f172a;
+            line-height: 0;
+        }
+        .ai-demo-video {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 70vh;
+            background: #0f172a;
+        }
+        @media (max-width: 768px) {
+            .ai-demo-card { margin-top: -1rem; padding: 1.25rem 1rem; }
+        }
+    </style>
+
+    <style>
+        .ai-trust { background: linear-gradient(135deg, rgba(46,91,255,.05), rgba(14,165,233,.05)); border: 1px solid rgba(46,91,255,.12); padding: 14px 18px; border-radius: 8px; margin: 1rem 0 1.25rem; font-weight: 600; color: #1e293b; }
+        .ai-example { background: #f8fafc; border-left: 3px solid #2e5bff; padding: 10px 14px; margin: .5rem 0 1rem; font-style: italic; color: #334155; border-radius: 0 8px 8px 0; }
+        .ai-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
+        .ai-table th, .ai-table td { border: 1px solid #f1f5f9; padding: 12px 14px; text-align: left; vertical-align: top; color: #475569; }
+        .ai-table th { background: #f8fafc; color: #0f172a; }
+        .ai-cta { text-align: center; }
+        .ai-cta .hero-actions, .privacy-hero .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 1.25rem; }
+        .ai-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; font-size: .85rem; font-weight: 600; margin: 0 6px 8px 0; }
+        .ai-pill.live { background: rgba(16,185,129,.1); color: #047857; border: 1px solid rgba(16,185,129,.3); }
+        .ai-pill.soon { background: rgba(245,158,11,.1); color: #b45309; border: 1px solid rgba(245,158,11,.3); }
+        .faq-block { margin-bottom: 1.25rem; }
+        .faq-block h3 { margin-top: 0; font-size: 1.1rem; }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDDRVMHG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Header & Navigation -->
+    <header class="header" id="home">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html#home" class="logo-wrapper">
+                    <img src="assets/images/latest/logo-text.png" alt="Connectedu Logo">
+                </a>
+                
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html#features" class="nav-link">Features</a></li>
+                        <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+                        <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+                        <li><a href="index.html#about" class="nav-link">About</a></li>
+                        <li><a href="video-tutorials.html" class="nav-link">Resources</a></li>
+                        
+                        <!-- Mobile Actions -->
+                        <li class="nav-actions-mobile">
+                            <a href="https://schools.connectedu.in/site/login" class="btn btn-secondary">Login</a>
+                            <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">Book a Demo</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="nav-actions">
+                    <a href="https://schools.connectedu.in/site/login" class="login-link">Login</a>
+                    <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">Book a Demo</a>
+                </div>
+
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Admin AI Agent</span>
+            </nav>
+        </div>
+    </section>
+
+    <section class="privacy-hero">
+        <div class="container">
+            <h1><i class="fas fa-robot"></i> Admin AI Agent for Schools</h1>
+            <p>Ask your ERP in plain English. Get answers from your school’s live data.</p>
+            <div class="hero-actions">
+                <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">See Admin AI Agent</a>
+                <a href="https://schools.connectedu.in/site/login" class="btn btn-secondary">School Login</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ai-demo-section" aria-label="Admin AI Agent demo">
+        <div class="container">
+            <div class="ai-demo-card">
+                <p class="ai-demo-label"><i class="fas fa-play-circle"></i> See it in action</p>
+                <h2>Ask a question. Get an answer from live school data.</h2>
+                <p class="ai-demo-sub">Short demo of ConnectEdu’s Admin AI Agent — sped up for the web. No audio.</p>
+                <div class="ai-demo-frame">
+                    <video
+                        class="ai-demo-video"
+                        controls
+                        muted
+                        playsinline
+                        preload="metadata"
+                        poster="assets/images/admin-ai-agent-demo-poster.jpg"
+                        aria-label="Screen recording of ConnectEdu Admin AI Agent answering a school question">
+                        <source src="assets/video/admin-ai-agent-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="privacy-content">
+        <div class="privacy-container">
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-comments"></i> Ask your school ERP instead of searching it</h2>
+                <p>School administrators already have the data they need. The challenge is finding it.</p>
+                <p>A principal may need pending fees for one class. An administrator may want today’s absent count. A school owner may want weekly fee collection or the number of active students on record.</p>
+                <p>Usually that means opening reports, setting filters, checking modules, exporting sheets, or asking someone to prepare a summary.</p>
+                <p>ConnectEdu’s <strong>Admin AI Agent for schools</strong> offers another path: ask your school ERP in natural language and get an answer from the school’s own data.</p>
+                <p>You can <strong>ask in any language; answers are in English</strong>.</p>
+                <div class="ai-trust">Answers come from live school data via secure database queries.</div>
+                <p>The agent sits inside ConnectEdu’s school ERP for principals, administrators, and other authorized staff who already run school operations — fees, attendance, staff, transport, exams, and more — and need faster access to information.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-circle-info"></i> What is an Admin AI Agent in a school ERP?</h2>
+                <p>An <strong>Admin AI Agent in a school ERP</strong> is an AI interface that lets authorized administrators ask about information stored in their school management system using natural language.</p>
+                <p>Instead of hunting through screens for a report, an administrator can ask:</p>
+                <ul>
+                    <li>“How much fee is pending for Class 8?”</li>
+                    <li>“How many students are absent today?”</li>
+                    <li>“How many active students are there in the school?”</li>
+                    <li>“What was the fee collection this week?”</li>
+                    <li>“Which staff are on leave today?”</li>
+                    <li>“Where is Bus 3 right now?”</li>
+                    <li>“What is Class 10’s exam schedule this week?”</li>
+                    <li>“Show me attendance for Class 7.”</li>
+                </ul>
+                <p>The agent interprets the question, uses information available to that user’s permissions, and returns the result in English.</p>
+                <p>That is different from a generic chatbot answering from training data. ConnectEdu’s Admin AI Agent is tied to the school’s ERP. For fees, attendance, student counts, and other operational records, the useful answer has to come from the school’s database—not from general AI knowledge.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-list-check"></i> What can school leaders ask?</h2>
+                <h3>Fee information</h3>
+                <div class="ai-example">“How much fee is pending for Class 8?”</div>
+                <h3>Attendance and absences</h3>
+                <div class="ai-example">“How many students are absent today?”</div>
+                <div class="ai-example">“What is today’s attendance status for Class 7?”</div>
+                <h3>Student and class headcounts</h3>
+                <div class="ai-example">“How many active students are currently registered?”</div>
+                <div class="ai-example">“How many students are in Class 10?”</div>
+                <h3>Fee collection</h3>
+                <div class="ai-example">“What was the fee collection this week?”</div>
+                <h3>Staff</h3>
+                <div class="ai-example">“Which staff are on leave today?”</div>
+                <div class="ai-example">“How many teachers are assigned to Class 9?”</div>
+                <h3>Transport</h3>
+                <div class="ai-example">“Where is Bus 3 right now?”</div>
+                <div class="ai-example">“Which students are on the Airport Road route?”</div>
+                <h3>Exams</h3>
+                <div class="ai-example">“What is Class 10’s exam schedule this week?”</div>
+                <div class="ai-example">“Who scored below 40% in Class 8 Maths?”</div>
+                <p>In each case, the answer is based on the school’s actual ERP data, within what that user’s role is allowed to see — including staff, transport, and exam records where those modules are live.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-shield-halved"></i> Why accuracy matters in AI school management</h2>
+                <p>Fluent AI answers are not enough for school administration. Questions about fees, attendance, or student records need to connect to operational data.</p>
+                <div class="ai-trust">Answers come from live school data via secure database queries.</div>
+                <p>The agent also runs inside ConnectEdu’s access-control model. Users should only see what their role permits. School ERPs hold sensitive financial and student information; an AI interface must not bypass permissions.</p>
+                <p>So the Admin AI Agent is part of the school ERP environment—not a separate public chatbot.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-toggle-on"></i> What is live today—and what is coming next?</h2>
+                <p><span class="ai-pill live"><i class="fas fa-circle-check"></i> Live today</span> <span class="ai-pill soon"><i class="fas fa-clock"></i> In the pipeline</span></p>
+                <h3>Live today</h3>
+                <ol>
+                    <li>Search the school’s database for relevant, permitted information.</li>
+                    <li>Answer in English, even when the question was asked in another language.</li>
+                </ol>
+                <h3>In the pipeline</h3>
+                <p>Reminders and notifications are being explored as administrative workflows. <strong>They are not live Admin AI Agent capabilities today.</strong></p>
+                <p>The current product helps administrators <strong>find and understand school information through natural-language queries</strong>—not claim every administrative action is already automated.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-sitemap"></i> Where the Admin AI Agent sits in ConnectEdu</h2>
+                <p>The agent is not a standalone AI app with a second database. It sits inside ConnectEdu’s school management system, which connects operations such as attendance, fees, exams, academics, transport, and communication.</p>
+                <p><strong>School data → secure database queries → Admin AI Agent → English answer</strong></p>
+                <p>Instead of: which report → which module → which filters → which dates → where is the result?<br>an administrator can start with the question itself.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-table"></i> AI school management vs a chatbot bolted onto an ERP</h2>
+                <table class="ai-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Website / generic chatbot</th>
+                            <th>ConnectEdu Admin AI Agent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Job</th>
+                            <td>School info, policies, FAQs</td>
+                            <td>Operational questions for authorized staff</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Data</th>
+                            <td>Training data or fixed FAQs</td>
+                            <td>Live school ERP data (permitted fields)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Example</th>
+                            <td>“Where is the school?”</td>
+                            <td>“How much fee is pending for Class 8?”</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Access</th>
+                            <td>Often public</td>
+                            <td>Role-based, inside the ERP</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Ask the ERP about the school’s data instead of manually searching the ERP to find it.</strong></p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-users"></i> Who it is for</h2>
+                <ul>
+                    <li><strong>Principals</strong> — quick answers across operations without waiting on every small pull.</li>
+                    <li><strong>School administrators</strong> — faster access to fees, attendance, and student records they already manage.</li>
+                    <li><strong>School owners / management</strong> — operational visibility without learning every module.</li>
+                    <li><strong>Schools on ConnectEdu</strong> — an AI query layer on the ERP they already use, not a replacement for the ERP.</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-circle-question"></i> Frequently asked questions</h2>
+                <div class="faq-block">
+                    <h3>What is an Admin AI Agent in a school ERP?</h3>
+                    <p>An AI interface inside a school ERP that lets authorized administrators ask about school data in natural language and get answers from information available in that ERP.</p>
+                </div>
+                <div class="faq-block">
+                    <h3>Can I ask in my own language?</h3>
+                    <p>Yes. Ask in any language. <strong>Answers are in English.</strong></p>
+                </div>
+                <div class="faq-block">
+                    <h3>Where do answers come from?</h3>
+                    <p><strong>Answers come from live school data via secure database queries</strong>—from the school’s ConnectEdu data for school-specific questions, not from general AI knowledge alone.</p>
+                </div>
+                <div class="faq-block">
+                    <h3>Can it answer questions about fees and attendance?</h3>
+                    <p>Yes. It can answer relevant questions about fees, attendance, student counts, fee collection, staff, transport, and exams — based on data in the school’s ERP and the user’s permissions.</p>
+                </div>
+                <div class="faq-block">
+                    <h3>Can it send fee reminders or notifications?</h3>
+                    <p>Not currently. Live capability is search and answer. <strong>Reminders and notifications are in the pipeline, not live today.</strong></p>
+                </div>
+                <div class="faq-block">
+                    <h3>Is it available to every user?</h3>
+                    <p>No. It is for authorized ConnectEdu users. Access follows the ERP’s role and permission model.</p>
+                </div>
+            </div>
+
+            <div class="privacy-section ai-cta">
+                <h2><i class="fas fa-sparkles"></i> See Admin AI Agent</h2>
+                <p>Ask your ERP. Get the answer. Book a short demo, or log in if your school already uses ConnectEdu.</p>
+                <div class="hero-actions">
+                    <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">See Admin AI Agent</a>
+                    <a href="https://schools.connectedu.in/site/login" class="btn btn-secondary">School Login</a>
+                </div>
+                <p style="margin-top:1.25rem;margin-bottom:0;font-size:.9rem;opacity:.75;">Existing ConnectEdu schools: after login, open Admin AI Agent from the admin panel.</p>
+            </div>
+
+            <a href="index.html" class="back-to-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </section>
+
+<!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h4>Connectedu</h4>
+                    <p>Revolutionizing school management and bridging parent-classroom connections through advanced real-time SaaS technology.</p>
+                    <div class="footer-app-badges">
+                        <a href="https://play.google.com/store/apps/details?id=com.mslabba.connecteduapp" target="_blank" rel="noopener" class="footer-app-btn" title="Download on Google Play">
+                            <i class="fa-brands fa-google-play"></i>
+                            <span>Google Play</span>
+                        </a>
+                        <a href="https://apps.apple.com/us/app/connectedu-inray/id6800581730" target="_blank" rel="noopener" class="footer-app-btn" title="Download on App Store">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>App Store</span>
+                        </a>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="footer-column-title">Features</h5>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html#features">Smart Attendance</a></li>
+                        <li class="footer-link"><a href="index.html#features">Bus Tracking</a></li>
+                        <li class="footer-link"><a href="index.html#features">Digital Ledger Fees</a></li>
+                        <li class="footer-link"><a href="index.html#features">AI Automation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="footer-column-title">Solutions</h5>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html#solutions">For Principals</a></li>
+                        <li class="footer-link"><a href="index.html#solutions">For Administrators</a></li>
+                        <li class="footer-link"><a href="index.html#solutions">For Teachers</a></li>
+                        <li class="footer-link"><a href="index.html#solutions">For Parents</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="footer-column-title">Pricing</h5>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html#pricing">Annual Plans</a></li>
+                        <li class="footer-link"><a href="index.html#pricing">Onboarding Support</a></li>
+                        <li class="footer-link"><a href="index.html#pricing">Custom Setup</a></li>
+                        <li class="footer-link"><a href="index.html#pricing">Addons</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="footer-column-title">Resources</h5>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="admin-ai-agent-for-schools.html">Admin AI Agent</a></li>
+                        <li class="footer-link"><a href="index.html#resources">Knowledge Base</a></li>
+                        <li class="footer-link"><a href="index.html#resources">Video Walkthroughs</a></li>
+                        <li class="footer-link"><a href="index.html#resources">Platform Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Connectedu. Powered by <a href="https://inraylabs.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">InRay Labs Pvt Ltd</a>. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Sales Modal -->
+    <div class="contact-modal" id="contactSalesModal">
+        <div class="contact-modal-content glass-card">
+            <button class="contact-modal-close" aria-label="Close contact modal">&times;</button>
+            <div class="contact-modal-header">
+                <h3>Talk to our Sales Team</h3>
+                <p>Learn how Connectedu can transform parent communication and school administration.</p>
+            </div>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-sales-form">
+                <input type="hidden" name="access_key" value="e6c00b1f-b590-4d88-9fe9-2616c56c2914">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                <div class="form-grid">
+                    <div class="form-group-v2">
+                        <label for="salesName">Contact Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="salesName" name="name" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+                    <div class="form-group-v2">
+                        <label for="salesEmail">Work Email</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="salesEmail" name="email" placeholder="principal@yourschool.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group-v2">
+                        <label for="salesPhone">Phone Number</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="salesPhone" name="phone" placeholder="e.g. +91 98765 43210" required>
+                        </div>
+                    </div>
+                    <div class="form-group-v2">
+                        <label for="salesSchool">School Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-school"></i>
+                            <input type="text" id="salesSchool" name="school_name" placeholder="e.g. Greenfield Public School" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group-v2 full-width">
+                    <label for="salesMessage">Tell us about your school</label>
+                    <div class="input-wrapper textarea-wrapper">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <textarea id="salesMessage" name="message" rows="4" placeholder="How many students do you manage? What specific features (fees, attendance, bus tracking) are you looking to optimize?" required></textarea>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary submit-sales-btn">
+                    <span>Send Inquiry</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Core App JS -->
+    <script src="assets/js/app-v2.js"></script>
+
+    <script>
+        // Add animation on scroll for privacy sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Initially hide sections and animate them in
+        document.querySelectorAll('.privacy-section').forEach((section, index) => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            section.style.transitionDelay = `${index * 0.08}s`;
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
