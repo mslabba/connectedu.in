@@ -18,29 +18,24 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms & Conditions - Connectedu School Management System</title>
-
-    <!-- Primary Meta Tags -->
-    <meta name="title" content="Terms & Conditions - Connectedu School Management System">
-    <meta name="description" content="Connectedu terms and conditions governing the use of our school management software platform and services.">
-    <meta name="keywords" content="Connectedu terms, school management terms, software license, user agreement, educational platform terms">
+    <title>Blog | ConnectEdu — School Management Insights</title>
+    <meta name="title" content="Blog | ConnectEdu — School Management Insights">
+    <meta name="description" content="ConnectEdu blog: school parent engagement, Admin AI Agent, and practical guides for Indian school leaders.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://connectedu.in/terms-conditions.html">
+    <link rel="canonical" href="https://connectedu.in/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://connectedu.in/blog.html">
+    <meta property="og:title" content="Blog | ConnectEdu — School Management Insights">
+    <meta property="og:description" content="ConnectEdu blog: school parent engagement, Admin AI Agent, and practical guides for Indian school leaders.">
+    <meta property="og:image" content="https://connectedu.in/assets/images/latest/transparent-logo.png">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/latest/transparent-logo.png">
-
-    <!-- Core & Font Stylesheets -->
     <link rel="stylesheet" href="assets/css/styles-v2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    <!-- Calendly Integration Assets -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-
     <style>
         :root {
-            /* Map old local styles to premium CSS variables cleanly */
             --primary-color: var(--primary-blue);
             --secondary-color: var(--accent-teal);
             --accent-color: var(--accent-purple);
@@ -50,8 +45,7 @@
             --border-radius: var(--radius-md);
             --transition: var(--transition-smooth);
         }
-
-        .terms-hero {
+        .privacy-hero {
             background: linear-gradient(135deg, var(--slate-900) 0%, var(--dark-navy) 100%);
             color: white;
             padding: 8rem 0 4rem;
@@ -60,52 +54,33 @@
             overflow: hidden;
             border-bottom: 1px solid var(--navy-card-border);
         }
-
-        .terms-hero::before {
+        .privacy-hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
             opacity: 0.8;
         }
-
-        .terms-hero .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .terms-hero h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            margin-bottom: 1.5rem;
+        .privacy-hero .container { position: relative; z-index: 2; }
+        .privacy-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            margin-bottom: 1.25rem;
             font-weight: 800;
             color: var(--pure-white);
             letter-spacing: -1px;
+            line-height: 1.15;
         }
-
-        .terms-hero p {
-            font-size: 1.2rem;
-            margin-bottom: 0;
-            opacity: 0.8;
-            max-width: 680px;
+        .privacy-hero p {
+            font-size: 1.15rem;
+            margin-bottom: 1.75rem;
+            opacity: 0.85;
+            max-width: 720px;
             margin-left: auto;
             margin-right: auto;
         }
-
-        .terms-content {
-            padding: 5rem 0;
-            background: var(--background-light);
-        }
-
-        .terms-container {
-            max-width: 840px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .terms-section {
+        .privacy-content { padding: 5rem 0; background: var(--background-light); }
+        .privacy-container { max-width: 840px; margin: 0 auto; padding: 0 24px; }
+        .privacy-section {
             background: var(--pure-white);
             border-radius: var(--border-radius);
             padding: 40px;
@@ -114,14 +89,12 @@
             border: 1px solid var(--slate-100);
             transition: var(--transition);
         }
-
-        .terms-section:hover {
+        .privacy-section:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
             border-color: rgba(46, 91, 255, 0.1);
         }
-
-        .terms-section h2 {
+        .privacy-section h2 {
             color: var(--slate-900);
             font-size: 1.5rem;
             font-weight: 700;
@@ -131,85 +104,31 @@
             gap: 12px;
             letter-spacing: -0.5px;
         }
-
-        .terms-section h2 i {
-            color: var(--primary-color);
-        }
-
-        .terms-section h3 {
+        .privacy-section h2 i { color: var(--primary-color); }
+        .privacy-section h3 {
             color: var(--slate-800);
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 700;
-            margin: 2rem 0 1rem;
+            margin: 1.75rem 0 0.75rem;
         }
-
-        .terms-section p {
+        .privacy-section p {
             color: var(--slate-600);
             line-height: 1.75;
             margin-bottom: 1.25rem;
         }
-
-        .terms-section ul {
+        .privacy-section ul, .privacy-section ol {
             color: var(--slate-600);
             line-height: 1.75;
             margin-bottom: 1.25rem;
             padding-left: 20px;
         }
-
-        .terms-section li {
-            margin-bottom: 8px;
-        }
-
-        .contact-info {
-            background: var(--slate-50);
-            border: 1px solid var(--slate-100);
-            color: var(--slate-800);
-            padding: 24px;
-            border-radius: var(--radius-sm);
-            margin-top: 20px;
-        }
-
-        .contact-info h4 {
-            margin-bottom: 12px;
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--slate-900);
-        }
-
-        .contact-info p {
-            margin-bottom: 8px;
-            opacity: 1;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--slate-600);
-        }
-
-        .contact-info p i {
-            color: var(--primary-color);
-            width: 16px;
-        }
-
-        .effective-date {
-            background: linear-gradient(135deg, rgba(46, 91, 255, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%);
-            border: 1px solid rgba(46, 91, 255, 0.1);
-            color: var(--primary-blue);
-            padding: 16px 24px;
-            border-radius: var(--radius-sm);
-            text-align: center;
-            margin-bottom: 40px;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
+        .privacy-section li { margin-bottom: 8px; }
         .breadcrumb {
             background: var(--pure-white);
             padding: 16px 0;
             border-bottom: 1px solid var(--slate-100);
-            margin-top: 92px; /* Balanced for desktop header height */
+            margin-top: 92px;
         }
-
         .breadcrumb-nav {
             display: flex;
             align-items: center;
@@ -217,17 +136,10 @@
             color: var(--slate-400);
             font-size: 0.9rem;
             font-weight: 500;
+            flex-wrap: wrap;
         }
-
-        .breadcrumb-nav a {
-            color: var(--primary-color);
-            transition: var(--transition);
-        }
-
-        .breadcrumb-nav a:hover {
-            color: var(--primary-blue-hover);
-        }
-
+        .breadcrumb-nav a { color: var(--primary-color); transition: var(--transition); }
+        .breadcrumb-nav a:hover { color: var(--primary-blue-hover); }
         .back-to-home {
             display: inline-flex;
             align-items: center;
@@ -242,48 +154,60 @@
             margin: 40px 0;
             box-shadow: 0 4px 15px -3px rgba(46, 91, 255, 0.3);
         }
-
         .back-to-home:hover {
             transform: translateY(-2px);
             background-color: var(--primary-blue-hover);
             box-shadow: 0 8px 25px -3px rgba(46, 91, 255, 0.4);
         }
-
-        @media (max-width: 991px) {
-            .breadcrumb {
-                margin-top: 70px; /* Aligned for tablet/mobile header height */
-            }
+        .ai-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
+        .ai-table th, .ai-table td { border: 1px solid #f1f5f9; padding: 12px 14px; text-align: left; vertical-align: top; color: #475569; }
+        .ai-table th { background: #f8fafc; color: #0f172a; }
+        .ai-cta { text-align: center; }
+        .ai-cta .hero-actions, .privacy-hero .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 1.25rem; }
+        .faq-block { margin-bottom: 1.25rem; }
+        .faq-block h3 { margin-top: 0; font-size: 1.1rem; }
+        .blog-meta { opacity: 0.75; font-size: 0.95rem; margin-bottom: 0 !important; }
+        .blog-card-grid { display: grid; gap: 1.5rem; }
+        .blog-card {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 1.25rem;
+            align-items: stretch;
+            text-decoration: none;
+            color: inherit;
+            background: var(--pure-white);
+            border: 1px solid var(--slate-100);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
         }
-
+        .blog-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: rgba(46, 91, 255, 0.12); }
+        .blog-card img { width: 100%; height: 100%; object-fit: cover; min-height: 160px; }
+        .blog-card-body { padding: 1.25rem 1.25rem 1.25rem 0; }
+        .blog-card-body h2 { font-size: 1.25rem; margin: 0.35rem 0 0.75rem; color: var(--slate-900); letter-spacing: -0.02em; }
+        .blog-card-body p { color: var(--slate-600); margin: 0; line-height: 1.6; }
+        .blog-card-date { font-size: 0.85rem; font-weight: 600; color: var(--primary-color); }
+        @media (max-width: 991px) { .breadcrumb { margin-top: 70px; } }
         @media (max-width: 768px) {
-            .terms-hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .terms-container {
-                padding: 0 16px;
-            }
-
-            .terms-section {
-                padding: 24px;
-            }
+            .privacy-hero h1 { font-size: 2.2rem; }
+            .privacy-container { padding: 0 16px; }
+            .privacy-section { padding: 24px; }
+            .blog-card { grid-template-columns: 1fr; }
+            .blog-card-body { padding: 0 1.25rem 1.25rem; }
         }
     </style>
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDDRVMHG"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Header & Navigation -->
     <header class="header" id="home">
         <div class="container">
             <div class="nav-container">
                 <a href="index.html#home" class="logo-wrapper">
                     <img src="assets/images/latest/logo-text.png" alt="Connectedu Logo">
                 </a>
-                
                 <nav>
                     <ul class="nav-menu">
                         <li><a href="index.html#features" class="nav-link">Features</a></li>
@@ -292,21 +216,17 @@
                         <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
                         <li><a href="index.html#about" class="nav-link">About</a></li>
                         <li><a href="video-tutorials.html" class="nav-link">Resources</a></li>
-                        <li><a href="blog.html" class="nav-link">Blog</a></li>
-                        
-                        <!-- Mobile Actions -->
+                        <li><a href="blog.html" class="nav-link active">Blog</a></li>
                         <li class="nav-actions-mobile">
                             <a href="https://schools.connectedu.in/site/login" class="btn btn-secondary">Login</a>
                             <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">Book a Demo</a>
                         </li>
                     </ul>
                 </nav>
-                
                 <div class="nav-actions">
                     <a href="https://schools.connectedu.in/site/login" class="login-link">Login</a>
                     <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">Book a Demo</a>
                 </div>
-
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
@@ -316,207 +236,39 @@
         </div>
     </header>
 
-    <!-- Breadcrumb -->
     <section class="breadcrumb">
         <div class="container">
-            <nav class="breadcrumb-nav">
+            <nav class="breadcrumb-nav" aria-label="Breadcrumb">
                 <a href="index.html">Home</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Terms & Conditions</span>
+                <span>Blog</span>
             </nav>
         </div>
     </section>
 
-    <!-- Hero Section -->
-    <section class="terms-hero">
+    <section class="privacy-hero">
         <div class="container">
-            <h1><i class="fas fa-file-contract"></i> Terms & Conditions</h1>
-            <p>Please read these terms and conditions carefully before using our ConnectedU platform and services.</p>
+            <h1><i class="fas fa-newspaper"></i> ConnectEdu Blog</h1>
+            <p>Practical insights for Indian school leaders on parent engagement, operations, and Admin AI.</p>
         </div>
     </section>
 
-    <!-- Terms Content -->
-    <section class="terms-content">
-        <div class="terms-container">
-            <div class="effective-date">
-                <strong>Effective Date:</strong> January 1, 2025 | <strong>Last Updated:</strong> January 1, 2025
-            </div>
-
-            <!-- Introduction -->
-            <div class="terms-section">
-                <h2><i class="fas fa-info-circle"></i> Introduction</h2>
-                <p>Welcome to ConnectedU ("Turgut", "we", "us", or "our"), a proprietorship owned by Muhammed Shihabudeen Labba.</p>
-                <p>These Terms & Conditions ("Terms") govern your access to and use of our website https://connectedu.in, the ConnectedU web application, and the ConnectedU mobile app (collectively, the "Platform").</p>
-                <p>By accessing or using the Platform, you agree to be bound by these Terms. If you do not agree, you must not access or use the Platform.</p>
-            </div>
-
-            <!-- About ConnectedU -->
-            <div class="terms-section">
-                <h2><i class="fas fa-graduation-cap"></i> About ConnectedU</h2>
-                <p>ConnectedU is a digital school management software that helps educational institutions manage administrative, academic, and communication activities. The Platform allows schools, teachers, students, and parents to access and exchange educational information digitally.</p>
-            </div>
-
-            <!-- Business Details -->
-            <div class="terms-section">
-                <h2><i class="fas fa-building"></i> Business Details</h2>
-                <ul>
-                    <li><strong>Service Provider:</strong> Turgut, proprietorship owned by Muhammed Shihabudeen Labba</li>
-                    <li><strong>GSTIN:</strong> 32AHDPL2727R1Z3</li>
-                    <li><strong>Registered Address:</strong> 10/179, Valanjavazhy, Alappuzha, Alappuzha, Kerala, 688005</li>
-                    <li><strong>Contact Email:</strong> hello@connectedu.in</li>
-                    <li><strong>Contact Phone:</strong> +919037138030</li>
-                </ul>
-            </div>
-
-            <!-- Eligibility -->
-            <div class="terms-section">
-                <h2><i class="fas fa-user-check"></i> Eligibility</h2>
-                <p>By using the Platform, you confirm that:</p>
-                <ul>
-                    <li>You are at least 18 years old; or</li>
-                    <li>If you are below 18, your parent or legal guardian has provided consent to use the Platform; and</li>
-                    <li>You have the authority to enter into these Terms on behalf of yourself or the institution you represent.</li>
-                </ul>
-            </div>
-
-            <!-- Account Registration -->
-            <div class="terms-section">
-                <h2><i class="fas fa-user-plus"></i> Account Registration</h2>
-                <ul>
-                    <li>Certain features require registration.</li>
-                    <li>You must provide accurate, complete, and current information and update it as necessary.</li>
-                    <li>You are responsible for keeping your credentials confidential and for all activities under your account.</li>
-                    <li>Accounts that violate these Terms may be suspended or terminated.</li>
-                </ul>
-            </div>
-
-            <!-- Services and Access -->
-            <div class="terms-section">
-                <h2><i class="fas fa-cogs"></i> Services and Access</h2>
-                <p>ConnectedU provides schools with digital tools for managing attendance, grades, communication, and other academic functions.</p>
-                <p>We may update, modify, suspend, or discontinue any feature or service at any time without notice.</p>
-            </div>
-
-            <!-- Subscription and Payments -->
-            <div class="terms-section">
-                <h2><i class="fas fa-credit-card"></i> Subscription and Payments</h2>
-                <ul>
-                    <li>Access to certain modules may require a paid subscription or license.</li>
-                    <li>Payment terms, renewal, and cancellation policies will be detailed in your Service Agreement with Turgut.</li>
-                    <li>Payments are subject to GST at the applicable rate.</li>
-                    <li>All payments once made are non-refundable except as required by law or specified in the Agreement.</li>
-                </ul>
-            </div>
-
-            <!-- Intellectual Property Rights -->
-            <div class="terms-section">
-                <h2><i class="fas fa-copyright"></i> Intellectual Property Rights</h2>
-                <ul>
-                    <li>All content, software, code, design, trademarks, logos, and other materials on the Platform are owned by Turgut.</li>
-                    <li>You are granted a limited, non-exclusive, non-transferable license to use the Platform for educational and administrative purposes of your institution.</li>
-                    <li>Copying, modifying, distributing, selling, or reverse-engineering any part of the Platform is strictly prohibited without prior written consent.</li>
-                </ul>
-            </div>
-
-            <!-- User Responsibilities -->
-            <div class="terms-section">
-                <h2><i class="fas fa-user-shield"></i> User Responsibilities</h2>
-                <p>You agree not to:</p>
-                <ul>
-                    <li>Use the Platform for unlawful purposes;</li>
-                    <li>Upload or share content that is harmful, illegal, or infringes third-party rights;</li>
-                    <li>Attempt unauthorized access to any system or network;</li>
-                    <li>Use bots, scrapers, or automated tools;</li>
-                    <li>Violate applicable laws or regulations.</li>
-                </ul>
-            </div>
-
-            <!-- Data Ownership and Privacy -->
-            <div class="terms-section">
-                <h2><i class="fas fa-database"></i> Data Ownership and Privacy</h2>
-                <ul>
-                    <li>All data related to students, parents, teachers, and schools uploaded to the Platform remains the property of the respective institution.</li>
-                    <li>Turgut acts as a data processor and handles such data only for providing the agreed services.</li>
-                    <li>We comply with the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023 (DPDPA).</li>
-                    <li>Details on data handling, protection, and user rights are covered in our <a href="privacy-policy.html">Privacy Policy</a>.</li>
-                </ul>
-            </div>
-
-            <!-- Third-Party Services -->
-            <div class="terms-section">
-                <h2><i class="fas fa-external-link-alt"></i> Third-Party Services</h2>
-                <p>The Platform may integrate with third-party services (e.g., SMS gateways, payment processors, or cloud hosting).</p>
-                <p>Turgut is not responsible for any issues, losses, or damages arising from third-party services, which are governed by their terms.</p>
-            </div>
-
-            <!-- Limitation of Liability -->
-            <div class="terms-section">
-                <h2><i class="fas fa-exclamation-triangle"></i> Limitation of Liability</h2>
-                <ul>
-                    <li>To the fullest extent permitted by law, Muhammed Shihabudeen Labba, as the proprietor of Turgut, shall not be liable for indirect, incidental, or consequential damages (including loss of data, profits, or reputation).</li>
-                    <li>Our total liability for any claim arising out of or related to your use of the Platform shall not exceed the total amount paid (if any) by you during the 12 months preceding the claim.</li>
-                </ul>
-            </div>
-
-            <!-- Disclaimer -->
-            <div class="terms-section">
-                <h2><i class="fas fa-info"></i> Disclaimer</h2>
-                <p>The Platform and all content and services are provided "as is" and "as available".</p>
-                <p>No warranties, express or implied, are made regarding accuracy, reliability, or suitability. We do not guarantee uninterrupted or error-free service.</p>
-            </div>
-
-            <!-- Termination -->
-            <div class="terms-section">
-                <h2><i class="fas fa-times-circle"></i> Termination</h2>
-                <ul>
-                    <li>Access may be suspended or terminated if you violate these Terms, engage in fraudulent activities, or cause harm to the Platform or its users.</li>
-                    <li>Upon termination, your right to use the Platform ceases immediately.</li>
-                    <li>Obligations that by their nature survive (confidentiality, IP, and payment obligations) remain in effect.</li>
-                </ul>
-            </div>
-
-            <!-- Indemnification -->
-            <div class="terms-section">
-                <h2><i class="fas fa-shield-alt"></i> Indemnification</h2>
-                <p>You agree to indemnify and hold harmless Turgut and its proprietor from claims, damages, or expenses arising from:</p>
-                <ul>
-                    <li>Misuse of the Platform;</li>
-                    <li>Violation of these Terms; or</li>
-                    <li>Content or data submitted through the Platform.</li>
-                </ul>
-            </div>
-
-            <!-- Governing Law and Jurisdiction -->
-            <div class="terms-section">
-                <h2><i class="fas fa-gavel"></i> Governing Law and Jurisdiction</h2>
-                <ul>
-                    <li>These Terms are governed by the laws of India.</li>
-                    <li>All disputes shall be subject to the exclusive jurisdiction of courts in Kerala, preferably Ernakulam.</li>
-                </ul>
-            </div>
-
-            <!-- Contact Information -->
-            <div class="terms-section">
-                <h2><i class="fas fa-envelope"></i> Contact Information</h2>
-                <p>For questions about these Terms & Conditions, please contact us:</p>
-                <div class="contact-info">
-                    <h4>Turgut (Proprietorship owned by Muhammed Shihabudeen Labba)</h4>
-                    <p><i class="fas fa-envelope"></i> Email: hello@connectedu.in</p>
-                    <p><i class="fas fa-phone"></i> Phone: +919037138030</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Address: 10/179, Valanjavazhy, Alappuzha, Alappuzha, Kerala, 688005</p>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="index.html" class="back-to-home">
-                    <i class="fas fa-arrow-left"></i>
-                    Back to Home
+    <section class="privacy-content">
+        <div class="privacy-container">
+            <div class="blog-card-grid">
+                <a class="blog-card privacy-section" href="school-parent-engagement-platform-india.html" style="padding:0; display:grid;">
+                    <img src="assets/images/school-parent-engagement-platform-india.jpg" alt="School parent engagement platform on a phone next to outdated group chat" width="1280" height="720">
+                    <div class="blog-card-body">
+                        <div class="blog-card-date">22 Sep 2026</div>
+                        <h2>School Parent Engagement Platform for Indian Schools: Why WhatsApp Groups Are Not Enough</h2>
+                        <p>WhatsApp groups are not a school parent engagement platform. See why Indian schools need targeting, audit trails, and ops-tied parent communication — and how ConnectEdu helps.</p>
+                    </div>
                 </a>
             </div>
+            <a href="index.html" class="back-to-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
@@ -540,7 +292,6 @@
                         <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
-                
                 <div>
                     <h5 class="footer-column-title">Features</h5>
                     <ul class="footer-links">
@@ -550,7 +301,6 @@
                         <li class="footer-link"><a href="index.html#features">AI Automation</a></li>
                     </ul>
                 </div>
-                
                 <div>
                     <h5 class="footer-column-title">Solutions</h5>
                     <ul class="footer-links">
@@ -560,7 +310,6 @@
                         <li class="footer-link"><a href="index.html#solutions">For Parents</a></li>
                     </ul>
                 </div>
-                
                 <div>
                     <h5 class="footer-column-title">Pricing</h5>
                     <ul class="footer-links">
@@ -570,7 +319,6 @@
                         <li class="footer-link"><a href="index.html#pricing">Addons</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h5 class="footer-column-title">Resources</h5>
                     <ul class="footer-links">
@@ -582,7 +330,6 @@
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2026 Connectedu. Powered by <a href="https://inraylabs.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">InRay Labs Pvt Ltd</a>. All rights reserved.</p>
                 <div class="footer-legal-links">
@@ -592,8 +339,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Contact Sales Modal -->
     <div class="contact-modal" id="contactSalesModal">
         <div class="contact-modal-content glass-card">
             <button class="contact-modal-close" aria-label="Close contact modal">&times;</button>
@@ -604,7 +349,6 @@
             <form action="https://api.web3forms.com/submit" method="POST" class="contact-sales-form">
                 <input type="hidden" name="access_key" value="e6c00b1f-b590-4d88-9fe9-2616c56c2914">
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                
                 <div class="form-grid">
                     <div class="form-group-v2">
                         <label for="salesName">Contact Name</label>
@@ -635,7 +379,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="form-group-v2 full-width">
                     <label for="salesMessage">Tell us about your school</label>
                     <div class="input-wrapper textarea-wrapper">
@@ -643,7 +386,6 @@
                         <textarea id="salesMessage" name="message" rows="4" placeholder="How many students do you manage? What specific features (fees, attendance, bus tracking) are you looking to optimize?" required></textarea>
                     </div>
                 </div>
-                
                 <button type="submit" class="btn btn-primary submit-sales-btn">
                     <span>Send Inquiry</span>
                     <i class="fa-solid fa-paper-plane"></i>
@@ -651,17 +393,9 @@
             </form>
         </div>
     </div>
-
-    <!-- Core App JS -->
     <script src="assets/js/app-v2.js"></script>
-
     <script>
-        // Add animation on scroll for terms sections
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -670,9 +404,7 @@
                 }
             });
         }, observerOptions);
-
-        // Initially hide sections and animate them in
-        document.querySelectorAll('.terms-section').forEach((section, index) => {
+        document.querySelectorAll('.privacy-section').forEach((section, index) => {
             section.style.opacity = '0';
             section.style.transform = 'translateY(30px)';
             section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
