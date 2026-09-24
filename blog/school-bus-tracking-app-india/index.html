@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PDDRVMHG');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17526502385"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-17526502385');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live School Bus Tracking for Parents: GPS, Geofence Alerts, and Fewer Office Calls | ConnectEdu</title>
+    <meta name="title" content="Live School Bus Tracking App for Parents | ConnectEdu">
+    <meta name="description" content="A school bus tracking app with live GPS, geofence notifications near home, and delay alerts — so Indian parents stop calling the office and waiting at the stop.">
+    <meta name="keywords" content="school bus tracking app, live school bus tracking, school GPS bus tracker India, geofence bus alerts, ConnectEdu">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://connectedu.in/blog/school-bus-tracking-app-india">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://connectedu.in/blog/school-bus-tracking-app-india">
+    <meta property="og:title" content="Live School Bus Tracking App for Parents | ConnectEdu">
+    <meta property="og:description" content="A school bus tracking app with live GPS, geofence notifications near home, and delay alerts — so Indian parents stop calling the office and waiting at the stop.">
+    <meta property="og:image" content="https://connectedu.in/assets/images/school-bus-tracking-app-india.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Live School Bus Tracking App for Parents | ConnectEdu">
+    <meta name="twitter:description" content="A school bus tracking app with live GPS, geofence notifications near home, and delay alerts — so Indian parents stop calling the office and waiting at the stop.">
+
+    <link rel="icon" type="image/png" href="../../assets/images/latest/transparent-logo.png">
+    <link rel="stylesheet" href="../../assets/css/styles-v2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <style>
+        :root {
+            --primary-color: var(--primary-blue);
+            --secondary-color: var(--accent-teal);
+            --accent-color: var(--accent-purple);
+            --text-primary: var(--slate-900);
+            --text-secondary: var(--slate-600);
+            --background-light: var(--slate-50);
+            --border-radius: var(--radius-md);
+            --transition: var(--transition-smooth);
+        }
+        .privacy-hero {
+            background: linear-gradient(135deg, var(--slate-900) 0%, var(--dark-navy) 100%);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--navy-card-border);
+        }
+        .privacy-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.8;
+        }
+        .privacy-hero .container { position: relative; z-index: 2; }
+        .privacy-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            margin-bottom: 1.25rem;
+            font-weight: 800;
+            color: var(--pure-white);
+            letter-spacing: -1px;
+            line-height: 1.15;
+        }
+        .privacy-hero p {
+            font-size: 1.15rem;
+            margin-bottom: 1.75rem;
+            opacity: 0.85;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .privacy-content { padding: 5rem 0; background: var(--background-light); }
+        .privacy-container { max-width: 840px; margin: 0 auto; padding: 0 24px; }
+        .privacy-section {
+            background: var(--pure-white);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--slate-100);
+            transition: var(--transition);
+        }
+        .privacy-section:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(46, 91, 255, 0.1);
+        }
+        .privacy-section h2 {
+            color: var(--slate-900);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -0.5px;
+        }
+        .privacy-section h2 i { color: var(--primary-color); }
+        .privacy-section h3 {
+            color: var(--slate-800);
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .privacy-section p {
+            color: var(--slate-600);
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
+        .privacy-section ul, .privacy-section ol {
+            color: var(--slate-600);
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+            padding-left: 20px;
+        }
+        .privacy-section li { margin-bottom: 8px; }
+        .breadcrumb {
+            background: var(--pure-white);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--slate-100);
+            margin-top: 92px;
+        }
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--slate-400);
+            font-size: 0.9rem;
+            font-weight: 500;
+            flex-wrap: wrap;
+        }
+        .breadcrumb-nav a { color: var(--primary-color); transition: var(--transition); }
+        .breadcrumb-nav a:hover { color: var(--primary-blue-hover); }
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 28px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            margin: 40px 0;
+            box-shadow: 0 4px 15px -3px rgba(46, 91, 255, 0.3);
+        }
+        .back-to-home:hover {
+            transform: translateY(-2px);
+            background-color: var(--primary-blue-hover);
+            box-shadow: 0 8px 25px -3px rgba(46, 91, 255, 0.4);
+        }
+        .ai-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
+        .ai-table th, .ai-table td { border: 1px solid #f1f5f9; padding: 12px 14px; text-align: left; vertical-align: top; color: #475569; }
+        .ai-table th { background: #f8fafc; color: #0f172a; }
+        .ai-cta { text-align: center; }
+        .ai-cta .hero-actions, .privacy-hero .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 1.25rem; }
+        .faq-block { margin-bottom: 1.25rem; }
+        .faq-block h3 { margin-top: 0; font-size: 1.1rem; }
+        .blog-meta { opacity: 0.75; font-size: 0.95rem; margin-bottom: 0 !important; }
+        .blog-card-grid { display: grid; gap: 1.5rem; }
+        .blog-card {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 1.25rem;
+            align-items: stretch;
+            text-decoration: none;
+            color: inherit;
+            background: var(--pure-white);
+            border: 1px solid var(--slate-100);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .blog-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: rgba(46, 91, 255, 0.12); }
+        .blog-card img { width: 100%; height: 100%; object-fit: cover; min-height: 160px; }
+        .blog-card-body { padding: 1.25rem 1.25rem 1.25rem 0; }
+        .blog-card-body h2 { font-size: 1.25rem; margin: 0.35rem 0 0.75rem; color: var(--slate-900); letter-spacing: -0.02em; }
+        .blog-card-body p { color: var(--slate-600); margin: 0; line-height: 1.6; }
+        .blog-card-date { font-size: 0.85rem; font-weight: 600; color: var(--primary-color); }
+        @media (max-width: 991px) { .breadcrumb { margin-top: 70px; } }
+        @media (max-width: 768px) {
+            .privacy-hero h1 { font-size: 2.2rem; }
+            .privacy-container { padding: 0 16px; }
+            .privacy-section { padding: 24px; }
+            .blog-card { grid-template-columns: 1fr; }
+            .blog-card-body { padding: 0 1.25rem 1.25rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDDRVMHG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header" id="home">
+        <div class="container">
+            <div class="nav-container">
+                <a href="../../index.html#home" class="logo-wrapper">
+                    <img src="../../assets/images/latest/logo-text.png" alt="Connectedu Logo">
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="../../index.html#features" class="nav-link">Features</a></li>
+                        <li><a href="../../admin-ai-agent-for-schools.html" class="nav-link">Admin AI Agent <span class="nav-new-badge">NEW</span></a></li>
+                        <li><a href="../../index.html#solutions" class="nav-link">Solutions</a></li>
+                        <li><a href="../../index.html#pricing" class="nav-link">Pricing</a></li>
+                        <li><a href="../../index.html#about" class="nav-link">About</a></li>
+                        <li><a href="../../video-tutorials.html" class="nav-link">Resources</a></li>
+                        <li><a href="/blog/" class="nav-link active">Blog</a></li>
+                        <li class="nav-actions-mobile">
+                            <a href="https://schools.connectedu.in/site/login" class="btn btn-secondary">Login</a>
+                            <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">Book a Demo</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="nav-actions">
+                    <a href="https://schools.connectedu.in/site/login" class="login-link">Login</a>
+                    <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">Book a Demo</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                <a href="../../index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="/blog/">Blog</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>School Bus Tracking</span>
+            </nav>
+        </div>
+    </section>
+
+    <section class="privacy-hero">
+        <div class="container">
+            <h1>Live School Bus Tracking for Parents: GPS, Geofence Alerts, and Fewer Office Calls</h1>
+            <p class="blog-meta">24 Sep 2026 · School bus tracking app</p>
+            <div class="hero-actions">
+                <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">Book a Demo</a>
+                <a href="https://schools.connectedu.in/site/login" class="btn btn-secondary">School Login</a>
+            </div>
+        </div>
+    </section>
+
+        <section class="privacy-content">
+        <div class="privacy-container">
+
+            <div class="privacy-section">
+                <img src="../../assets/images/school-bus-tracking-app-india.jpg" alt="Live school bus tracking on a parent phone with GPS map and home geofence pin" width="1280" height="720" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;">
+                <p>Every morning and evening, the same question hits Indian school offices: “Where is the bus?” Parents wait at the gate in sun or rain. Drivers get interrupted mid-route. The front desk becomes a live traffic desk instead of a school office.</p>
+                <p>A <strong>school bus tracking app</strong> answers that question on the parent phone: live vehicle progress, geofence alerts near home, and delay notices when traffic or a breakdown slows the route — without a group-chat scramble.</p>
+                <p>If you lead a school that still manages transport by phone calls and WhatsApp location pins, this guide covers what parents actually need, what the office gains, and how live GPS fits inside a wider <a href="/blog/school-management-system-india">school management system</a> and <a href="/blog/school-parent-engagement-platform-india">parent engagement</a> stack — not as a standalone gadget.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-phone-slash"></i> Why “call the office” fails as a transport system</h2>
+                <p>School transport is a safety and trust product. When location is invisible, parents invent workarounds:</p>
+                <ul>
+                    <li><strong>Repeated calls</strong> to the office, driver, or class teacher during every delay.</li>
+                    <li><strong>Group-chat location pins</strong> that go stale the moment traffic moves.</li>
+                    <li><strong>Early waiting</strong> at the stop “just in case,” because nobody trusts the timetable alone.</li>
+                    <li><strong>Noise for everyone</strong> — parents who are not on that route still see the panic thread.</li>
+                </ul>
+                <p>None of that scales. A 20-bus fleet with staggered routes will drown a small admin team in the same questions every weekday. Live tracking does not replace good drivers or clear routes. It replaces the information gap that turns every delay into a crisis.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-map-location-dot"></i> What parents expect from live school bus tracking</h2>
+                <p>When schools evaluate a <strong>school GPS bus tracker India</strong> parents will actually use, the bar is practical, not flashy.</p>
+                <h3>1. Live map of the school vehicle</h3>
+                <p>Parents want to watch the bus move toward their stop — not a static “departed” SMS from an hour ago. Real-time coordinates on an interactive map turn anxiety into a plan: leave the house now, or wait five more minutes.</p>
+                <h3>2. Geofence notifications near home</h3>
+                <p>The highest-value alert is proximity. A geofence near the house (or stop) tells parents the bus is close, so they are not standing outside for twenty minutes. ConnectEdu’s parent experience is built around that pattern: watch live school vehicle progress and receive geofenced notifications near your house.</p>
+                <h3>3. Delay alerts when plans change</h3>
+                <p>Traffic, rain, and mechanical delays are normal. What parents resent is silence. Proactive delay alerts — when the system can flag bottlenecks or disruptions — keep the office from becoming a rumour mill and keep parents from flooding the driver’s phone.</p>
+                <h3>4. One official app, not a third login</h3>
+                <p>Parents already juggle homework apps, fee portals, and chat groups. A bus tracker that sits in the same parent app as attendance, fees, and school updates gets opened. A separate fleet app often gets ignored after the first week.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-table"></i> Standalone GPS vs bus tracking inside the school platform</h2>
+                <p>Many Indian vendors sell transport-only tracking. That can work for operators. For school leadership, the question is whether transport stays siloed.</p>
+                <div style="overflow-x:auto;">
+                <table class="ai-table">
+                    <thead>
+                        <tr>
+                            <th>Need</th>
+                            <th>Standalone tracker</th>
+                            <th>Bus tracking inside school ERP + parent app</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Live GPS map</td>
+                            <td>Often yes</td>
+                            <td>Yes — same parent login</td>
+                        </tr>
+                        <tr>
+                            <td>Geofence / near-home alerts</td>
+                            <td>Often yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Delay / route updates</td>
+                            <td>Varies</td>
+                            <td>Tied to school communication</td>
+                        </tr>
+                        <tr>
+                            <td>Parent already uses the app daily</td>
+                            <td>Unlikely</td>
+                            <td>Yes — fees, attendance, announcements</td>
+                        </tr>
+                        <tr>
+                            <td>Office sees transport next to student records</td>
+                            <td>Rare</td>
+                            <td>Yes — one school stack</td>
+                        </tr>
+                        <tr>
+                            <td>Driver role on mobile</td>
+                            <td>Sometimes</td>
+                            <td>Supported alongside parents and teachers</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                <p>A dedicated tracker solves location. A platform tracker solves location <strong>plus</strong> the reason parents already open the school app every day. That is the difference between “we have GPS” and “parents stop calling.”</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-building"></i> What the school office gains</h2>
+                <p>Live tracking is sold as a parent feature. Principals and administrators feel the upside in operations:</p>
+                <ul>
+                    <li><strong>Fewer interrupt calls</strong> during morning and evening peaks.</li>
+                    <li><strong>Clearer escalation</strong> when a bus is genuinely late — the map is shared truth, not a debate.</li>
+                    <li><strong>Better parent trust</strong> on safety without promising perfection on traffic.</li>
+                    <li><strong>Less chat noise</strong> in class groups about routes that do not belong there.</li>
+                </ul>
+                <p>Transport still needs trained drivers, assigned routes, and school policy. Software does not replace that. It makes the journey visible so policy can work.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-bus"></i> How ConnectEdu approaches school bus tracking</h2>
+                <p><a href="https://connectedu.in">ConnectEdu</a> is a school ERP and parent engagement platform: web for school teams; mobile for parents, teachers, and bus drivers. Transport is one module on that stack — alongside attendance, fees, exams, and structured <a href="/blog/school-parent-communication-india">school parent communication</a>.</p>
+                <p>Approved product capabilities for the bus experience:</p>
+                <ul>
+                    <li><strong>Live GPS tracking</strong> on the journey so parents can follow the school vehicle in real time.</li>
+                    <li><strong>Bus tracker in the parent app</strong> — watch live progress and receive <strong>geofenced notifications</strong> near home.</li>
+                    <li><strong>Precise GPS dispatch views</strong> — real-time coordinates, driver contact context, and geofence updates on interactive maps.</li>
+                    <li><strong>Proactive delay alerts</strong> when mechanical delays or traffic bottlenecks affect the route.</li>
+                    <li><strong>Peace of mind framing</strong> — parents are not left waiting under sun or rain without information.</li>
+                </ul>
+                <p>Because the same parent app also carries attendance history, online fees (cards, UPI, net banking), announcements, and exam results, bus alerts land in a channel parents already trust for school operations — not a one-off download.</p>
+                <p>For school admins reviewing fleet questions at the desk, ConnectEdu’s <a href="../../admin-ai-agent-for-schools.html">Admin AI Agent for schools</a> answers from live school data via secure database queries (ask in any language; answers in English). Parent-facing bus updates still run through the transport and communication modules — not through AI chat to families.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-clipboard-check"></i> A practical checklist for school leadership</h2>
+                <p>Use this when you shortlist a <strong>school bus tracking app</strong> or GPS add-on:</p>
+                <ol>
+                    <li><strong>Can parents see live vehicle progress on a map?</strong> A late SMS is not live tracking.</li>
+                    <li><strong>Do geofence alerts fire near the home or stop?</strong> Waiting time is the pain you are buying down.</li>
+                    <li><strong>Are delay alerts possible when routes slip?</strong> Silence is what creates office call storms.</li>
+                    <li><strong>Is tracking inside the same parent app as fees and attendance?</strong> Extra logins kill adoption.</li>
+                    <li><strong>Can drivers and the office work from the same stack?</strong> Fragmented tools recreate the phone-call culture you are trying to end.</li>
+                    <li><strong>Is transport visible next to student and route records?</strong> Safety and accountability need school context, not only a map pin.</li>
+                </ol>
+                <p>If your current setup fails most of these, you have a visibility problem — not a “parents worry too much” problem.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-circle-question"></i> FAQ: school bus tracking for Indian schools</h2>
+                <div class="faq-block">
+                    <h3>What is a school bus tracking app?</h3>
+                    <p>A school bus tracking app shows parents (and usually the school) the live GPS location of the school vehicle, often with geofence alerts near the stop or home and notifications when the bus is delayed. Better products put that map inside the same parent app used for attendance, fees, and school updates.</p>
+                </div>
+                <div class="faq-block">
+                    <h3>How do geofence alerts help parents?</h3>
+                    <p>A geofence is a virtual boundary around a place — typically near home or the pickup/drop stop. When the bus enters that zone, parents get a notification so they can step out at the right time instead of waiting early or missing the bus.</p>
+                </div>
+                <div class="faq-block">
+                    <h3>Can live GPS replace calling the driver?</h3>
+                    <p>It should reduce routine “where are you?” calls. Parents still need a clear school policy for emergencies. Live maps and delay alerts handle the everyday information gap that floods drivers and the front desk.</p>
+                </div>
+                <div class="faq-block">
+                    <h3>Is bus tracking only for large city schools?</h3>
+                    <p>Any school with assigned routes and parent pickup/drop expectations can benefit. The value is clearer when multiple buses run overlapping morning and evening windows — exactly when office phones ring most.</p>
+                </div>
+                <div class="faq-block">
+                    <h3>Does ConnectEdu include bus tracking with the rest of the school ERP?</h3>
+                    <p>Yes. ConnectEdu includes live GPS bus tracking, geofence notifications, and delay alerts as part of the wider platform parents already use for communication, attendance, fees, and exams.</p>
+                </div>
+            </div>
+
+            <div class="privacy-section ai-cta">
+                <h2><i class="fas fa-arrow-right"></i> Next step for school leaders</h2>
+                <p>If your goal is fewer office calls and calmer mornings, start with live GPS, geofence alerts near home, and delay notices inside the official parent app — not another standalone login.</p>
+                <p>Explore <a href="https://connectedu.in">ConnectEdu</a> for bus tracking alongside attendance, online fees, structured alerts, and digital report cards. Book a demo or use school login to see how <strong>live school bus tracking</strong> looks when it sits in the same stack parents already open every day.</p>
+                <div class="hero-actions">
+                    <a href="https://calendly.com/mslabba-turgut/30min" class="btn btn-primary book-demo-btn">Book a Demo</a>
+                    <a href="https://schools.connectedu.in/site/login" class="btn btn-secondary">School Login</a>
+                </div>
+            </div>
+
+
+            <a href="/blog/" class="back-to-home"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+        </div>
+    </section>
+
+<footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h4>Connectedu</h4>
+                    <p>Revolutionizing school management and bridging parent-classroom connections through advanced real-time SaaS technology.</p>
+                    <div class="footer-app-badges">
+                        <a href="https://play.google.com/store/apps/details?id=com.mslabba.connecteduapp" target="_blank" rel="noopener" class="footer-app-btn" title="Download on Google Play">
+                            <i class="fa-brands fa-google-play"></i>
+                            <span>Google Play</span>
+                        </a>
+                        <a href="https://apps.apple.com/us/app/connectedu-inray/id6800581730" target="_blank" rel="noopener" class="footer-app-btn" title="Download on App Store">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>App Store</span>
+                        </a>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="footer-column-title">Features</h5>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../index.html#features">Smart Attendance</a></li>
+                        <li class="footer-link"><a href="../../index.html#features">Bus Tracking</a></li>
+                        <li class="footer-link"><a href="../../index.html#features">Digital Ledger Fees</a></li>
+                        <li class="footer-link"><a href="../../index.html#features">AI Automation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="footer-column-title">Solutions</h5>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../index.html#solutions">For Principals</a></li>
+                        <li class="footer-link"><a href="../../index.html#solutions">For Administrators</a></li>
+                        <li class="footer-link"><a href="../../index.html#solutions">For Teachers</a></li>
+                        <li class="footer-link"><a href="../../index.html#solutions">For Parents</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="footer-column-title">Pricing</h5>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../index.html#pricing">Annual Plans</a></li>
+                        <li class="footer-link"><a href="../../index.html#pricing">Onboarding Support</a></li>
+                        <li class="footer-link"><a href="../../index.html#pricing">Custom Setup</a></li>
+                        <li class="footer-link"><a href="../../index.html#pricing">Addons</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="footer-column-title">Resources</h5>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../admin-ai-agent-for-schools.html">Admin AI Agent</a></li>
+                        <li class="footer-link"><a href="/blog/">Blog</a></li>
+                        <li class="footer-link"><a href="../../index.html#resources">Knowledge Base</a></li>
+                        <li class="footer-link"><a href="../../index.html#resources">Video Walkthroughs</a></li>
+                        <li class="footer-link"><a href="../../index.html#resources">Platform Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Connectedu. Powered by <a href="https://inraylabs.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">InRay Labs Pvt Ltd</a>. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="../../privacy-policy.html">Privacy Policy</a>
+                    <a href="../../terms-conditions.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="contact-modal" id="contactSalesModal">
+        <div class="contact-modal-content glass-card">
+            <button class="contact-modal-close" aria-label="Close contact modal">&times;</button>
+            <div class="contact-modal-header">
+                <h3>Talk to our Sales Team</h3>
+                <p>Learn how Connectedu can transform parent communication and school administration.</p>
+            </div>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-sales-form">
+                <input type="hidden" name="access_key" value="e6c00b1f-b590-4d88-9fe9-2616c56c2914">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <div class="form-grid">
+                    <div class="form-group-v2">
+                        <label for="salesName">Contact Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="salesName" name="name" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+                    <div class="form-group-v2">
+                        <label for="salesEmail">Work Email</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="salesEmail" name="email" placeholder="principal@yourschool.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group-v2">
+                        <label for="salesPhone">Phone Number</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="salesPhone" name="phone" placeholder="e.g. +91 98765 43210" required>
+                        </div>
+                    </div>
+                    <div class="form-group-v2">
+                        <label for="salesSchool">School Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-school"></i>
+                            <input type="text" id="salesSchool" name="school_name" placeholder="e.g. Greenfield Public School" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group-v2 full-width">
+                    <label for="salesMessage">Tell us about your school</label>
+                    <div class="input-wrapper textarea-wrapper">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <textarea id="salesMessage" name="message" rows="4" placeholder="How many students do you manage? What specific features (fees, attendance, bus tracking) are you looking to optimize?" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary submit-sales-btn">
+                    <span>Send Inquiry</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="../../assets/js/app-v2.js"></script>
+    <script>
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.privacy-section').forEach((section, index) => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            section.style.transitionDelay = `${index * 0.08}s`;
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
