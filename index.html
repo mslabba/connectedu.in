@@ -926,6 +926,78 @@
         </div>
     </div>
 
+    <!-- Book a Demo Modal -->
+    <div class="contact-modal" id="bookDemoModal">
+        <div class="contact-modal-content glass-card">
+            <button class="contact-modal-close" type="button" aria-label="Close demo modal">&times;</button>
+            <div class="contact-modal-header">
+                <h3>Book a Live Product Demo</h3>
+                <p>See how Connectedu automates school operations, fee collections, attendance, and parent communication.</p>
+            </div>
+            <form id="bookDemoForm" action="https://api.web3forms.com/submit" method="POST" class="contact-sales-form">
+                <input type="hidden" name="access_key" value="e6c00b1f-b590-4d88-9fe9-2616c56c2914">
+                <input type="hidden" name="subject" value="New Book a Demo Request - Connectedu">
+                <input type="hidden" name="from_name" value="Connectedu Demo Booking">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                <div class="form-grid">
+                    <div class="form-group-v2">
+                        <label for="demoName">Your Full Name *</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="demoName" name="name" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+                    <div class="form-group-v2">
+                        <label for="demoEmail">Official / Work Email *</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="demoEmail" name="email" placeholder="principal@yourschool.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group-v2">
+                        <label for="demoPhone">Phone / WhatsApp Number *</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="demoPhone" name="phone" placeholder="e.g. +91 98765 43210" required>
+                        </div>
+                    </div>
+                    <div class="form-group-v2">
+                        <label for="demoSchool">School / Institution Name *</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-school"></i>
+                            <input type="text" id="demoSchool" name="school_name" placeholder="e.g. Greenfield Public School" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group-v2 full-width">
+                    <label for="demoStudents">Approx. Student Strength</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-users"></i>
+                        <select id="demoStudents" name="student_count">
+                            <option value="Under 500 Students">Under 500 Students</option>
+                            <option value="500 - 1,500 Students" selected>500 - 1,500 Students</option>
+                            <option value="1,500 - 3,000 Students">1,500 - 3,000 Students</option>
+                            <option value="3,000+ Students">3,000+ Students</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary submit-demo-btn" id="demoSubmitBtn">
+                    <span>Continue to Schedule Demo</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="demo-modal-trust-badges">
+                    <span class="demo-modal-trust-badge"><i class="fa-solid fa-shield-halved"></i> 100% Privacy</span>
+                    <span class="demo-modal-trust-badge"><i class="fa-solid fa-clock"></i> 30-min tailored demo</span>
+                    <span class="demo-modal-trust-badge"><i class="fa-solid fa-bolt"></i> No obligation</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- Contact Sales Modal -->
     <div class="contact-modal" id="contactSalesModal">
         <div class="contact-modal-content glass-card">

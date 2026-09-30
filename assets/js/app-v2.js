@@ -311,20 +311,248 @@ function initScrollspy() {
 }
 
 /**
- * 9. Calendly integration: Open booking popup on click
+ * Helper: Fire OpenAI Lead tracking snippet
  */
+function trackLeadCreated(source = 'demo_form', extraData = {}) {
+    try {
+        if (typeof oaiq === 'function') {
+            oaiq("measure", "lead_created", {
+                type: "customer_action"
+            });
+        }
+    } catch (err) {
+        console.warn('oaiq tracking error:', err);
+    }
+
+    try {
+        if (window.dataLayer) {
+            window.dataLayer.push({
+                event: 'lead_created',
+                source: source,
+                ...extraData
+            });
+        }
+        if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+                event_category: 'Lead',
+                event_label: source
+            });
+        }
+    } catch (err) {
+        console.warn('Analytics tracking error:', err);
+    }
+}
+
+/**
+ * 9. Book a Demo Modal & Calendly integration with OpenAI Pixel tracking
+ */
+function ensureBookDemoModalExists() {
+    if (document.getElementById('bookDemoModal')) return;
+
+    const modalDiv = document.createElement('div');
+    modalDiv.className = 'contact-modal';
+    modalDiv.id = 'bookDemoModal';
+    modalDiv.innerHTML = `
+        <div class="contact-modal-content glass-card">
+            <button class="contact-modal-close" type="button" aria-label="Close demo modal">&times;</button>
+            <div class="contact-modal-header">
+                <h3>Book a Live Product Demo</h3>
+                <p>See how Connectedu automates school operations, fee collections, attendance, and parent communication.</p>
+            </div>
+            <form id="bookDemoForm" action="https://api.web3forms.com/submit" method="POST" class="contact-sales-form">
+                <input type="hidden" name="access_key" value="e6c00b1f-b590-4d88-9fe9-2616c56c2914">
+                <input type="hidden" name="subject" value="New Book a Demo Request - Connectedu">
+                <input type="hidden" name="from_name" value="Connectedu Demo Booking">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                <div class="form-grid">
+                    <div class="form-group-v2">
+                        <label for="demoName">Your Full Name *</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="demoName" name="name" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+                    <div class="form-group-v2">
+                        <label for="demoEmail">Official / Work Email *</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="demoEmail" name="email" placeholder="principal@yourschool.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group-v2">
+                        <label for="demoPhone">Phone / WhatsApp Number *</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="demoPhone" name="phone" placeholder="e.g. +91 98765 43210" required>
+                        </div>
+                    </div>
+                    <div class="form-group-v2">
+                        <label for="demoSchool">School / Institution Name *</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-school"></i>
+                            <input type="text" id="demoSchool" name="school_name" placeholder="e.g. Greenfield Public School" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group-v2 full-width">
+                    <label for="demoStudents">Approx. Student Strength</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-users"></i>
+                        <select id="demoStudents" name="student_count">
+                            <option value="Under 500 Students">Under 500 Students</option>
+                            <option value="500 - 1,500 Students" selected>500 - 1,500 Students</option>
+                            <option value="1,500 - 3,000 Students">1,500 - 3,000 Students</option>
+                            <option value="3,000+ Students">3,000+ Students</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary submit-demo-btn" id="demoSubmitBtn">
+                    <span>Continue to Schedule Demo</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="demo-modal-trust-badges">
+                    <span class="demo-modal-trust-badge"><i class="fa-solid fa-shield-halved"></i> 100% Privacy</span>
+                    <span class="demo-modal-trust-badge"><i class="fa-solid fa-clock"></i> 30-min tailored demo</span>
+                    <span class="demo-modal-trust-badge"><i class="fa-solid fa-bolt"></i> No obligation</span>
+                </div>
+            </form>
+        </div>
+    `;
+    document.body.appendChild(modalDiv);
+}
+
 function initCalendly() {
+    ensureBookDemoModalExists();
+
+    const demoModal = document.getElementById('bookDemoModal');
     const demoButtons = document.querySelectorAll('.book-demo-btn');
+    const closeBtn = demoModal ? demoModal.querySelector('.contact-modal-close') : null;
+    const demoForm = document.getElementById('bookDemoForm');
+
+    const openModal = () => {
+        if (demoModal) {
+            demoModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            const nameInput = demoModal.querySelector('#demoName');
+            if (nameInput) setTimeout(() => nameInput.focus(), 150);
+        } else {
+            // Fallback direct open
+            openCalendlyDirect();
+        }
+    };
+
+    const closeModal = () => {
+        if (demoModal) {
+            demoModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    };
+
+    const openCalendlyDirect = (name = '', email = '', phone = '', schoolName = '') => {
+        const calendlyBase = 'https://calendly.com/mslabba-turgut/30min';
+        const params = new URLSearchParams();
+        if (name) params.append('name', name);
+        if (email) params.append('email', email);
+        if (phone) params.append('a1', phone);
+        if (schoolName) params.append('a2', schoolName);
+
+        const queryString = params.toString();
+        const fullUrl = queryString ? `${calendlyBase}?${queryString}` : calendlyBase;
+
+        if (typeof Calendly !== 'undefined') {
+            Calendly.initPopupWidget({ url: fullUrl });
+        } else {
+            window.open(fullUrl, '_blank');
+        }
+    };
+
     demoButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            if (typeof Calendly !== 'undefined') {
-                Calendly.initPopupWidget({ url: 'https://calendly.com/mslabba-turgut/30min' });
-            } else {
-                // Graceful fallback if Calendly script fails to load (e.g. ad blockers)
-                window.open('https://calendly.com/mslabba-turgut/30min', '_blank');
+            openModal();
+        });
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+    if (demoModal) {
+        demoModal.addEventListener('click', (e) => {
+            if (e.target === demoModal) {
+                closeModal();
             }
         });
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && demoModal && demoModal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    if (demoForm) {
+        demoForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = demoForm.querySelector('#demoSubmitBtn');
+            const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<span>Opening schedule calendar...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
+            }
+
+            const formData = new FormData(demoForm);
+            const name = (formData.get('name') || '').trim();
+            const email = (formData.get('email') || '').trim();
+            const phone = (formData.get('phone') || '').trim();
+            const schoolName = (formData.get('school_name') || '').trim();
+            const studentCount = (formData.get('student_count') || '').trim();
+
+            // 1. Fire OpenAI Tracking Snippet (lead_created)
+            trackLeadCreated('book_a_demo_modal', {
+                lead_name: name,
+                lead_email: email,
+                lead_phone: phone,
+                school_name: schoolName,
+                student_count: studentCount
+            });
+
+            // 2. Dispatch form data to Web3Forms in background
+            try {
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                }).catch(err => console.warn('Form dispatch notice:', err));
+            } catch (err) {
+                console.warn('Form submission fetch error:', err);
+            }
+
+            // 3. Close modal and launch Calendly with pre-filled details
+            setTimeout(() => {
+                closeModal();
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnHtml;
+                }
+                demoForm.reset();
+                openCalendlyDirect(name, email, phone, schoolName);
+            }, 600);
+        });
+    }
+
+    // 4. Calendly booking completion listener
+    window.addEventListener('message', (e) => {
+        if (e.data && e.data.event === 'calendly.event_scheduled') {
+            trackLeadCreated('calendly_event_scheduled', {
+                payload: e.data.payload
+            });
+        }
     });
 }
 
@@ -332,16 +560,19 @@ function initCalendly() {
  * 10. Contact Sales Modal integration: Open modal form on click
  */
 function initContactModal() {
-    const trigger = document.querySelector('.contact-sales-btn');
+    const triggers = document.querySelectorAll('.contact-sales-btn');
     const modal = document.getElementById('contactSalesModal');
     const closeBtn = modal ? modal.querySelector('.contact-modal-close') : null;
+    const salesForm = modal ? modal.querySelector('.contact-sales-form') : null;
     
-    if (!trigger || !modal || !closeBtn) return;
+    if (!triggers.length || !modal) return;
 
-    trigger.addEventListener('click', (e) => {
-        e.preventDefault();
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Stop page scroll
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Stop page scroll
+        });
     });
 
     const closeModal = () => {
@@ -349,12 +580,24 @@ function initContactModal() {
         document.body.style.overflow = 'auto'; // Re-enable page scroll
     };
 
-    closeBtn.addEventListener('click', closeModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             closeModal();
         }
     });
+
+    if (salesForm) {
+        salesForm.addEventListener('submit', () => {
+            const formData = new FormData(salesForm);
+            trackLeadCreated('contact_sales_modal', {
+                lead_name: formData.get('name') || '',
+                lead_email: formData.get('email') || '',
+                lead_phone: formData.get('phone') || '',
+                school_name: formData.get('school_name') || ''
+            });
+        });
+    }
 }
 
 /**
