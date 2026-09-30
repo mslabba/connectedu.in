@@ -453,7 +453,7 @@ function initCalendly() {
     };
 
     const openCalendlyDirect = (name = '', email = '', phone = '', schoolName = '') => {
-        const calendlyBase = 'https://calendly.com/mslabba-turgut/30min';
+        const calendlyBase = 'https://calendly.com/mslabba-turgut/connectedu-school-demo';
         const params = new URLSearchParams();
         if (name) params.append('name', name);
         if (email) params.append('email', email);
