@@ -166,9 +166,27 @@
     </section>
 
     <!-- SEO definition block -->
-    <section class="section-spacing" style="padding-top: 48px; padding-bottom: 0;">
+    <style>
+        #seo-definition .seo-definition-box {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 24px 28px;
+            text-align: center;
+        }
+        #seo-definition .seo-definition-box p {
+            margin: 0;
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+    </style>
+    <section class="section-spacing" id="seo-definition" style="padding-top: 48px; padding-bottom: 0;">
         <div class="container">
-            <p style="max-width: 820px; margin: 0 auto; text-align: center; font-size: 1.125rem; line-height: 1.7;">Connectedu is a school management and parent engagement platform built for small and independent schools. It brings parent communication, attendance, online fee collection with UPI, live bus tracking, and exams into one simple system — so the office spends less time on paperwork and parents never miss an update.</p>
+            <div class="seo-definition-box">
+                <p>Connectedu is a school management and parent engagement platform built for small and independent schools. It brings parent communication, attendance, online fee collection with UPI, live bus tracking, and exams into one simple system — so the office spends less time on paperwork and parents never miss an update.</p>
+            </div>
         </div>
     </section>
 
@@ -870,8 +888,11 @@
     <!-- Section 15a: From the Blog -->
     <style>
         #from-the-blog .blog-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; }
-        #from-the-blog .blog-card { display: flex; flex-direction: column; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px 28px; text-decoration: none; color: inherit; transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
+        #from-the-blog .blog-card { display: flex; flex-direction: column; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 0; overflow: hidden; text-decoration: none; color: inherit; transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
         #from-the-blog .blog-card:hover { border-color: var(--primary-blue, #2E5BFF); box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08); transform: translateY(-2px); }
+        #from-the-blog .blog-card-media { background: #F1F5F9; aspect-ratio: 16 / 9; overflow: hidden; }
+        #from-the-blog .blog-card-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        #from-the-blog .blog-card-body { display: flex; flex-direction: column; flex-grow: 1; padding: 24px 28px; }
         #from-the-blog .blog-card h3 { margin: 0 0 10px 0; font-size: 1.125rem; line-height: 1.5; }
         #from-the-blog .blog-card p { margin: 0 0 16px 0; line-height: 1.7; flex-grow: 1; }
         #from-the-blog .blog-card .blog-card-link { color: var(--primary-blue, #2E5BFF); font-weight: 600; }
@@ -886,19 +907,34 @@
             </div>
             <div class="blog-cards">
                 <a class="blog-card" href="/blog/reducing-fee-defaulters-with-reminders-and-upi/">
-                    <h3>Reducing Fee Defaulters with Reminders and UPI</h3>
-                    <p>How structured fee reminders and online school fee payment via UPI help parents pay from the parent app before the office starts calling.</p>
-                    <span class="blog-card-link">Read the guide <i class="fa-solid fa-arrow-right"></i></span>
+                    <div class="blog-card-media">
+                        <img src="assets/images/reducing-fee-defaulters-with-reminders-and-upi.jpg" alt="School fee reminder card next to a parent phone completing UPI online fee payment with a confirmation check" width="1280" height="720" loading="lazy">
+                    </div>
+                    <div class="blog-card-body">
+                        <h3>Reducing Fee Defaulters with Reminders and UPI</h3>
+                        <p>How structured fee reminders and online school fee payment via UPI help parents pay from the parent app before the office starts calling.</p>
+                        <span class="blog-card-link">Read the guide <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
                 </a>
                 <a class="blog-card" href="/blog/whatsapp-pta-to-structured-acknowledgements/">
-                    <h3>From WhatsApp PTA Groups to Structured Acknowledgements</h3>
-                    <p>A practical migration guide for moving parent communication from WhatsApp group noise to acknowledgements and approvals parents can act on.</p>
-                    <span class="blog-card-link">Read the guide <i class="fa-solid fa-arrow-right"></i></span>
+                    <div class="blog-card-media">
+                        <img src="assets/images/whatsapp-pta-to-structured-acknowledgements.jpg" alt="WhatsApp PTA group chat noise contrasted with structured school alerts for acknowledge, approve, and pay" width="1280" height="720" loading="lazy">
+                    </div>
+                    <div class="blog-card-body">
+                        <h3>From WhatsApp PTA Groups to Structured Acknowledgements</h3>
+                        <p>A practical migration guide for moving parent communication from WhatsApp group noise to acknowledgements and approvals parents can act on.</p>
+                        <span class="blog-card-link">Read the guide <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
                 </a>
                 <a class="blog-card" href="/blog/what-is-a-school-parent-engagement-platform/">
-                    <h3>What Is a School Parent Engagement Platform?</h3>
-                    <p>What the term means for Indian schools: official parent communication tied to attendance, fees, bus tracking, and exams — not chat-only apps.</p>
-                    <span class="blog-card-link">Read the guide <i class="fa-solid fa-arrow-right"></i></span>
+                    <div class="blog-card-media">
+                        <img src="assets/images/what-is-a-school-parent-engagement-platform.jpg" alt="School desk and parent phone showing official notices for attendance, the bus, and messages" width="1280" height="720" loading="lazy">
+                    </div>
+                    <div class="blog-card-body">
+                        <h3>What Is a School Parent Engagement Platform?</h3>
+                        <p>What the term means for Indian schools: official parent communication tied to attendance, fees, bus tracking, and exams — not chat-only apps.</p>
+                        <span class="blog-card-link">Read the guide <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
                 </a>
             </div>
             <div class="blog-more">
