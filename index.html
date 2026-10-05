@@ -44,7 +44,20 @@
 .footer-col p{margin:0 0 8px;font-size:.88rem;line-height:1.75}
 .footer-brand{font-weight:700;font-size:1.05rem;margin:0 0 10px}
 .footer-head{font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;margin:0 0 12px}
-.footer-base{margin:28px 0 0;padding-top:18px;border-top:1px solid #e6eaf3;text-align:center;font-size:.8rem;color:#64748b}.link-button{border:0;background:none;padding:0;color:inherit;cursor:pointer}
+.footer-base{margin:28px 0 0;padding-top:18px;border-top:1px solid #e6eaf3;text-align:center;font-size:.8rem;color:#64748b}
+.demo-modal{position:fixed;inset:0;background:rgba(15,23,42,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:200}
+.demo-modal.active{display:flex}
+.demo-modal-card{background:#fff;border-radius:16px;max-width:560px;width:100%;padding:32px;position:relative;max-height:90vh;overflow:auto;box-sizing:border-box}
+.demo-modal-close{position:absolute;top:10px;right:16px;border:0;background:none;font-size:1.7rem;cursor:pointer;color:#64748b;line-height:1}
+.demo-modal-card h3{margin:0 0 6px;font-size:1.35rem}
+.demo-modal-sub{margin:0 0 20px;color:#64748b;font-size:.92rem}
+.demo-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.demo-modal-card label{display:block;font-size:.82rem;font-weight:600;color:#0f172a}
+.demo-modal-card input,.demo-modal-card select{width:100%;padding:11px 12px;border:1px solid #dbe2ee;border-radius:9px;font-size:.92rem;margin-top:6px;box-sizing:border-box;font-family:inherit}
+.demo-full{display:block;margin-bottom:18px}
+.demo-submit{width:100%;margin-top:4px}
+.demo-trust{text-align:center;font-size:.8rem;color:#64748b;margin:14px 0 0}
+@media(max-width:560px){.demo-form-grid{grid-template-columns:1fr}.demo-modal-card{padding:24px 20px}}.link-button{border:0;background:none;padding:0;color:inherit;cursor:pointer}
     .definition-strip{padding:0 0 34px}.definition-inner{display:grid;grid-template-columns:190px 1fr;gap:25px;align-items:start;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.definition-inner strong{font:700 1.08rem var(--serif)}.definition-inner p{margin:0;color:var(--muted);font-size:.9rem}
     .blog-section{background:var(--surface)}.blog-heading{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:38px}.blog-heading h2{max-width:650px;margin:0;font:700 clamp(2.2rem,4vw,3.75rem)/1.04 var(--serif);letter-spacing:-.04em}.blog-heading .btn{flex:0 0 auto}.blog-layout{display:grid;grid-template-columns:1.12fr .88fr;gap:36px;align-items:start}.blog-feature,.blog-brief{display:block}.blog-feature-image{aspect-ratio:16/9;overflow:hidden;border-radius:16px;background:var(--surface-2);box-shadow:var(--soft-shadow)}.blog-feature-image img,.blog-brief-image img{width:100%;height:100%;object-fit:cover}.blog-copy{padding-top:21px}.blog-meta{display:flex;align-items:center;gap:9px;color:var(--blue-dark);font-size:.7rem;font-weight:700}.blog-meta:before{content:"";width:18px;height:2px;background:currentColor}.blog-copy h3{margin:8px 0 8px;font:700 1.65rem/1.18 var(--serif);letter-spacing:-.025em}.blog-copy p{margin:0;color:var(--muted);font-size:.85rem}.blog-read{display:inline-block;margin-top:13px;color:var(--blue-dark);font-size:.78rem;font-weight:700}.blog-feature:hover .blog-read,.blog-brief:hover .blog-read{text-decoration:underline}.blog-side{border-top:1px solid var(--line)}.blog-brief{display:grid;grid-template-columns:180px minmax(0,1fr);gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}.blog-brief-image{aspect-ratio:16/10;overflow:hidden;border-radius:11px;background:var(--surface-2)}.blog-brief .blog-copy{padding:0}.blog-brief h3{margin:7px 0 6px;font:700 1.12rem/1.23 var(--serif);letter-spacing:-.02em}.blog-brief p{display:-webkit-box;overflow:hidden;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:.78rem}
     .vector-scene{display:none;width:100%;height:100%;padding:22px;background:linear-gradient(145deg,#eaf4ff,#f7fbff);color:#10223e}.vector-scene.active{display:grid;place-items:center}.v-window{width:min(100%,660px);min-height:300px;display:grid;grid-template-columns:112px 1fr;background:#fff;border:1px solid #cadcf1;border-radius:16px;box-shadow:0 20px 44px rgba(8,73,143,.16);overflow:hidden}.v-side{padding:18px 12px;background:#0b58bd;color:#fff}.v-logo{width:26px;height:26px;border:5px solid #fff;border-right-color:#72cbff;border-radius:50%;margin-bottom:24px}.v-side i{display:block;width:72px;height:7px;margin:13px 0;border-radius:7px;background:rgba(255,255,255,.42)}.v-side i.active{width:84px;height:22px;margin-left:-3px;background:#fff}.v-main{padding:18px}.v-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.v-top b{font-size:.82rem}.v-top span{padding:5px 9px;border-radius:7px;background:#e9f3ff;color:#0756ac;font-size:.62rem;font-weight:700}.v-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:12px}.v-stat{padding:11px;border-radius:10px;background:#eef6ff}.v-stat:nth-child(2){background:#e8f8f2}.v-stat:nth-child(3){background:#fff1e9}.v-stat small{display:block;color:#61738a;font-size:.56rem}.v-stat b{font-size:.8rem}.v-list{border:1px solid #dce8f4;border-radius:10px;overflow:hidden}.v-row{display:grid;grid-template-columns:1.4fr .8fr .7fr;gap:10px;padding:10px 12px;border-bottom:1px solid #e4edf6;font-size:.62rem}.v-row:last-child{border-bottom:0}.v-row.head{background:#f1f6fb;color:#64758b;font-weight:700}.v-status{color:#078e91;font-weight:700}.v-route{position:relative;height:125px;margin-top:8px;border-radius:12px;background:#eaf5ff;overflow:hidden}.v-route:before{content:"";position:absolute;left:13%;top:54%;width:74%;height:4px;background:#fff;border:7px solid #6ab2ff;border-width:7px 0;transform:rotate(-9deg)}.v-route:after{content:"BUS";position:absolute;right:22%;top:34%;padding:7px 10px;border-radius:8px;background:#0b58bd;color:#fff;font-size:.58rem;font-weight:700}.v-stop{position:absolute;width:13px;height:13px;border:3px solid #fff;border-radius:50%;background:#0b58bd;box-shadow:0 0 0 2px #0b58bd}.v-stop.one{left:18%;top:58%}.v-stop.two{left:49%;top:45%}.v-stop.three{right:16%;top:31%}.v-bars{display:flex;align-items:end;gap:13px;height:130px;padding:18px 24px 5px;border-left:1px solid #ccdceb;border-bottom:1px solid #ccdceb}.v-bars i{flex:1;min-width:15px;border-radius:5px 5px 0 0;background:#2684ea}.v-bars i:nth-child(1){height:44%}.v-bars i:nth-child(2){height:72%;background:#15a39d}.v-bars i:nth-child(3){height:58%;background:#f08a54}.v-bars i:nth-child(4){height:88%}.v-grade{display:flex;align-items:center;justify-content:space-between;padding:12px;margin-top:12px;border-radius:10px;background:#f0f6fc}.v-grade span{font-size:.68rem}.v-grade b{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:5px solid #58a4ee;color:#0756ac;font-size:.7rem}
@@ -66,6 +79,7 @@
     <!-- End Google Tag Manager -->
     <link rel="canonical" href="https://connectedu.in/">
     <script>(function(){if(/\/index\.html$/i.test(location.pathname)){location.replace('https://connectedu.in/');}})();</script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -78,8 +92,8 @@
       <a class="brand" href="#" aria-label="ConnectEdu home"><img src="assets/images/redesign/connectedu.png" alt="ConnectEdu"></a>
       <button class="menu" aria-expanded="false" aria-controls="mainNav" aria-label="Open navigation">☰</button>
       <nav class="nav-links" id="mainNav" aria-label="Page sections">
-        <a href="#modules">Modules</a><a href="#messaging">Messaging</a><a href="#ai">Admin AI</a><a href="#pricing">Pricing</a><a href="#blog">Blog</a><a href="#faq">FAQ</a><a href="/video-tutorials/">Resources</a><a href="contact.html">Contact</a><a href="https://schools.connectedu.in/site/login">Login</a>
-        <a class="btn btn-primary btn-small" href="https://calendly.com/mslabba-turgut/connectedu-school-demo">Book a demo</a>
+        <a href="#modules">Modules</a><a href="#messaging">Messaging</a><a href="admin-ai-agent-for-schools.html">Admin AI</a><a href="#pricing">Pricing</a><a href="/blog/">Blog</a><a href="#faq">FAQ</a><a href="/video-tutorials/">Resources</a><a href="contact.html">Contact</a><a href="https://schools.connectedu.in/site/login">Login</a>
+        <a class="btn btn-primary btn-small book-demo-btn" href="#book-demo">Book a demo</a>
       </nav>
     </div>
   </header>
@@ -97,7 +111,7 @@
             <div class="kicker">For small and independent schools</div>
             <h1>The school platform parents actually use.</h1>
             <p class="lead">Keep families informed while your team manages attendance, UPI fee collection, transport and academics from one clear system.</p>
-            <div class="hero-actions"><a class="btn btn-primary" href="mailto:hello@inraylabs.com?subject=ConnectEdu%20school%20demo">Book a school demo →</a><a class="btn btn-quiet" href="#modules">Explore the modules</a></div>
+            <div class="hero-actions"><a class="btn btn-primary book-demo-btn" href="#book-demo">Book a school demo →</a><a class="btn btn-quiet" href="#modules">Explore the modules</a></div>
             <div class="price-note"><span class="price-dot" aria-hidden="true"></span><span>Plans start at <strong>₹8 per student / month</strong></span></div>
           </div>
           <div class="hero-visual"><img src="assets/images/redesign/parent-using-connectedu-for-school-notices-at.jpg" alt="Parent using ConnectEdu for school notices, attendance, fees, transport and results"><div class="float-card"><small>ONE CONNECTED ROUTINE</small><b>School → Parent</b><span>Clear, structured updates</span></div></div>
@@ -162,14 +176,14 @@
       </section>
 
       <section class="section pricing" id="pricing">
-        <div class="wrap price-layout"><div><div class="kicker">Transparent starting price</div><h2>Start small. Add what your school needs.</h2><p class="muted">ConnectEdu is built for small and independent schools. Book a walkthrough to match the platform setup to your student count and daily workflows.</p><div class="pricing-points"><div><span>✓</span><p><b>School and parent experience</b><span>Administration portal with Android and iPhone parent apps.</span></p></div><div><span>✓</span><p><b>Guided rollout</b><span>Support for migration, configuration and team training.</span></p></div></div></div><div class="price-card"><small>PLANS START AT</small><div class="price"><sup>₹</sup>8 <span>/ student / month</span></div><p>Talk to the ConnectEdu team about the modules and rollout that fit your school.</p><a class="btn btn-primary" href="mailto:hello@inraylabs.com?subject=ConnectEdu%20pricing%20and%20demo">Discuss my school →</a></div></div>
+        <div class="wrap price-layout"><div><div class="kicker">Transparent starting price</div><h2>Start small. Add what your school needs.</h2><p class="muted">ConnectEdu is built for small and independent schools. Book a walkthrough to match the platform setup to your student count and daily workflows.</p><div class="pricing-points"><div><span>✓</span><p><b>School and parent experience</b><span>Administration portal with Android and iPhone parent apps.</span></p></div><div><span>✓</span><p><b>Guided rollout</b><span>Support for migration, configuration and team training.</span></p></div></div></div><div class="price-card"><small>PLANS START AT</small><div class="price"><sup>₹</sup>8 <span>/ student / month</span></div><p>Talk to the ConnectEdu team about the modules and rollout that fit your school.</p><a class="btn btn-primary book-demo-btn" href="#book-demo">Discuss my school →</a></div></div>
       </section>
 
       <section class="section white"><div class="wrap"><div class="section-head"><h2>From setup to daily use, with support.</h2><p>ConnectEdu guides your team through migration, configuration and training so adoption does not become another project for the school office.</p></div><div class="journey"><article><small>STEP 01</small><h3>Bring your records</h3><p>Import supported student data and existing spreadsheets.</p></article><article><small>STEP 02</small><h3>Configure the school</h3><p>Set classes, fee structures, users and daily workflows.</p></article><article><small>STEP 03</small><h3>Prepare the team</h3><p>Train administrators and teachers for a confident rollout.</p></article></div></div></section>
 
       <section class="section faq" id="faq"><div class="wrap faq-grid"><div><div class="kicker">Common questions</div><h2>A clearer start for your school.</h2></div><div class="faq-list"><details><summary>What is ConnectEdu?</summary><p>ConnectEdu is school management and parent engagement software for small schools in India. It brings communication, attendance, fees, transport and academics into one system.</p></details><details><summary>How much does ConnectEdu cost?</summary><p>Plans start at ₹8 per student per month. Book a demo to discuss the modules and rollout that fit your school.</p></details><details><summary>Can it work with our existing biometric device?</summary><p>ConnectEdu can integrate with a supported existing biometric device through a sync script on the connected school computer.</p></details><details><summary>Is there an app for parents?</summary><p>Yes. ConnectEdu has Android and iPhone apps where parents can see school notices, attendance, fees, report cards and transport updates.</p></details><details><summary>How does the Admin AI Agent work?</summary><p>Administrators ask a question in plain language. The agent finds supported school information, returns a clear answer and guides the administrator to the relevant record or next action.</p></details><details><summary>Can the AI Agent add students and staff?</summary><p>Yes. Give the Admin AI Agent the student’s or staff member’s name and required details, and it will add the record for the administrator.</p></details><details><summary>Can parents pay fees through the mobile app?</summary><p>Yes. Parents can pay through available payment gateways using methods such as UPI, credit card and net banking, then view the payment record in the app.</p></details><details><summary>How does structured messaging work?</summary><p>Every school-parent message has a clear purpose: announcement, acknowledgement, approval request, payment request, alert event or reply. Parents can immediately understand what the school needs them to read or do.</p></details><details><summary>Is ConnectEdu only for large schools?</summary><p>No. ConnectEdu is built for small and independent schools — simple to set up, with guided onboarding and video tutorials for staff.</p></details></div></div></section>
 
-      <section class="cta"><div class="wrap cta-box"><div><h2>See how ConnectEdu fits your school.</h2><p>Walk through the administration portal and parent app with the ConnectEdu team.</p></div><a class="btn" href="mailto:hello@inraylabs.com?subject=ConnectEdu%20school%20demo">Book a school demo →</a></div></section>
+      <section class="cta"><div class="wrap cta-box"><div><h2>See how ConnectEdu fits your school.</h2><p>Walk through the administration portal and parent app with the ConnectEdu team.</p></div><a class="btn book-demo-btn" href="#book-demo">Book a school demo →</a></div></section>
     </div>
 
     <div class="view" id="parent-view" data-audience="parent">
@@ -183,7 +197,7 @@
       </div></div></section>
       <section class="section white"><div class="wrap split"><div><div class="kicker">Live school transport</div><h2>Less waiting. More certainty.</h2><p>Follow the school vehicle on its active route and receive important updates from the school, helping families plan pickup time with more confidence.</p><div class="module-tags"><span class="tag">Live route view</span><span class="tag">Vehicle progress</span><span class="tag">School alerts</span></div></div><img class="illustration" src="assets/images/redesign/parent-following-a-school-bus-route-on-the-co.jpg" alt="Parent following a school bus route on the ConnectEdu app"></div></section>
       <section class="section parent-callout"><div class="wrap parent-grid"><img class="illustration" src="assets/images/redesign/parent-using-connectedu-for-school-notices-at.jpg" alt="Parent using one app for school communication, fees, grades and transport"><div><div class="kicker">One simpler routine</div><h2>From morning attendance to the next fee receipt.</h2><p class="muted">ConnectEdu keeps the information families need inside one consistent app—without asking parents to learn the school office's internal systems.</p><button class="btn btn-primary" type="button" data-jump-school>See what schools manage →</button></div></div></section>
-      <section class="cta"><div class="wrap cta-box"><div><h2>Want ConnectEdu at your school?</h2><p>Introduce your school to the ConnectEdu team.</p></div><a class="btn" href="mailto:hello@inraylabs.com?subject=ConnectEdu%20for%20our%20school">Introduce my school →</a></div></section>
+      <section class="cta"><div class="wrap cta-box"><div><h2>Want ConnectEdu at your school?</h2><p>Introduce your school to the ConnectEdu team.</p></div><a class="btn book-demo-btn" href="#book-demo">Introduce my school →</a></div></section>
     </div>
 
     <section class="section blog-section" id="blog" aria-labelledby="blog-title">
@@ -292,5 +306,75 @@
       aiButtons.forEach(function(button){button.addEventListener('click',function(){var key=button.getAttribute('data-ai'),item=aiAnswers[key];aiButtons.forEach(function(b){b.setAttribute('aria-pressed',String(b===button))});document.getElementById('aiAnswer').innerHTML='<div class="question-bubble">'+item.question+'</div><div class="answer-bubble"><div class="answer-top">Admin AI Agent</div><h3>'+item.title+'</h3><p>'+item.text+'</p><div class="answer-meta">'+item.tags.map(function(tag){return '<span>'+tag+'</span>'}).join('')+'</div></div>'})});
     }());
   </script>
+
+<div class="demo-modal" id="bookDemoModal" aria-hidden="true">
+  <div class="demo-modal-card" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+    <button class="demo-modal-close" type="button" aria-label="Close">&times;</button>
+    <h3 id="demoModalTitle">Book a Live Product Demo</h3>
+    <p class="demo-modal-sub">See how ConnectEdu automates school operations, fee collection, attendance, and parent communication.</p>
+    <form id="bookDemoForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="e6c00b1f-b590-4d88-9fe9-2616c56c2914">
+      <input type="hidden" name="subject" value="New Book a Demo Request - Connectedu">
+      <input type="hidden" name="from_name" value="Connectedu Demo Booking">
+      <input type="checkbox" name="botcheck" style="display:none">
+      <div class="demo-form-grid">
+        <label>Your Full Name *<input type="text" name="name" required placeholder="Enter your full name" autocomplete="name"></label>
+        <label>Official / Work Email *<input type="email" name="email" required placeholder="principal@yourschool.com" autocomplete="email"></label>
+        <label>Phone / WhatsApp Number *<input type="tel" name="phone" required placeholder="+91 98765 43210" autocomplete="tel"></label>
+        <label>School / Institution Name *<input type="text" name="school_name" required placeholder="Greenfield Public School"></label>
+      </div>
+      <label class="demo-full">Approx. Student Strength
+        <select name="student_count">
+          <option>Under 500 Students</option>
+          <option selected>500 - 1,500 Students</option>
+          <option>1,500 - 3,000 Students</option>
+          <option>3,000+ Students</option>
+        </select>
+      </label>
+      <button type="submit" class="btn btn-primary demo-submit" id="demoSubmitBtn">Continue to Schedule Demo &rarr;</button>
+      <p class="demo-trust">100% Privacy &middot; 30-min tailored demo &middot; No obligation</p>
+    </form>
+  </div>
+</div>
+<script>
+(function(){
+  var modal=document.getElementById('bookDemoModal');
+  var form=document.getElementById('bookDemoForm');
+  function openModal(){modal.classList.add('active');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+  function closeModal(){modal.classList.remove('active');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+  function openCalendly(name,email,phone,school){
+    var base='https://calendly.com/mslabba-turgut/connectedu-school-demo';
+    var p=new URLSearchParams();
+    if(name)p.append('name',name);if(email)p.append('email',email);
+    if(phone)p.append('a1',phone);if(school)p.append('a2',school);
+    var url=p.toString()?base+'?'+p.toString():base;
+    if(typeof Calendly!=='undefined'){Calendly.initPopupWidget({url:url});}
+    else{window.open(url,'_blank');}
+  }
+  document.querySelectorAll('.book-demo-btn').forEach(function(btn){
+    btn.addEventListener('click',function(e){e.preventDefault();openModal();});
+  });
+  modal.addEventListener('click',function(e){if(e.target===modal)closeModal();});
+  modal.querySelector('.demo-modal-close').addEventListener('click',closeModal);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=document.getElementById('demoSubmitBtn');
+    var orig=btn.innerHTML;btn.disabled=true;btn.textContent='Opening schedule calendar...';
+    var fd=new FormData(form);
+    var d={name:(fd.get('name')||'').toString().trim(),email:(fd.get('email')||'').toString().trim(),
+           phone:(fd.get('phone')||'').toString().trim(),school:(fd.get('school_name')||'').toString().trim(),
+           count:(fd.get('student_count')||'').toString().trim()};
+    try{if(window.dataLayer)window.dataLayer.push({event:'lead_created',source:'book_a_demo_modal',lead_name:d.name,lead_email:d.email,lead_phone:d.phone,school_name:d.school,student_count:d.count});}catch(_){}
+    try{fetch('https://api.web3forms.com/submit',{method:'POST',body:fd,headers:{'Accept':'application/json'}}).catch(function(){});}catch(_){}
+    setTimeout(function(){closeModal();btn.disabled=false;btn.innerHTML=orig;form.reset();openCalendly(d.name,d.email,d.phone,d.school);},600);
+  });
+  window.addEventListener('message',function(e){
+    if(e.data&&e.data.event==='calendly.event_scheduled'){
+      try{if(window.dataLayer)window.dataLayer.push({event:'lead_created',source:'calendly_event_scheduled'});}catch(_){}
+    }
+  });
+})();
+</script>
 </body>
 </html>
