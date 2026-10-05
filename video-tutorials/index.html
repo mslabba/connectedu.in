@@ -336,7 +336,70 @@
       .tutorial-video {
         height: 200px;
       }
+
+      .tutorials-section-header {
+        padding: 0 1rem;
+      }
     }
+
+    .tutorials-section-header {
+      max-width: 1200px;
+      margin: 0 auto 2rem;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .tutorials-section-header:not(:first-child) {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--slate-100);
+    }
+
+    .tutorials-section-header h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+
+    .tutorials-section-header p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      margin-bottom: 0.75rem;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .tutorials-section-header a {
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .tutorials-section-header a:hover {
+      text-decoration: underline;
+      color: var(--primary-blue-hover);
+    }
+
+    .tutorial-video-portrait-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--slate-900);
+      padding: 1.25rem 0;
+    }
+
+    .tutorial-video-portrait {
+      width: 100%;
+      max-width: 360px;
+      aspect-ratio: 9 / 16;
+      height: auto;
+      border: 0;
+      display: block;
+    }
+
   </style>
 </head>
 
@@ -406,6 +469,10 @@
 
   <!-- Tutorials Grid -->
   <section class="tutorials-grid">
+    <div class="tutorials-section-header">
+      <h2>School office tutorials</h2>
+      <p>Step-by-step guides for the school office and principal.</p>
+    </div>
     <div class="tutorials-container">
       <div class="tutorial-card">
         <iframe class="tutorial-video" src="https://www.youtube.com/embed/-0IN7yuIbUo?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
@@ -585,6 +652,31 @@
       </div>
     </div>
 
+    <div class="tutorials-section-header">
+      <h2>Teacher App tutorials</h2>
+      <p>How teachers and staff use the ConnectEdu mobile app.</p>
+      <p><a href="https://www.youtube.com/playlist?list=PLbAsA9pX-1bo" target="_blank" rel="noopener">Watch the playlist</a></p>
+    </div>
+    <div class="tutorials-container">
+      <div class="tutorial-card" id="teacher-leave">
+        <div class="tutorial-video-portrait-wrap">
+          <iframe class="tutorial-video-portrait" src="https://www.youtube.com/embed/PUXTXY8Pzr4?modestbranding=1&rel=0" referrerpolicy="strict-origin-when-cross-origin"
+            title="Applying for Leave in the ConnectEdu Teacher App" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="tutorial-content">
+          <h3 class="tutorial-title">Applying for Leave in the ConnectEdu Teacher App</h3>
+          <p class="tutorial-description">Teachers apply for leave from Home › Leave &amp; Apply in the staff mobile app. The principal approves it from the admin panel.</p>
+          <div class="tutorial-meta">
+            <span class="tutorial-tag">Teacher App</span>
+            <span><i class="fas fa-play"></i> Teacher App 1 of 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container" style="text-align: center; margin-top: 3rem;">
       <a href="/" class="back-to-home">
         <i class="fas fa-arrow-left"></i>
@@ -752,7 +844,7 @@
       console.log('Local file protocol detected. Swapping YouTube iframes with preview images to avoid Error 153.');
       
       const runFallback = () => {
-        document.querySelectorAll('iframe.tutorial-video').forEach(iframe => {
+        document.querySelectorAll('iframe.tutorial-video, iframe.tutorial-video-portrait').forEach(iframe => {
           const src = iframe.getAttribute('src');
           if (src && src.includes('/embed/')) {
             const videoId = src.split('/embed/')[1].split('?')[0];
