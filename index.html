@@ -44,7 +44,7 @@
     <!-- Calendly Integration Assets -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"4ycNT2YXzXSWgSSjGspzWW",debug:true});</script>
+  <script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"4ycNT2YXzXSWgSSjGspzWW",debug:false});</script>
 
     <script type="application/ld+json">
     {
@@ -863,6 +863,46 @@
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 15a: From the Blog -->
+    <style>
+        #from-the-blog .blog-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; }
+        #from-the-blog .blog-card { display: flex; flex-direction: column; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px 28px; text-decoration: none; color: inherit; transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
+        #from-the-blog .blog-card:hover { border-color: var(--primary-blue, #2E5BFF); box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08); transform: translateY(-2px); }
+        #from-the-blog .blog-card h3 { margin: 0 0 10px 0; font-size: 1.125rem; line-height: 1.5; }
+        #from-the-blog .blog-card p { margin: 0 0 16px 0; line-height: 1.7; flex-grow: 1; }
+        #from-the-blog .blog-card .blog-card-link { color: var(--primary-blue, #2E5BFF); font-weight: 600; }
+        #from-the-blog .blog-more { text-align: center; margin-top: 32px; }
+    </style>
+    <section class="section-spacing" id="from-the-blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">From the Blog</span>
+                <h2>Guides for School Leaders</h2>
+                <p>Practical articles on fee collection, parent communication, and running a modern school office.</p>
+            </div>
+            <div class="blog-cards">
+                <a class="blog-card" href="/blog/reducing-fee-defaulters-with-reminders-and-upi/">
+                    <h3>Reducing Fee Defaulters with Reminders and UPI</h3>
+                    <p>How structured fee reminders and online school fee payment via UPI help parents pay from the parent app before the office starts calling.</p>
+                    <span class="blog-card-link">Read the guide <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+                <a class="blog-card" href="/blog/whatsapp-pta-to-structured-acknowledgements/">
+                    <h3>From WhatsApp PTA Groups to Structured Acknowledgements</h3>
+                    <p>A practical migration guide for moving parent communication from WhatsApp group noise to acknowledgements and approvals parents can act on.</p>
+                    <span class="blog-card-link">Read the guide <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+                <a class="blog-card" href="/blog/what-is-a-school-parent-engagement-platform/">
+                    <h3>What Is a School Parent Engagement Platform?</h3>
+                    <p>What the term means for Indian schools: official parent communication tied to attendance, fees, bus tracking, and exams — not chat-only apps.</p>
+                    <span class="blog-card-link">Read the guide <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </div>
+            <div class="blog-more">
+                <a href="/blog/" class="btn btn-secondary">View all blog posts</a>
             </div>
         </div>
     </section>

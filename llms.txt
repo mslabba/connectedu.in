@@ -1,0 +1,31 @@
+# ConnectEdu
+
+> ConnectEdu (connectedu.in) is a school ERP and parent engagement platform for small and independent schools in India. It brings parent communication, attendance, online fee collection (UPI, cards, net banking), live school bus tracking, and exams into one system. ConnectEdu is a product of INRAY LABS PRIVATE LIMITED.
+
+## What it does
+- School ERP: a web admin panel for the school office covering students, staff, attendance, fees, transport, and exams.
+- Parent engagement: a parent app (Android and iPhone) for announcements, acknowledgements and approvals, attendance history, online fee payment with receipts, and live bus tracking. Teachers have their own app.
+- Fees: online fee collection via UPI, cards, and net banking, with payment reminders and automatic receipts.
+- Attendance: works with a school's existing biometric device through a sync script on a school computer.
+
+## Admin AI Agent
+- School admins ask questions in plain language (for example about fees, attendance, or headcounts).
+- Answers come from the school's live ERP data via secure database queries.
+- It can add and update student and staff records.
+- It does not send reminders or messages to parents.
+
+## Key pages
+- Homepage: https://connectedu.in/
+- Admin AI Agent for schools: https://connectedu.in/admin-ai-agent-for-schools.html
+- Mobile apps: https://connectedu.in/app
+- Video tutorials: https://connectedu.in/video-tutorials/
+- Blog: https://connectedu.in/blog/
+- Contact: https://connectedu.in/contact.html
+
+## Fee collection articles
+- School fee management software for Indian schools: https://connectedu.in/blog/school-fee-management-software-india/
+- Reducing fee defaulters with reminders and UPI: https://connectedu.in/blog/reducing-fee-defaulters-with-reminders-and-upi/
+
+## Parent engagement articles
+- What is a school parent engagement platform?: https://connectedu.in/blog/what-is-a-school-parent-engagement-platform/
+- From WhatsApp PTA groups to structured acknowledgements: https://connectedu.in/blog/whatsapp-pta-to-structured-acknowledgements/
