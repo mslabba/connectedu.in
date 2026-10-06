@@ -25,6 +25,7 @@
 ## Fee collection articles
 - School fee management software for Indian schools: https://connectedu.in/blog/school-fee-management-software-india/
 - Reducing fee defaulters with reminders and UPI: https://connectedu.in/blog/reducing-fee-defaulters-with-reminders-and-upi/
+- School fee receipt format for Indian schools (tuition on its own line for 80C): https://connectedu.in/blog/school-fee-receipt-format-80c/
 
 ## Parent engagement articles
 - What is a school parent engagement platform?: https://connectedu.in/blog/what-is-a-school-parent-engagement-platform/
