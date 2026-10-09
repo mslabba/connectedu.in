@@ -26,7 +26,15 @@
 - School fee management software for Indian schools: https://connectedu.in/blog/school-fee-management-software-india/
 - Reducing fee defaulters with reminders and UPI: https://connectedu.in/blog/reducing-fee-defaulters-with-reminders-and-upi/
 - School fee receipt format for Indian schools (tuition on its own line for 80C): https://connectedu.in/blog/school-fee-receipt-format-80c/
+- What CBSE Circular 12/2026 means for school fee collection: https://connectedu.in/blog/cbse-circular-digital-payments-school-fees/
 
 ## Parent engagement articles
 - What is a school parent engagement platform?: https://connectedu.in/blog/what-is-a-school-parent-engagement-platform/
 - From WhatsApp PTA groups to structured acknowledgements: https://connectedu.in/blog/whatsapp-pta-to-structured-acknowledgements/
+
+## Transport & safety
+- School transport safety checklist for principals (drivers, attendants, pickup rules, drills, parent alerts): https://connectedu.in/blog/school-transport-safety-checklist-india/
+- Live school bus tracking for parents: https://connectedu.in/blog/school-bus-tracking-app-india/
+
+## Choosing a school ERP
+- School ERP checklist for CBSE and ICSE schools (12 questions to ask before you buy): https://connectedu.in/blog/school-erp-checklist-cbse-icse/
