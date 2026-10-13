@@ -39,3 +39,4 @@
 ## Choosing a school ERP
 - All-in-one school software: attendance, fees, bus and exams on one student record: https://connectedu.in/blog/all-in-one-school-software-india/
 - School ERP checklist for CBSE and ICSE schools (12 questions to ask before you buy): https://connectedu.in/blog/school-erp-checklist-cbse-icse/
+- AI school ERP vs traditional school software (what changes, what stays, questions to ask vendors): https://connectedu.in/blog/ai-school-erp-vs-traditional-school-software/
