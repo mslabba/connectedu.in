@@ -43,3 +43,4 @@
 - How principals use an Admin AI Agent on live school data (day-to-day AI school management): https://connectedu.in/blog/how-principals-use-admin-ai-agent/
 - Teacher attendance going online (Maharashtra Smart Attendance, Karnataka Kartavya-KAAMS; who is responsible and what the school office should keep): https://connectedu.in/blog/teacher-attendance-online-school-records/
 - CBSE LOC 2026–27 checklist for school offices (Class 10 & 12 dates, accuracy checks, late fees; clean student–subject records): https://connectedu.in/blog/cbse-loc-checklist-school-office/
+- CBSE name and DOB corrections (23 Sep 2026 demographic-corrections circular, 2–4 Nov data verification slip window, post-result corrections): https://connectedu.in/blog/cbse-demographic-details-correction/
