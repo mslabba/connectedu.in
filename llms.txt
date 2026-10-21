@@ -46,3 +46,4 @@
 - CBSE name and DOB corrections (23 Sep 2026 demographic-corrections circular, 2–4 Nov data verification slip window, post-result corrections): https://connectedu.in/blog/cbse-demographic-details-correction/
 - Which channel reaches parents (app push vs WhatsApp vs SMS vs Telegram — cost and reach without invented prices): https://connectedu.in/blog/school-parent-notification-channels/
 - School maintenance and safety inspection checklist (Maharashtra 18–31 Oct 2026 cleanliness and maintenance drive; what to inspect, repair week, recording findings, asset register): https://connectedu.in/blog/school-maintenance-safety-inspection-checklist/
+- GRAP hybrid classes for Delhi-NCR schools (Stage III/IV classes, 24-hour switch plan, parent message templates, hybrid-day attendance): https://connectedu.in/blog/grap-hybrid-classes-delhi-ncr-schools/
