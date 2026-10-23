@@ -47,3 +47,5 @@
 - Which channel reaches parents (app push vs WhatsApp vs SMS vs Telegram — cost and reach without invented prices): https://connectedu.in/blog/school-parent-notification-channels/
 - School maintenance and safety inspection checklist (Maharashtra 18–31 Oct 2026 cleanliness and maintenance drive; what to inspect, repair week, recording findings, asset register): https://connectedu.in/blog/school-maintenance-safety-inspection-checklist/
 - GRAP hybrid classes for Delhi-NCR schools (Stage III/IV classes, 24-hour switch plan, parent message templates, hybrid-day attendance): https://connectedu.in/blog/grap-hybrid-classes-delhi-ncr-schools/
+- School ERP audit log for marks, fees and attendance (what an audit log should record, an edit policy for the school office, a 5-step routine for parent mark disputes): https://connectedu.in/blog/school-erp-audit-log-marks-fees-attendance/
+- Sampoorna Plus for CBSE, ICSE and unaided schools in Kerala (what the KITE portal records, what the school still runs itself, a record-readiness checklist): https://connectedu.in/blog/sampoorna-plus-cbse-icse-unaided-schools-kerala/
